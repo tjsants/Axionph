@@ -1350,7 +1350,6 @@ window.AXION_PRODUCTS = [
   "code": "NPP-LG",
   "img": "121.jpg"
 },
-
 {
   "id": 128,
   "name": "CLEMBUTEROL LanderGold",
@@ -1543,17 +1542,6 @@ window.AXION_PRODUCTS = [
   "img": "144.jpg"
 },
 {
-  "id": 145,
-  "name": "Cipionato Black (5 ampolas) Muscle Labs",
-  "category": "Ganho de Massa",
-  "price": 85.00,
-  "old": null,
-  "tag": null,
-  "desc": "Cipionato de Testosterona 200mg - Kit com 5 ampolas. Produto Black Muscle Labs. Administração intramuscular.",
-  "code": "CT-BML",
-  "img": "145.jpg"
-},
-{
   "id": 146,
   "name": "Propionato de Testosterona Muscle Labs",
   "category": "Ganho de Massa",
@@ -1574,17 +1562,6 @@ window.AXION_PRODUCTS = [
   "desc": "Enantato de Testosterona 250mg/mL - 10mL. Produto Muscle Labs. Administração intramuscular semanal.",
   "code": "ET-ML",
   "img": "147.jpg"
-},
-{
-  "id": 148,
-  "name": "Enantato de Testosterona (5 ampolas) Black Muscle Labs",
-  "category": "Ganho de Massa",
-  "price": 105.00,
-  "old": null,
-  "tag": null,
-  "desc": "Enantato de Testosterona 250mg - Kit com 5 ampolas. Produto Black Muscle Labs. Administração intramuscular.",
-  "code": "ET-BML",
-  "img": "148.jpg"
 },
 {
   "id": 149,
@@ -1684,17 +1661,6 @@ window.AXION_PRODUCTS = [
   "desc": "Primobolan 100mg/mL - 10mL. Produto Muscle Labs. Administração intramuscular semanal.",
   "code": "PRI-ML",
   "img": "157.jpg"
-},
-{
-  "id": 158,
-  "name": "Primobolan (5 ampolas) Black Muscle Labs",
-  "category": "Ganho de Massa",
-  "price": 240.00,
-  "old": null,
-  "tag": null,
-  "desc": "Primobolan 100mg - Kit com 5 ampolas. Produto Black Muscle Labs. Administração intramuscular.",
-  "code": "PRIMOB-ML",
-  "img": "158.jpg"
 },
 {
   "id": 159,
