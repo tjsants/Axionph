@@ -1,0 +1,703 @@
+window.AXION_PRODUCTS = [
+
+// ============================================================
+// OXYGENKW - PEPTÍDEOS (IDs 1 a 25)
+// ============================================================
+{
+  "id": 1,
+  "name": "Klow 80mg x 1 vial OxygenKW",
+  "category": "Peptídeos",
+  "price": 1095.00,
+  "old": null,
+  "tag": null,
+  "desc": "Klow 80mg x 1 vial OxygenKW - Peptídeo para rejuvenescimento, regeneração celular e longevidade. Administração subcutânea.",
+  "code": "KLW-OK",
+  "img": "1.jpg"
+},
+{
+  "id": 2,
+  "name": "AOD (AOD-9604) 5mg OxygenKW",
+  "category": "Peptídeos",
+  "price": 520.00,
+  "old": null,
+  "tag": null,
+  "desc": "AOD (AOD-9604) 5mg OxygenKW - Peptídeo para queima de gordura e aceleração do metabolismo. Administração subcutânea diária.",
+  "code": "AOD-OK",
+  "img": "2.jpg"
+},
+{
+  "id": 3,
+  "name": "Glow 70mg OxygenKW",
+  "category": "Peptídeos",
+  "price": 810.00,
+  "old": null,
+  "tag": null,
+  "desc": "Glow 70mg OxygenKW - Peptídeo para pele, regeneração e rejuvenescimento. Administração subcutânea.",
+  "code": "GLW-OK",
+  "img": "3.jpg"
+},
+{
+  "id": 4,
+  "name": "TB500+BPC 20mg OxygenKW",
+  "category": "Peptídeos",
+  "price": 530.00,
+  "old": null,
+  "tag": null,
+  "desc": "TB500+BPC 20mg OxygenKW - Blend para recuperação muscular e cicatrização. Administração subcutânea.",
+  "code": "TBBPC-OK",
+  "img": "4.jpg"
+},
+{
+  "id": 5,
+  "name": "TB500 10mg OxygenKW",
+  "category": "Peptídeos",
+  "price": 520.00,
+  "old": null,
+  "tag": null,
+  "desc": "TB500 10mg OxygenKW - Peptídeo para recuperação e cicatrização de tecidos. Administração subcutânea.",
+  "code": "TB10-OK",
+  "img": "5.jpg"
+},
+{
+  "id": 6,
+  "name": "SS31 10mg OxygenKW",
+  "category": "Peptídeos",
+  "price": 520.00,
+  "old": null,
+  "tag": null,
+  "desc": "SS31 10mg OxygenKW - Peptídeo para saúde mitocondrial e energia. Administração subcutânea.",
+  "code": "SS31-OK",
+  "img": "6.jpg"
+},
+{
+  "id": 7,
+  "name": "MOTS-C 10mg OxygenKW",
+  "category": "Peptídeos",
+  "price": 520.00,
+  "old": null,
+  "tag": null,
+  "desc": "MOTS-C 10mg OxygenKW - Peptídeo para metabolismo e queima de gordura. Administração subcutânea.",
+  "code": "MOTS-OK",
+  "img": "7.jpg"
+},
+{
+  "id": 8,
+  "name": "SLU-PP-332 5mg OxygenKW",
+  "category": "Peptídeos",
+  "price": 580.00,
+  "old": null,
+  "tag": null,
+  "desc": "SLU-PP-332 5mg OxygenKW - Peptídeo para metabolismo e emagrecimento. Administração subcutânea.",
+  "code": "SLU-OK",
+  "img": "8.jpg"
+},
+{
+  "id": 9,
+  "name": "PT-141 OxygenKW",
+  "category": "Peptídeos",
+  "price": 520.00,
+  "old": null,
+  "tag": null,
+  "desc": "PT-141 OxygenKW - Peptídeo para libido e função sexual. Administração subcutânea.",
+  "code": "PT-OK",
+  "img": "9.jpg"
+},
+{
+  "id": 10,
+  "name": "Ipamorelin 10mg x 1 vial OxygenKW",
+  "category": "Peptídeos",
+  "price": 550.00,
+  "old": null,
+  "tag": null,
+  "desc": "Ipamorelin 10mg x 1 vial OxygenKW - Peptídeo para liberação de GH e recuperação. Administração subcutânea.",
+  "code": "IPA-OK",
+  "img": "10.jpg"
+},
+{
+  "id": 11,
+  "name": "GHK-CU Liofilizado 50mg x 1 vial OxygenKW",
+  "category": "Peptídeos",
+  "price": 480.00,
+  "old": null,
+  "tag": null,
+  "desc": "GHK-CU Liofilizado 50mg x 1 vial OxygenKW - Peptídeo para regeneração celular. Administração subcutânea.",
+  "code": "GHK-OK",
+  "img": "11.jpg"
+},
+{
+  "id": 12,
+  "name": "Tesamorelin 10mg OxygenKW",
+  "category": "Peptídeos",
+  "price": 580.00,
+  "old": null,
+  "tag": null,
+  "desc": "Tesamorelin 10mg OxygenKW - Peptídeo para liberação de GH. Administração subcutânea.",
+  "code": "TESA-OK",
+  "img": "12.jpg"
+},
+{
+  "id": 13,
+  "name": "CJC 1295 + IPAMORELIN OxygenKW",
+  "category": "Peptídeos",
+  "price": 640.00,
+  "old": null,
+  "tag": null,
+  "desc": "CJC 1295 + IPAMORELIN OxygenKW - Blend para liberação de GH. Administração subcutânea.",
+  "code": "CJC-OK",
+  "img": "13.jpg"
+},
+{
+  "id": 14,
+  "name": "Retatrutida (EM PÓ) 40mg OxygenKW",
+  "category": "Emagrecimento",
+  "price": 1120.00,
+  "old": null,
+  "tag": null,
+  "desc": "Retatrutida (EM PÓ) 40mg OxygenKW - Agonista triplo para emagrecimento. Administração subcutânea semanal.",
+  "code": "RET-OK",
+  "img": "14.jpg"
+},
+{
+  "id": 15,
+  "name": "Tirzepatida Liofilizado 60mg OxygenKW",
+  "category": "Emagrecimento",
+  "price": 940.00,
+  "old": null,
+  "tag": null,
+  "desc": "Tirzepatida Liofilizado 60mg OxygenKW - Para emagrecimento. Reconstituir com água bacteriostática. Administração subcutânea semanal.",
+  "code": "TIR-OK",
+  "img": "15.jpg"
+},
+{
+  "id": 16,
+  "name": "Enantato de Testosterona OxygenKW",
+  "category": "Ganho de Massa",
+  "price": 210.00,
+  "old": null,
+  "tag": null,
+  "desc": "Enantato de Testosterona 250mg/mL - 10mL. Éster de longa duração. Produto OxygenKW. Administração intramuscular semanal. Exige prescrição médica.",
+  "code": "ET-OK",
+  "img": "16.jpg"
+},
+{
+  "id": 17,
+  "name": "Cipionato de Testosterona OxygenKW",
+  "category": "Ganho de Massa",
+  "price": 210.00,
+  "old": null,
+  "tag": null,
+  "desc": "Cipionato de Testosterona 200mg/mL - 10mL. Éster de longa duração. Produto OxygenKW. Administração intramuscular semanal.",
+  "code": "CT-OK",
+  "img": "17.jpg"
+},
+{
+  "id": 18,
+  "name": "Durateston OxygenKW",
+  "category": "Ganho de Massa",
+  "price": 210.00,
+  "old": null,
+  "tag": null,
+  "desc": "Durateston 250mg/mL - 10mL. Blend de 4 ésteres de testosterona. Produto OxygenKW. Administração intramuscular.",
+  "code": "DUR-OK",
+  "img": "18.jpg"
+},
+{
+  "id": 19,
+  "name": "Deca OxygenKW",
+  "category": "Ganho de Massa",
+  "price": 210.00,
+  "old": null,
+  "tag": null,
+  "desc": "Deca 200mg/mL - 10mL. Decanoato de Nandrolona. Produto OxygenKW. Administração intramuscular semanal.",
+  "code": "DEC-OK",
+  "img": "19.jpg"
+},
+{
+  "id": 20,
+  "name": "Primobolan OxygenKW",
+  "category": "Ganho de Massa",
+  "price": 685.00,
+  "old": null,
+  "tag": null,
+  "desc": "Primobolan 100mg/mL - 10mL. Metenolona Enantato. Produto OxygenKW. Administração intramuscular semanal.",
+  "code": "PRI-OK",
+  "img": "20.jpg"
+},
+{
+  "id": 21,
+  "name": "Masteron OxygenKW",
+  "category": "Ganho de Massa",
+  "price": 210.00,
+  "old": null,
+  "tag": null,
+  "desc": "Masteron Propionato 100mg/mL - 10mL. Drostanolona Propionato. Produto OxygenKW. Administração intramuscular em dias alternados.",
+  "code": "MAS-OK",
+  "img": "21.jpg"
+},
+{
+  "id": 22,
+  "name": "NPP OxygenKW",
+  "category": "Ganho de Massa",
+  "price": 210.00,
+  "old": null,
+  "tag": null,
+  "desc": "NPP 100mg/mL - 10mL. Fenilpropionato de Nandrolona. Produto OxygenKW. Administração intramuscular em dias alternados.",
+  "code": "NPP-OK",
+  "img": "22.jpg"
+},
+{
+  "id": 23,
+  "name": "Stanozolol Aquoso OxygenKW",
+  "category": "Ganho de Massa",
+  "price": 160.00,
+  "old": null,
+  "tag": null,
+  "desc": "Stanozolol Aquoso 50mg/mL - 10mL. Produto OxygenKW. Administração intramuscular.",
+  "code": "STA-OK",
+  "img": "23.jpg"
+},
+{
+  "id": 24,
+  "name": "Trembolona Acetato OxygenKW",
+  "category": "Ganho de Massa",
+  "price": 210.00,
+  "old": null,
+  "tag": null,
+  "desc": "Trembolona Acetato 100mg/mL - 10mL. Produto OxygenKW. Administração intramuscular em dias alternados.",
+  "code": "TRENA-OK",
+  "img": "24.jpg"
+},
+{
+  "id": 25,
+  "name": "Propionato de Testosterona OxygenKW",
+  "category": "Ganho de Massa",
+  "price": 210.00,
+  "old": null,
+  "tag": null,
+  "desc": "Propionato de Testosterona 100mg/mL - 10mL. Produto OxygenKW. Administração intramuscular em dias alternados.",
+  "code": "PT-OK",
+  "img": "25.jpg"
+},
+
+// ============================================================
+// BRATVA LABS - 18 PRODUTOS (IDs 26 a 43)
+// ============================================================
+{
+  "id": 26,
+  "name": "Acetato de Trembolona (100mg/10ml) Bratva Labs",
+  "category": "Ganho de Massa",
+  "price": 170.00,
+  "old": null,
+  "tag": null,
+  "desc": "Acetato de Trembolona 100mg/mL - 10mL. Trembolona de ação rápida para ganhos de qualidade. Produto Bratva Labs. Administração intramuscular em dias alternados.",
+  "code": "TRENA-BTV",
+  "img": "26.jpg"
+},
+{
+  "id": 27,
+  "name": "B-Blend (CutStack 150mg/10ml) Bratva Labs",
+  "category": "Ganho de Massa",
+  "price": 190.00,
+  "old": null,
+  "tag": null,
+  "desc": "B-Blend (CutStack) 150mg/mL - 10mL. Blend cutting para definição muscular. Produto Bratva Labs. Administração intramuscular.",
+  "code": "BBLEND-BTV",
+  "img": "27.jpg"
+},
+{
+  "id": 28,
+  "name": "Cipionato de Testosterona (200mg/10ml) Bratva Labs",
+  "category": "Ganho de Massa",
+  "price": 150.00,
+  "old": null,
+  "tag": null,
+  "desc": "Cipionato de Testosterona 200mg/mL - 10mL. Longa duração e alta qualidade. Produto Bratva Labs. Administração intramuscular semanal.",
+  "code": "CT-BTV",
+  "img": "28.jpg"
+},
+{
+  "id": 29,
+  "name": "Decanoato de Nandrolona (200mg/10ml) Bratva Labs",
+  "category": "Ganho de Massa",
+  "price": 160.00,
+  "old": null,
+  "tag": null,
+  "desc": "Decanoato de Nandrolona 200mg/mL - 10mL. Deca para ganhos de massa. Produto Bratva Labs. Administração intramuscular semanal.",
+  "code": "DECA-BTV",
+  "img": "29.jpg"
+},
+{
+  "id": 30,
+  "name": "Enantato de Metenolona (Primobolan 100mg/10ml) Bratva Labs",
+  "category": "Ganho de Massa",
+  "price": 360.00,
+  "old": null,
+  "tag": null,
+  "desc": "Enantato de Metenolona 100mg/mL - 10mL. Primobolan para ganhos de qualidade. Produto Bratva Labs. Administração intramuscular semanal.",
+  "code": "PRIMO-BTV",
+  "img": "30.jpg"
+},
+{
+  "id": 31,
+  "name": "Enantato de Testosterona (250mg/10ml) Bratva Labs",
+  "category": "Ganho de Massa",
+  "price": 140.00,
+  "old": null,
+  "tag": null,
+  "desc": "Enantato de Testosterona 250mg/mL - 10mL. Enantato de alta qualidade. Produto Bratva Labs. Administração intramuscular semanal.",
+  "code": "ET-BTV",
+  "img": "31.jpg"
+},
+{
+  "id": 32,
+  "name": "Enantato de Trembolona (200mg/10ml) Bratva Labs",
+  "category": "Ganho de Massa",
+  "price": 180.00,
+  "old": null,
+  "tag": null,
+  "desc": "Enantato de Trembolona 200mg/mL - 10mL. Trembolona de longa duração. Produto Bratva Labs. Administração intramuscular semanal.",
+  "code": "TRENE-BTV",
+  "img": "32.jpg"
+},
+{
+  "id": 33,
+  "name": "Fenilpropionato de Nandrolona (NPP 100mg/10ml) Bratva",
+  "category": "Ganho de Massa",
+  "price": 170.00,
+  "old": null,
+  "tag": null,
+  "desc": "Fenilpropionato de Nandrolona 100mg/mL - 10mL. NPP de ação rápida. Produto Bratva Labs. Administração intramuscular em dias alternados.",
+  "code": "NPP-BTV",
+  "img": "33.jpg"
+},
+{
+  "id": 34,
+  "name": "Hemogenin (25cmp/50mg) Bratva Labs",
+  "category": "Ganho de Massa",
+  "price": 110.00,
+  "old": null,
+  "tag": null,
+  "desc": "Hemogenin 50mg - 25 comprimidos. Oximetolona para ganhos de massa. Produto Bratva Labs. Uso oral diário.",
+  "code": "HEMO-BTV",
+  "img": "34.jpg"
+},
+{
+  "id": 35,
+  "name": "Mesterolona (Proviron 25cmp/25mg) Bratva Labs",
+  "category": "Ganho de Massa",
+  "price": 120.00,
+  "old": null,
+  "tag": null,
+  "desc": "Mesterolona 25mg - 25 comprimidos. Proviron para libido e definição. Produto Bratva Labs. Uso oral diário.",
+  "code": "PROV-BTV",
+  "img": "35.jpg"
+},
+{
+  "id": 36,
+  "name": "Metandrostenolona (Dianabol 100cmp/10mg) Bratva Labs",
+  "category": "Ganho de Massa",
+  "price": 105.00,
+  "old": null,
+  "tag": null,
+  "desc": "Metandrostenolona 10mg - 100 comprimidos. Dianabol para ganhos de massa. Produto Bratva Labs. Uso oral diário.",
+  "code": "DIA-BTV",
+  "img": "36.jpg"
+},
+{
+  "id": 37,
+  "name": "Oxandrolona (50cmp/10mg) Bratva Labs",
+  "category": "Ganho de Massa",
+  "price": 250.00,
+  "old": null,
+  "tag": null,
+  "desc": "Oxandrolona 10mg - 50 comprimidos. Oxandrolona para definição muscular. Produto Bratva Labs. Uso oral diário.",
+  "code": "OXA-BTV",
+  "img": "37.jpg"
+},
+{
+  "id": 38,
+  "name": "Propionato de Drostanolona (100mg/10ml) Bratva Labs",
+  "category": "Ganho de Massa",
+  "price": 170.00,
+  "old": null,
+  "tag": null,
+  "desc": "Propionato de Drostanolona 100mg/mL - 10mL. Masteron para definição. Produto Bratva Labs. Administração intramuscular em dias alternados.",
+  "code": "MAST-BTV",
+  "img": "38.jpg"
+},
+{
+  "id": 39,
+  "name": "Propionato de Testosterona (100mg/10ml) Bratva Labs",
+  "category": "Ganho de Massa",
+  "price": 150.00,
+  "old": null,
+  "tag": null,
+  "desc": "Propionato de Testosterona 100mg/mL - 10mL. Propionato de ação rápida. Produto Bratva Labs. Administração intramuscular em dias alternados.",
+  "code": "PT-BTV",
+  "img": "39.jpg"
+},
+{
+  "id": 40,
+  "name": "Sales de Testosterona (Dura 250mg/10ml) Bratva Labs",
+  "category": "Ganho de Massa",
+  "price": 150.00,
+  "old": null,
+  "tag": null,
+  "desc": "Sales de Testosterona 250mg/mL - 10mL. Blend de testosteronas. Produto Bratva Labs. Administração intramuscular.",
+  "code": "DT-BTV",
+  "img": "40.jpg"
+},
+{
+  "id": 41,
+  "name": "Stanozolol Oleoso (50mg/10ml) Bratva Labs",
+  "category": "Ganho de Massa",
+  "price": 140.00,
+  "old": null,
+  "tag": null,
+  "desc": "Stanozolol Oleoso 50mg/mL - 10mL. Winstrol injetável para definição. Produto Bratva Labs. Administração intramuscular.",
+  "code": "STANA-BTV",
+  "img": "41.jpg"
+},
+{
+  "id": 42,
+  "name": "Stanozolol oral (100cmp/10mg) Bratva Labs",
+  "category": "Ganho de Massa",
+  "price": 90.00,
+  "old": null,
+  "tag": null,
+  "desc": "Stanozolol oral 10mg - 100 comprimidos. Winstrol oral para definição. Produto Bratva Labs. Uso oral diário.",
+  "code": "STAO-BTV",
+  "img": "42.jpg"
+},
+{
+  "id": 43,
+  "name": "Undecilenato de Boldenona (250mg/10ml) Bratva Labs",
+  "category": "Ganho de Massa",
+  "price": 170.00,
+  "old": null,
+  "tag": null,
+  "desc": "Undecilenato de Boldenona 250mg/mL - 10mL. Boldenona para ganhos de massa. Produto Bratva Labs. Administração intramuscular semanal.",
+  "code": "BOLD-BTV",
+  "img": "43.jpg"
+},
+
+// ============================================================
+// COOPER PHARMA - 27 PRODUTOS (IDs 44 a 70)
+// ============================================================
+{
+  "id": 44,
+  "name": "PEG-MGF (Lyophillized) 2mg Cooper",
+  "category": "Peptídeos",
+  "price": 2720.00,
+  "old": null,
+  "tag": null,
+  "desc": "PEG-MGF 2mg Cooper - Peptídeo para crescimento muscular e regeneração. Administração subcutânea ou intramuscular.",
+  "code": "PEG-CP",
+  "img": "44.jpg"
+},
+{
+  "id": 45,
+  "name": "T3 + T4 Cooper Pharma",
+  "category": "Emagrecimento",
+  "price": 505.00,
+  "old": null,
+  "tag": null,
+  "desc": "T3 + T4 25mcg - 100 comprimidos. Combinação para metabolismo e queima de gordura. Produto Cooper Pharma. Uso oral. Exige prescrição médica.",
+  "code": "T3T4-CP",
+  "img": "45.jpg"
+},
+{
+  "id": 46,
+  "name": "T3 Cooper Pharma",
+  "category": "Emagrecimento",
+  "price": 405.00,
+  "old": null,
+  "tag": null,
+  "desc": "T3 25mcg - 100 comprimidos. Triiodotironina de alta confiabilidade. Produto Cooper Pharma. Uso oral. Exige prescrição médica.",
+  "code": "T3-CP",
+  "img": "46.jpg"
+},
+{
+  "id": 47,
+  "name": "Oxandrolona Cooper Pharma",
+  "category": "Ganho de Massa",
+  "price": 320.00,
+  "old": null,
+  "tag": null,
+  "desc": "Oxandrolona 10mg - 100 comprimidos. Produto Cooper Pharma. Uso oral diário.",
+  "code": "OXA-CP",
+  "img": "47.jpg"
+},
+{
+  "id": 48,
+  "name": "Hemogenin Cooper Pharma",
+  "category": "Ganho de Massa",
+  "price": 360.00,
+  "old": null,
+  "tag": null,
+  "desc": "Hemogenin 50mg - 50 comprimidos. Oximetolona de alta confiabilidade. Produto Cooper Pharma. Uso oral diário.",
+  "code": "HEM-CP",
+  "img": "48.jpg"
+},
+{
+  "id": 49,
+  "name": "Stanozolol (oral) Cooper Pharma",
+  "category": "Ganho de Massa",
+  "price": 210.00,
+  "old": null,
+  "tag": null,
+  "desc": "Stanozolol 10mg - 100 comprimidos. Stanozolol oral de alta confiabilidade. Produto Cooper Pharma. Uso oral diário.",
+  "code": "STO-CP",
+  "img": "49.jpg"
+},
+{
+  "id": 50,
+  "name": "Clembuterol Cooper Pharma",
+  "category": "Emagrecimento",
+  "price": 185.00,
+  "old": null,
+  "tag": null,
+  "desc": "Clembuterol 40mcg - 100 comprimidos. Termogênico de alta confiabilidade. Produto Cooper Pharma. Uso oral diário.",
+  "code": "CLE-CP",
+  "img": "50.jpg"
+},
+{
+  "id": 51,
+  "name": "Clomid Cooper Pharma",
+  "category": "Ganho de Massa",
+  "price": 210.00,
+  "old": null,
+  "tag": null,
+  "desc": "Clomid 50mg - 50 comprimidos. Citrato de Clomifeno de alta confiabilidade para PCT. Produto Cooper Pharma. Uso oral.",
+  "code": "CLO-CP",
+  "img": "51.jpg"
+},
+{
+  "id": 52,
+  "name": "Dianabol Cooper Pharma",
+  "category": "Ganho de Massa",
+  "price": 210.00,
+  "old": null,
+  "tag": null,
+  "desc": "Dianabol 10mg - 100 comprimidos. Metandrostenolona de alta confiabilidade. Produto Cooper Pharma. Uso oral diário.",
+  "code": "DIA-CP",
+  "img": "52.jpg"
+},
+{
+  "id": 53,
+  "name": "Proviron Cooper Pharma",
+  "category": "Ganho de Massa",
+  "price": 360.00,
+  "old": null,
+  "tag": null,
+  "desc": "Proviron 25mg - 50 comprimidos. Mesterolona de alta confiabilidade. Produto Cooper Pharma. Uso oral diário.",
+  "code": "PRO-CP",
+  "img": "53.jpg"
+},
+{
+  "id": 54,
+  "name": "Turinabol Cooper Pharma",
+  "category": "Ganho de Massa",
+  "price": 320.00,
+  "old": null,
+  "tag": null,
+  "desc": "Turinabol 10mg - 50 comprimidos. Turinabol de alta confiabilidade. Produto Cooper Pharma. Uso oral diário.",
+  "code": "TUR-CP",
+  "img": "54.jpg"
+},
+{
+  "id": 55,
+  "name": "Cipionato de Testosterona Cooper Pharma",
+  "category": "Ganho de Massa",
+  "price": 360.00,
+  "old": null,
+  "tag": null,
+  "desc": "Cipionato de Testosterona 200mg/mL - 10mL. Éster de longa duração de alta confiabilidade. Produto Cooper Pharma. Administração intramuscular semanal.",
+  "code": "CT-CP",
+  "img": "55.jpg"
+},
+{
+  "id": 56,
+  "name": "Durateston Cooper Pharma",
+  "category": "Ganho de Massa",
+  "price": 390.00,
+  "old": null,
+  "tag": null,
+  "desc": "Durateston 250mg/mL - 10mL. Blend de testosteronas de alta confiabilidade. Produto Cooper Pharma. Administração intramuscular.",
+  "code": "DUR-CP",
+  "img": "56.jpg"
+},
+{
+  "id": 57,
+  "name": "Propionato de Testosterona Cooper Pharma",
+  "category": "Ganho de Massa",
+  "price": 335.00,
+  "old": null,
+  "tag": null,
+  "desc": "Propionato de Testosterona 100mg/mL - 10mL. Alta confiabilidade. Produto Cooper Pharma. Administração intramuscular em dias alternados.",
+  "code": "PT-CP",
+  "img": "57.jpg"
+},
+{
+  "id": 58,
+  "name": "Boldenona Cooper Pharma",
+  "category": "Ganho de Massa",
+  "price": 480.00,
+  "old": null,
+  "tag": null,
+  "desc": "Boldenona 250mg/mL - 10mL. Boldenona Undecilenato de alta confiabilidade. Produto Cooper Pharma. Administração intramuscular semanal.",
+  "code": "BOL-CP",
+  "img": "58.jpg"
+},
+{
+  "id": 59,
+  "name": "Deca Cooper Pharma",
+  "category": "Ganho de Massa",
+  "price": 460.00,
+  "old": null,
+  "tag": null,
+  "desc": "Deca 200mg/mL - 10mL. Decanoato de Nandrolona de alta confiabilidade. Produto Cooper Pharma. Administração intramuscular semanal.",
+  "code": "DEC-CP",
+  "img": "59.jpg"
+},
+{
+  "id": 60,
+  "name": "Masteron Cooper Pharma",
+  "category": "Ganho de Massa",
+  "price": 610.00,
+  "old": null,
+  "tag": null,
+  "desc": "Masteron Propionato 100mg/mL - 10mL. Drostanolona Propionato. Produto Cooper Pharma. Administração intramuscular em dias alternados.",
+  "code": "MAS-CP",
+  "img": "60.jpg"
+},
+{
+  "id": 61,
+  "name": "NPP Cooper Pharma",
+  "category": "Ganho de Massa",
+  "price": 460.00,
+  "old": null,
+  "tag": null,
+  "desc": "NPP 100mg/mL - 10mL. Fenilpropionato de Nandrolona. Produto Cooper Pharma. Administração intramuscular em dias alternados.",
+  "code": "NPP-CP",
+  "img": "61.jpg"
+},
+{
+  "id": 62,
+  "name": "Primobolan Cooper Pharma",
+  "category": "Ganho de Massa",
+  "price": 1570.00,
+  "old": null,
+  "tag": null,
+  "desc": "Primobolan 100mg/mL - 10mL. Metenolona Enantato de alta confiabilidade. Produto Cooper Pharma. Administração intramuscular semanal.",
+  "code": "PRI-CP",
+  "img": "62.jpg"
+},
+{
+  "id": 63,
+  "name": "Primobolan Oral Cooper Pharma",
+  "category": "Ganho de Massa",
+  "price": 870.00,
+  "old": null,
+  "tag": null,
+  "desc": "Primobolan Oral 25mg - 60 comprimidos. Metenolona Acetato oral para definição. Produto Cooper Pharma. Uso oral 
