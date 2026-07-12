@@ -1,0 +1,1959 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Axionpharma | online</title>
+  <style>
+    :root {
+      --ink: #17212f;
+      --muted: #627087;
+      --line: #dce3ec;
+      --panel: #ffffff;
+      --soft: #f0f7fa;
+      --brand: #087f8c;
+      --brand-dark: #075b67;
+      --green: #1c9b63;
+      --red: #d93b45;
+      --gold: #f4b740;
+      --blue: #2d7dd2;
+      --shadow: 0 14px 34px rgba(23, 33, 47, .10);
+      --radius: 8px;
+      --bg-body: #e8f4f8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg-body);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button, input { font: inherit; }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 100;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #25d366;
+      color: #fff;
+      box-shadow: 0 6px 24px rgba(37, 211, 102, .45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      transition: transform .2s ease, box-shadow .2s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+      box-shadow: 0 8px 32px rgba(37, 211, 102, .6);
+    }
+
+    .whatsapp-float svg {
+      width: 36px;
+      height: 36px;
+      fill: #fff;
+    }
+
+    .wrap {
+      width: min(1180px, calc(100% - 28px));
+      margin: 0 auto;
+    }
+
+    .header-main,
+    .section-head,
+    .footer-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, .96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+    }
+
+    .header-main {
+      min-height: 100px;
+      padding: 10px 0;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 160px;
+      flex: 1;
+    }
+
+    .brand-mark {
+      width: 80px;
+      height: 80px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--brand), var(--green));
+      box-shadow: 0 8px 18px rgba(8, 127, 140, .22);
+      flex-shrink: 0;
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 40px;
+      letter-spacing: -2px;
+      line-height: 1;
+    }
+
+    .brand span {
+      display: block;
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 2px;
+    }
+
+    .search {
+      flex: 1;
+      display: flex;
+      min-width: 180px;
+      max-width: 460px;
+      border: 1px solid #cbd7e4;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .search input {
+      width: 100%;
+      border: 0;
+      outline: 0;
+      padding: 12px 14px;
+      font-size: 16px;
+      color: var(--ink);
+    }
+
+    .search button,
+    .cart-button,
+    .qty-btn,
+    .add-btn,
+    .filter-btn {
+      border: 0;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
+    }
+
+    .search button {
+      width: 50px;
+      border-radius: 0;
+      background: var(--brand);
+      color: #fff;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .cart-button {
+      min-width: 140px;
+      padding: 12px 16px;
+      background: #eff7f8;
+      color: var(--brand-dark);
+      border: 1px solid #b8dce0;
+      font-weight: 700;
+      font-size: 15px;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .cart-button .count {
+      display: inline-grid;
+      place-items: center;
+      min-width: 26px;
+      height: 26px;
+      margin-left: 6px;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--red);
+      font-size: 13px;
+    }
+
+    .banner-top-text {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0 8px 0;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .banner-top-text .info-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #fff;
+      padding: 10px 20px;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      border: 1px solid var(--line);
+      flex: 1;
+      min-width: 200px;
+      cursor: pointer;
+      transition: all .2s ease;
+    }
+
+    .banner-top-text .info-box:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+
+    .banner-top-text .info-box .icon {
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+
+    .banner-top-text .info-box .text {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .banner-top-text .info-box .text small {
+      display: block;
+      font-weight: 400;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .banner-top-text .info-box.emagrecimento {
+      border-left: 4px solid #e67e22;
+    }
+
+    .banner-top-text .info-box.massa {
+      border-left: 4px solid #2d7dd2;
+    }
+
+    .banner-grande {
+      display: block;
+      width: 100%;
+      margin: 8px 0 16px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform .3s ease, box-shadow .3s ease;
+      box-shadow: 0 4px 20px rgba(0,0,0,.1);
+      background: #f0f5f8;
+    }
+
+    .banner-grande:hover {
+      transform: scale(1.01);
+      box-shadow: 0 8px 35px rgba(0,0,0,.15);
+    }
+
+    .banner-grande img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      max-height: none;
+    }
+
+    main {
+      padding: 6px 0 30px;
+    }
+
+    section {
+      margin-top: 20px;
+      scroll-margin-top: 120px;
+    }
+
+    .section-head {
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+      border-bottom: 2px solid var(--brand);
+      padding-bottom: 8px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: 0;
+      color: var(--brand-dark);
+    }
+
+    .section-head p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .filter-badge {
+      display: inline-block;
+      background: var(--brand);
+      color: #fff;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-left: 10px;
+    }
+
+    .filter-badge .clear-filter {
+      margin-left: 6px;
+      cursor: pointer;
+      font-weight: 900;
+    }
+
+    .filter-badge .clear-filter:hover {
+      color: #ff6b6b;
+    }
+
+    .catalog-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .product-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 330px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(23, 33, 47, .05);
+      position: relative;
+    }
+
+    .product-id {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 999px;
+      z-index: 15;
+      font-family: monospace;
+    }
+
+    .product-art {
+      position: relative;
+      width: 100%;
+      height: 180px;
+      min-height: 180px;
+      max-height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f9fbfd;
+      border-bottom: 1px solid #edf2f7;
+      overflow: hidden;
+      padding: 8px;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+
+    .product-art img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .product-art img:hover {
+      transform: scale(1.05);
+    }
+
+    .image-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 20px;
+    }
+
+    .image-modal.active {
+      display: flex;
+    }
+
+    .image-modal img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      animation: zoomIn 0.3s ease;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .image-modal .close-modal-img {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: #fff;
+      cursor: pointer;
+      background: none;
+      border: none;
+      transition: transform 0.3s;
+    }
+
+    .image-modal .close-modal-img:hover {
+      transform: rotate(90deg);
+    }
+
+    .badge {
+      position: absolute;
+      left: 8px;
+      top: 8px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--red);
+      font-size: 10px;
+      font-weight: 800;
+      z-index: 10;
+    }
+
+    .edit-buttons {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      display: flex;
+      gap: 4px;
+      z-index: 25;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .product-card:hover .edit-buttons {
+      opacity: 1;
+    }
+
+    .edit-btn {
+      background: rgba(0,0,0,0.8);
+      color: #fff;
+      border: 2px solid #0f0;
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-size: 11px;
+      cursor: pointer;
+      font-weight: 700;
+      display: none;
+    }
+
+    .edit-btn:hover {
+      background: var(--brand);
+    }
+
+    .edit-btn.price-btn { border-color: #0f0; }
+    .edit-btn.name-btn { border-color: #ff0; color: #ff0; }
+    .edit-btn.desc-btn { border-color: #0ff; color: #0ff; }
+    .edit-btn.img-btn { border-color: #f0f; color: #f0f; }
+
+    .product-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 10px 12px 12px;
+      background: #fff;
+      position: relative;
+      z-index: 1;
+      min-height: 160px;
+    }
+
+    .product-category {
+      color: var(--brand-dark);
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .product-card h3 {
+      margin: 4px 0 4px;
+      min-height: 32px;
+      font-size: 14px;
+      line-height: 1.2;
+      font-weight: 700;
+      cursor: default;
+    }
+
+    .product-card h3.editable {
+      cursor: pointer;
+      border-bottom: 1px dashed transparent;
+      transition: border-color 0.3s;
+    }
+
+    .product-card h3.editable:hover {
+      border-color: var(--brand);
+    }
+
+    .desc {
+      min-height: 28px;
+      margin: 0 0 6px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.3;
+      cursor: default;
+    }
+
+    .desc.editable {
+      cursor: pointer;
+      border-bottom: 1px dashed transparent;
+      transition: border-color 0.3s;
+    }
+
+    .desc.editable:hover {
+      border-color: var(--brand);
+    }
+
+    .price-row {
+      margin-top: auto;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .old-price {
+      color: #8b98a8;
+      text-decoration: line-through;
+      font-size: 12px;
+    }
+
+    .price {
+      color: var(--green);
+      font-size: 20px;
+      font-weight: 900;
+      cursor: pointer;
+      user-select: none;
+      padding: 2px 4px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    .price.editable:hover {
+      background: rgba(8, 127, 140, 0.1);
+    }
+
+    .add-btn {
+      width: 100%;
+      margin-top: 8px;
+      padding: 8px;
+      background: var(--brand);
+      color: #fff;
+      font-weight: 900;
+      font-size: 13px;
+      border: 0;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: transform .15s ease, background .15s ease;
+    }
+
+    .add-btn:hover {
+      transform: translateY(-1px);
+      background: var(--brand-dark);
+    }
+
+    .filter-reset-btn {
+      display: none;
+      padding: 8px 20px;
+      background: var(--brand);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 13px;
+      transition: background 0.2s;
+      margin-left: 10px;
+    }
+
+    .filter-reset-btn:hover {
+      background: var(--brand-dark);
+    }
+
+    .filter-reset-btn.visible {
+      display: inline-block;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-box {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 30px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      position: relative;
+    }
+
+    .modal-box h3 {
+      margin: 0 0 10px;
+    }
+
+    .modal-box .close-modal {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      font-size: 24px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: var(--muted);
+    }
+
+    .modal-box .close-modal:hover {
+      color: var(--red);
+    }
+
+    .modal-box label {
+      display: block;
+      font-weight: 700;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+
+    .modal-box input,
+    .modal-box textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      font-size: 16px;
+      margin-top: 4px;
+      font-family: inherit;
+    }
+
+    .modal-box textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+
+    .modal-box .modal-buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .modal-box .modal-buttons button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: var(--radius);
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .modal-box .btn-save {
+      background: var(--brand);
+      color: #fff;
+    }
+
+    .modal-box .btn-save:hover {
+      background: var(--brand-dark);
+    }
+
+    .modal-box .btn-cancel {
+      background: #eef2f6;
+      color: var(--ink);
+    }
+
+    .modal-box .btn-cancel:hover {
+      background: #dce3ec;
+    }
+
+    .drawer {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      pointer-events: none;
+    }
+
+    .drawer.open { pointer-events: auto; }
+
+    .shade {
+      position: absolute;
+      inset: 0;
+      background: rgba(23, 33, 47, .44);
+      opacity: 0;
+      transition: opacity .18s ease;
+    }
+
+    .drawer.open .shade { opacity: 1; }
+
+    .cart-panel {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: min(400px, 100%);
+      padding: 16px;
+      background: #fff;
+      transform: translateX(102%);
+      transition: transform .2s ease;
+      display: flex;
+      flex-direction: column;
+      box-shadow: -20px 0 40px rgba(23, 33, 47, .18);
+    }
+
+    .drawer.open .cart-panel { transform: translateX(0); }
+
+    .cart-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cart-head h2 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .close-cart {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: #fff;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    .cart-items {
+      flex: 1;
+      overflow: auto;
+      padding: 10px 0;
+    }
+
+    .empty {
+      padding: 30px 0;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .cart-line {
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid #eef2f6;
+    }
+
+    .cart-thumb {
+      width: 46px;
+      height: 46px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--brand);
+      font-weight: 800;
+      font-size: 12px;
+      overflow: hidden;
+    }
+
+    .cart-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cart-line strong {
+      display: block;
+      font-size: 13px;
+      line-height: 1.3;
+    }
+
+    .cart-line span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .qty-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .qty-controls {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .qty-btn {
+      width: 28px;
+      height: 28px;
+      background: #eef5f6;
+      color: var(--brand-dark);
+      font-weight: 900;
+      font-size: 14px;
+      border: 0;
+      border-radius: var(--radius);
+      cursor: pointer;
+    }
+
+    .cart-total {
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+    }
+
+    .total-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      font-size: 16px;
+      font-weight: 900;
+    }
+
+    .checkout {
+      width: 100%;
+      padding: 12px;
+      border: 0;
+      border-radius: var(--radius);
+      background: var(--green);
+      color: #fff;
+      font-weight: 900;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .coupon-section {
+      margin: 8px 0 12px;
+      padding: 10px;
+      background: #f5f8fb;
+      border-radius: 6px;
+      border: 1px dashed var(--brand);
+    }
+
+    .coupon-section .coupon-input-group {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .coupon-section .coupon-input-group input {
+      flex: 1;
+      min-width: 120px;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      font-size: 13px;
+      outline: none;
+    }
+
+    .coupon-section .coupon-input-group input:focus {
+      border-color: var(--brand);
+    }
+
+    .coupon-section .coupon-input-group button {
+      padding: 8px 16px;
+      background: var(--brand);
+      color: #fff;
+      border: 0;
+      border-radius: 6px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 13px;
+      transition: background 0.2s;
+    }
+
+    .coupon-section .coupon-input-group button:hover {
+      background: var(--brand-dark);
+    }
+
+    .coupon-section .coupon-message {
+      margin-top: 6px;
+      font-size: 12px;
+      color: var(--muted);
+      min-height: 20px;
+    }
+
+    .coupon-section .coupon-message.success {
+      color: var(--green);
+    }
+
+    .coupon-section .coupon-message.error {
+      color: var(--red);
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 24px;
+      z-index: 70;
+      transform: translate(-50%, 110px);
+      background: #11333b;
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 10px 16px;
+      box-shadow: var(--shadow);
+      transition: transform .2s ease;
+      font-weight: 700;
+      font-size: 14px;
+      text-align: center;
+      max-width: 90%;
+    }
+
+    .toast.show {
+      transform: translate(-50%, 0);
+    }
+
+    .coupon-badge {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background: var(--gold);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 2px 8px;
+      font-size: 10px;
+      font-weight: 900;
+      border: 2px solid #fff;
+      display: none;
+    }
+
+    .coupon-badge.visible {
+      display: block;
+    }
+
+    footer {
+      background: #122730;
+      color: #d9eef3;
+      padding: 24px 0;
+    }
+
+    .footer-grid {
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    footer h3 {
+      margin: 0 0 8px;
+      color: #fff;
+      font-size: 15px;
+    }
+
+    footer p, footer a {
+      display: block;
+      margin: 4px 0;
+      color: #c0d5db;
+      font-size: 13px;
+    }
+
+    @media (max-width: 1024px) {
+      .product-grid { grid-template-columns: repeat(3, 1fr); }
+      .product-art { height: 160px; min-height: 160px; max-height: 160px; }
+    }
+
+    @media (max-width: 768px) {
+      .header-main { flex-wrap: wrap; padding: 10px 0; gap: 10px; }
+      .brand { min-width: 0; flex: 1; }
+      .brand strong { font-size: 28px; }
+      .brand-mark { width: 60px; height: 60px; }
+      .brand span { font-size: 12px; }
+      .search { order: 3; max-width: none; flex-basis: 100%; min-width: 0; }
+      .cart-button { min-width: auto; padding: 10px 14px; font-size: 13px; }
+      .banner-top-text { flex-direction: column; gap: 10px; padding: 12px 0 6px; }
+      .banner-top-text .info-box { min-width: 0; width: 100%; padding: 8px 14px; }
+      .banner-top-text .info-box .text { font-size: 13px; }
+      .product-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .product-art { height: 140px; min-height: 140px; max-height: 140px; }
+      .product-card { min-height: 280px; }
+      .product-card h3 { font-size: 13px; min-height: 28px; }
+      .price { font-size: 17px; }
+      .add-btn { font-size: 12px; padding: 7px; }
+      .footer-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .whatsapp-float { width: 56px; height: 56px; font-size: 30px; bottom: 20px; right: 20px; }
+      .whatsapp-float svg { width: 30px; height: 30px; }
+    }
+
+    @media (max-width: 480px) {
+      .brand strong { font-size: 22px; }
+      .brand-mark { width: 50px; height: 50px; }
+      .brand span { font-size: 11px; }
+      .cart-button { padding: 8px 12px; font-size: 12px; min-width: auto; }
+      .cart-button .count { min-width: 22px; height: 22px; font-size: 11px; }
+      .search input { padding: 10px 12px; font-size: 14px; }
+      .search button { width: 44px; font-size: 18px; }
+      .product-grid { grid-template-columns: 1fr 1fr !important; gap: 6px !important; }
+      .product-card { min-height: 220px !important; border-radius: 6px; }
+      .product-art { height: 110px !important; min-height: 110px !important; max-height: 110px !important; padding: 4px; }
+      .product-card h3 { font-size: 11px !important; min-height: 20px !important; margin: 2px 0 2px !important; line-height: 1.2; }
+      .desc { font-size: 10px !important; min-height: 18px !important; margin-bottom: 3px !important; display: none; }
+      .price { font-size: 14px !important; }
+      .old-price { font-size: 10px !important; }
+      .add-btn { font-size: 10px !important; padding: 5px !important; margin-top: 4px !important; border-radius: 4px; }
+      .badge { font-size: 8px !important; padding: 2px 5px !important; left: 4px !important; top: 4px !important; }
+      .product-body { padding: 5px 6px 8px !important; min-height: 100px !important; }
+      .product-category { font-size: 8px !important; }
+      .footer-grid { grid-template-columns: 1fr; gap: 10px; }
+      footer h3 { font-size: 13px; }
+      footer p, footer a { font-size: 11px; }
+      .cart-panel { width: 100%; padding: 10px; }
+      .cart-head h2 { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="https://wa.me/5511920714068" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <header class="header">
+    <div class="wrap header-main">
+      <a class="brand" href="#">
+        <span class="brand-mark">
+          <img src="logoaxion.jpg" alt="Axionpharma">
+        </span>
+        <span>
+          <strong>Axionpharma</strong>
+          <span>cuidado perto de voce</span>
+        </span>
+      </a>
+
+      <form class="search" id="searchForm">
+        <input id="searchInput" type="search" placeholder="Buscar produtos...">
+        <button type="submit" aria-label="Buscar">⌕</button>
+      </form>
+
+      <button class="cart-button" id="openCart" type="button">
+        Carrinho <span class="count" id="cartCount">0</span>
+        <span class="coupon-badge" id="couponBadge"></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="wrap banner-top-text">
+    <div class="info-box emagrecimento" onclick="filterByCategory('Emagrecimento')">
+      <span class="icon">💊</span>
+      <span class="text">Emagrecimento<small>📦 Entrega para todo Brasil</small></span>
+    </div>
+    <div class="info-box massa" onclick="filterByCategory('Ganho de Massa')">
+      <span class="icon">💪</span>
+      <span class="text">Ganho de Massa<small>📦 Entrega para todo Brasil</small></span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="banner-grande" onclick="resetAllFilters();">
+      <img src="root/destaque1.jpg" alt="Promoção Axionpharma" loading="lazy" onerror="this.style.display='none'">
+    </div>
+  </div>
+
+  <main class="wrap">
+    
+    <!-- ============================================================ -->
+    <!-- TODOS OS PRODUTOS - APENAS ESTA SEÇÃO É EXIBIDA -->
+    <!-- ============================================================ -->
+    <section id="categoria-todos">
+      <div class="section-head">
+        <div>
+          <h2>📦 Todos os Produtos</h2>
+          <p id="resultText">Carregando produtos...</p>
+        </div>
+        <button class="filter-reset-btn" id="resetFilterBtn" onclick="resetAllFilters()">📦 Todos os Produtos</button>
+      </div>
+      <div class="catalog-layout">
+        <div class="product-grid" id="grid-todos"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL DE IMAGEM -->
+  <div class="image-modal" id="imageModal" onclick="closeImageModal()">
+    <button class="close-modal-img" onclick="closeImageModal()">✕</button>
+    <img id="modalImage" src="" alt="Produto ampliado">
+  </div>
+
+  <!-- MODAL DE EDIÇÃO -->
+  <div class="modal-overlay" id="editModal">
+    <div class="modal-box">
+      <button class="close-modal" id="closeModal">&times;</button>
+      <h3 id="editModalTitle">✏️ Editar Produto</h3>
+      <p id="editProductId" style="display:none;"></p>
+      
+      <label for="editNameInput">Nome do produto:</label>
+      <input type="text" id="editNameInput" placeholder="Digite o novo nome">
+      
+      <label for="editPriceInput">Preço (R$):</label>
+      <input type="number" id="editPriceInput" step="0.01" min="0" placeholder="0.00">
+      
+      <label for="editDescInput">Descrição:</label>
+      <textarea id="editDescInput" placeholder="Digite a nova descrição"></textarea>
+      
+      <label for="editImgInput">Nome da imagem:</label>
+      <input type="text" id="editImgInput" placeholder="Ex: produto.jpg">
+      
+      <div class="modal-buttons">
+        <button class="btn-cancel" id="cancelEdit">Cancelar</button>
+        <button class="btn-save" id="saveEdit">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <h3>Axionpharma</h3>
+        <p>Farmácia online com catálogo editável, pedidos por carrinho e atendimento local.</p>
+      </div>
+      <div>
+        <h3>Atendimento</h3>
+        <a href="https://wa.me/5511920714068" target="_blank">WhatsApp: (11)92071-4068</a>
+      </div>
+      <div>
+        <h3>Institucional</h3>
+        <a href="#">Sobre a loja</a>
+        <a href="#">Política de entrega</a>
+        <a href="#">Trocas e devoluções</a>
+      </div>
+      <div>
+        <h3>Horários</h3>
+        <p>Segunda a sábado: 8h às 20h</p>
+        <p>Domingo: 9h às 14h</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CARRINHO -->
+  <div class="drawer" id="cartDrawer" aria-hidden="true">
+    <div class="shade" id="closeShade"></div>
+    <aside class="cart-panel" aria-label="Carrinho de compras">
+      <div class="cart-head">
+        <h2>Seu carrinho</h2>
+        <button class="close-cart" id="closeCart" type="button" aria-label="Fechar">×</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="coupon-section">
+        <div class="coupon-input-group">
+          <input type="text" id="couponInput" placeholder="Digite seu cupom" autocomplete="off">
+          <button id="applyCouponBtn" type="button">Aplicar</button>
+        </div>
+        <div class="coupon-message" id="couponMessage"></div>
+      </div>
+      <div class="cart-total">
+        <div class="total-row">
+          <span>Total</span>
+          <span id="cartTotal">R$ 0,00</span>
+        </div>
+        <button class="checkout" type="button" id="checkoutBtn">Enviar pedido pelo WhatsApp</button>
+      </div>
+    </aside>
+  </div>
+
+  <div class="toast" id="toast">Produto adicionado ao carrinho</div>
+
+  <script src="catalogo-produtos.js"></script>
+  <script>
+    // ============================================================
+    // DADOS DOS PRODUTOS
+    // ============================================================
+    const products = window.AXION_PRODUCTS || [];
+
+    function getProductImage(product) {
+      if (product.img) return product.img;
+      return `data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23f0f5f8%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 font-size=%2214%22 text-anchor=%22middle%22 dominant-baseline=%22central%22 fill=%22%23627087%22 font-family=%22Arial%22%3E${encodeURIComponent(product.name)}%3C/text%3E%3C/svg%3E`;
+    }
+
+    // ============================================================
+    // MODAL DE IMAGEM
+    // ============================================================
+    function openImageModal(imageSrc) {
+      const modal = document.getElementById('imageModal');
+      const img = document.getElementById('modalImage');
+      if (imageSrc && imageSrc !== '') {
+        img.src = imageSrc;
+        modal.classList.add('active');
+      } else {
+        showToast('❌ Imagem não disponível');
+      }
+    }
+
+    function closeImageModal() {
+      document.getElementById('imageModal').classList.remove('active');
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeImageModal();
+        closeEditModal();
+      }
+    });
+
+    // ============================================================
+    // 🔐 MODO DESENVOLVEDOR - CLIQUE 7x NO PREÇO
+    // ============================================================
+    const DEV_PASSWORD = 'axion123';
+    let devMode = false;
+    let devClickCount = 0;
+    let devClickTimer = null;
+    let editingProductId = null;
+    let editingField = null;
+
+    function toggleDevMode() {
+      if (devMode) {
+        devMode = false;
+        document.querySelectorAll('.edit-btn').forEach(btn => {
+          btn.style.display = 'none';
+        });
+        showToast('🔒 Modo dev desativado');
+      } else {
+        const senha = prompt('🔐 Digite a senha do desenvolvedor:');
+        if (senha === DEV_PASSWORD) {
+          devMode = true;
+          document.querySelectorAll('.edit-btn').forEach(btn => {
+            btn.style.display = 'block';
+          });
+          document.querySelectorAll('.price').forEach(el => {
+            el.classList.add('editable');
+          });
+          document.querySelectorAll('.product-card h3').forEach(el => {
+            el.classList.add('editable');
+          });
+          document.querySelectorAll('.desc').forEach(el => {
+            el.classList.add('editable');
+          });
+          showToast('🔓 Modo dev ativado! Clique no nome, preço, descrição ou imagem para editar');
+        } else if (senha !== null) {
+          showToast('❌ Senha incorreta!');
+        }
+      }
+    }
+
+    // DETECTAR CLIQUE SECRETO (7x no preço)
+    document.addEventListener('click', function(e) {
+      const priceElement = e.target.closest('.price');
+      if (priceElement) {
+        devClickCount++;
+        clearTimeout(devClickTimer);
+        devClickTimer = setTimeout(() => { 
+          devClickCount = 0; 
+        }, 3000);
+        if (devClickCount >= 7) {
+          devClickCount = 0;
+          toggleDevMode();
+        }
+      }
+    });
+
+    // ============================================================
+    // EDIÇÃO DE PRODUTO - CLIQUE NO NOME, PREÇO, DESCRIÇÃO OU IMAGEM
+    // ============================================================
+    document.addEventListener('click', function(e) {
+      if (!devMode) return;
+      
+      const nameEl = e.target.closest('.product-card h3.editable');
+      const priceEl = e.target.closest('.price.editable');
+      const descEl = e.target.closest('.desc.editable');
+      const imgEl = e.target.closest('.product-art img');
+      
+      if (nameEl) {
+        const card = nameEl.closest('.product-card');
+        const id = card.querySelector('[data-product-id]')?.dataset.productId;
+        if (id) {
+          editingProductId = Number(id);
+          editingField = 'name';
+          openEditModal(editingProductId, 'name');
+        }
+        return;
+      }
+      
+      if (priceEl) {
+        const card = priceEl.closest('.product-card');
+        const id = card.querySelector('[data-product-id]')?.dataset.productId;
+        if (id) {
+          editingProductId = Number(id);
+          editingField = 'price';
+          openEditModal(editingProductId, 'price');
+        }
+        return;
+      }
+      
+      if (descEl) {
+        const card = descEl.closest('.product-card');
+        const id = card.querySelector('[data-product-id]')?.dataset.productId;
+        if (id) {
+          editingProductId = Number(id);
+          editingField = 'desc';
+          openEditModal(editingProductId, 'desc');
+        }
+        return;
+      }
+      
+      if (imgEl) {
+        const card = imgEl.closest('.product-card');
+        const id = card.querySelector('[data-product-id]')?.dataset.productId;
+        if (id) {
+          editingProductId = Number(id);
+          editingField = 'img';
+          openEditModal(editingProductId, 'img');
+        }
+        return;
+      }
+    });
+
+    // ============================================================
+    // CUPOM
+    // ============================================================
+    const COUPON_CONFIG = {
+      'BRUTUSBR': { discount: 0.10, type: 'percentual', description: 'Cupom BrutusBR - 10% OFF' }
+    };
+
+    let currentCoupon = null;
+    let currentDiscount = 0;
+
+    function applyCoupon(code) {
+      const input = document.getElementById('couponInput');
+      const messageEl = document.getElementById('couponMessage');
+      
+      if (!code) {
+        input.value = '';
+        currentCoupon = null;
+        currentDiscount = 0;
+        messageEl.textContent = '';
+        messageEl.className = 'coupon-message';
+        renderCart();
+        return true;
+      }
+      
+      const normalizedCode = code.trim().toUpperCase();
+      const couponData = COUPON_CONFIG[normalizedCode];
+      
+      if (!couponData) {
+        messageEl.textContent = '❌ Cupom inválido ou expirado';
+        messageEl.className = 'coupon-message error';
+        currentCoupon = null;
+        currentDiscount = 0;
+        renderCart();
+        return false;
+      }
+      
+      const entries = Object.entries(state.cart);
+      const subtotal = entries.reduce((sum, [id, qty]) => {
+        const product = products.find(item => item.id === Number(id));
+        return sum + (product ? product.price * qty : 0);
+      }, 0);
+      
+      let discount = 0;
+      if (couponData.type === 'percentual') {
+        discount = subtotal * couponData.discount;
+      } else {
+        discount = couponData.discount;
+      }
+      discount = Math.min(discount, subtotal);
+      
+      currentCoupon = normalizedCode;
+      currentDiscount = discount;
+      
+      messageEl.innerHTML = `
+        ✅ Cupom <strong>${normalizedCode}</strong> aplicado! 
+        Desconto: ${couponData.type === 'percentual' ? (couponData.discount * 100) + '%' : 'R$ ' + couponData.discount.toFixed(2)}
+        ${couponData.description ? '<br><small>' + couponData.description + '</small>' : ''}
+      `;
+      messageEl.className = 'coupon-message success';
+      renderCart();
+      return true;
+    }
+
+    function registerCouponUsage(couponCode, cartTotal, discountAmount) {
+      const logEntry = {
+        timestamp: new Date().toISOString(),
+        coupon: couponCode.toUpperCase(),
+        cartTotal: cartTotal,
+        discount: discountAmount,
+        finalTotal: cartTotal - discountAmount
+      };
+      const logs = JSON.parse(localStorage.getItem('coupon_usage_log') || '[]');
+      logs.push(logEntry);
+      localStorage.setItem('coupon_usage_log', JSON.stringify(logs));
+    }
+
+    function getCouponStats() {
+      const logs = JSON.parse(localStorage.getItem('coupon_usage_log') || '[]');
+      const stats = {};
+      logs.forEach(log => {
+        const coupon = log.coupon;
+        if (!stats[coupon]) stats[coupon] = { uses: 0, totalDiscount: 0 };
+        stats[coupon].uses++;
+        stats[coupon].totalDiscount += log.discount;
+      });
+      return stats;
+    }
+
+    // ============================================================
+    // FILTROS
+    // ============================================================
+    let currentFilter = 'Todos';
+
+    function filterByCategory(categoria) {
+      document.getElementById('searchInput').value = '';
+      state.query = '';
+      state.filter = categoria;
+      currentFilter = categoria;
+      
+      document.getElementById('resetFilterBtn').classList.add('visible');
+      
+      renderAllGrids();
+      const count = getFilteredProducts().length;
+      showToast(`🔍 ${count} produtos encontrados`);
+    }
+
+    function resetAllFilters() {
+      document.getElementById('searchInput').value = '';
+      state.query = '';
+      state.filter = 'Todos';
+      currentFilter = 'Todos';
+      
+      document.getElementById('resetFilterBtn').classList.remove('visible');
+      
+      renderAllGrids();
+      showToast('✅ Todos os produtos');
+    }
+
+    function getFilteredProducts() {
+      let filtered = products.filter(product => {
+        const matchesCategory = state.filter === "Todos" || product.category === state.filter;
+        const searchText = `${product.name} ${product.category} ${product.desc || ''}`.toLowerCase();
+        const matchesQuery = !state.query || searchText.includes(state.query.toLowerCase());
+        return matchesCategory && matchesQuery;
+      });
+      return filtered;
+    }
+
+    // ============================================================
+    // ESTADO
+    // ============================================================
+    const state = {
+      filter: "Todos",
+      query: "",
+      cart: {}
+    };
+
+    const money = value => value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+    const toast = document.getElementById("toast");
+
+    function renderGrid(gridId, mainCategory) {
+      const grid = document.getElementById(gridId);
+      if (!grid) return;
+      
+      let list = [...products];
+      
+      if (state.filter !== "Todos") {
+        list = list.filter(p => p.category === state.filter);
+      }
+      
+      if (state.query) {
+        list = list.filter(p => {
+          const searchText = `${p.name} ${p.category} ${p.desc || ''}`.toLowerCase();
+          return searchText.includes(state.query.toLowerCase());
+        });
+      }
+      
+      grid.innerHTML = list.map(product => `
+        <article class="product-card" data-id="${product.id}">
+          <span class="product-id">#${product.id}</span>
+          <div class="product-art" onclick="openImageModal('${getProductImage(product)}')">
+            ${product.tag ? `<span class="badge">${product.tag}</span>` : ''}
+            <img 
+              src="${getProductImage(product)}" 
+              alt="${product.name}"
+              loading="lazy"
+              onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23f0f5f8%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 font-size=%2214%22 text-anchor=%22middle%22 dominant-baseline=%22central%22 fill=%22%23627087%22 font-family=%22Arial%22%3E${encodeURIComponent(product.name)}%3C/text%3E%3C/svg%3E'"
+            >
+            <div class="edit-buttons">
+              <button class="edit-btn name-btn" onclick="event.stopPropagation(); openEditFromBtn(${product.id}, 'name')" style="display:${devMode?'block':'none'}">✏️ Nome</button>
+              <button class="edit-btn price-btn" onclick="event.stopPropagation(); openEditFromBtn(${product.id}, 'price')" style="display:${devMode?'block':'none'}">✏️ R$</button>
+              <button class="edit-btn desc-btn" onclick="event.stopPropagation(); openEditFromBtn(${product.id}, 'desc')" style="display:${devMode?'block':'none'}">✏️ Desc</button>
+              <button class="edit-btn img-btn" onclick="event.stopPropagation(); openEditFromBtn(${product.id}, 'img')" style="display:${devMode?'block':'none'}">🖼️ Img</button>
+            </div>
+            <span data-product-id="${product.id}" style="display:none;"></span>
+          </div>
+          <div class="product-body">
+            <span class="product-category">${product.category}</span>
+            <h3 class="${devMode ? 'editable' : ''}">${product.name}</h3>
+            <p class="desc ${devMode ? 'editable' : ''}">${product.desc || ''}</p>
+            <div class="price-row">
+              ${product.old ? `<span class="old-price">${money(product.old)}</span>` : ""}
+              <span class="price ${devMode ? 'editable' : ''}">${money(product.price)}</span>
+            </div>
+            <button class="add-btn" data-add="${product.id}" type="button">Adicionar</button>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function renderAllGrids() {
+      const gridTodos = document.getElementById('grid-todos');
+      let list = [...products];
+      if (state.filter !== "Todos") {
+        list = list.filter(p => p.category === state.filter);
+      }
+      if (state.query) {
+        list = list.filter(p => {
+          const searchText = `${p.name} ${p.category} ${p.desc || ''}`.toLowerCase();
+          return searchText.includes(state.query.toLowerCase());
+        });
+      }
+      
+      document.getElementById('resultText').textContent = `${list.length} produto${list.length === 1 ? "" : "s"} encontrado${list.length === 1 ? "" : "s"}.`;
+      
+      gridTodos.innerHTML = list.map(product => `
+        <article class="product-card" data-id="${product.id}">
+          <span class="product-id">#${product.id}</span>
+          <div class="product-art" onclick="openImageModal('${getProductImage(product)}')">
+            ${product.tag ? `<span class="badge">${product.tag}</span>` : ''}
+            <img 
+              src="${getProductImage(product)}" 
+              alt="${product.name}"
+              loading="lazy"
+              onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23f0f5f8%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 font-size=%2214%22 text-anchor=%22middle%22 dominant-baseline=%22central%22 fill=%22%23627087%22 font-family=%22Arial%22%3E${encodeURIComponent(product.name)}%3C/text%3E%3C/svg%3E'"
+            >
+            <div class="edit-buttons">
+              <button class="edit-btn name-btn" onclick="event.stopPropagation(); openEditFromBtn(${product.id}, 'name')" style="display:${devMode?'block':'none'}">✏️ Nome</button>
+              <button class="edit-btn price-btn" onclick="event.stopPropagation(); openEditFromBtn(${product.id}, 'price')" style="display:${devMode?'block':'none'}">✏️ R$</button>
+              <button class="edit-btn desc-btn" onclick="event.stopPropagation(); openEditFromBtn(${product.id}, 'desc')" style="display:${devMode?'block':'none'}">✏️ Desc</button>
+              <button class="edit-btn img-btn" onclick="event.stopPropagation(); openEditFromBtn(${product.id}, 'img')" style="display:${devMode?'block':'none'}">🖼️ Img</button>
+            </div>
+            <span data-product-id="${product.id}" style="display:none;"></span>
+          </div>
+          <div class="product-body">
+            <span class="product-category">${product.category}</span>
+            <h3 class="${devMode ? 'editable' : ''}">${product.name}</h3>
+            <p class="desc ${devMode ? 'editable' : ''}">${product.desc || ''}</p>
+            <div class="price-row">
+              ${product.old ? `<span class="old-price">${money(product.old)}</span>` : ""}
+              <span class="price ${devMode ? 'editable' : ''}">${money(product.price)}</span>
+            </div>
+            <button class="add-btn" data-add="${product.id}" type="button">Adicionar</button>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    function showToast(msg) {
+      toast.textContent = msg || "Produto adicionado ao carrinho";
+      toast.classList.add("show");
+      window.clearTimeout(showToast.timer);
+      showToast.timer = window.setTimeout(() => toast.classList.remove("show"), 3000);
+    }
+
+    function addToCart(id) {
+      state.cart[id] = (state.cart[id] || 0) + 1;
+      renderCart();
+      showToast('✅ Produto adicionado!');
+    }
+
+    function changeQty(id, amount) {
+      state.cart[id] = (state.cart[id] || 0) + amount;
+      if (state.cart[id] <= 0) delete state.cart[id];
+      renderCart();
+    }
+
+    function renderCart() {
+      const entries = Object.entries(state.cart);
+      const totalQty = entries.reduce((sum, [, qty]) => sum + qty, 0);
+      let subtotal = entries.reduce((sum, [id, qty]) => {
+        const product = products.find(item => item.id === Number(id));
+        return sum + (product ? product.price * qty : 0);
+      }, 0);
+      
+      const discount = currentDiscount || 0;
+      const total = subtotal - discount;
+      
+      document.getElementById('cartCount').textContent = totalQty;
+      
+      let totalHTML = money(total);
+      if (discount > 0) {
+        totalHTML = `
+          <span style="text-decoration: line-through; font-size: 14px; color: var(--muted);">${money(subtotal)}</span>
+          <span style="color: var(--green);">${money(total)}</span>
+          <span style="font-size: 12px; color: var(--red); display: block;">(-${money(discount)} de desconto)</span>
+        `;
+      }
+      document.getElementById('cartTotal').innerHTML = totalHTML;
+
+      const cartItems = document.getElementById('cartItems');
+      if (!entries.length) {
+        cartItems.innerHTML = `<div class="empty">Seu carrinho está vazio.</div>`;
+        return;
+      }
+
+      cartItems.innerHTML = entries.map(([id, qty]) => {
+        const product = products.find(item => item.id === Number(id));
+        if (!product) return '';
+        return `
+          <div class="cart-line">
+            <span class="cart-thumb">
+              <img src="${getProductImage(product)}" alt="${product.name}" onerror="this.style.display='none'">
+            </span>
+            <div>
+              <strong>${product.name}</strong>
+              <span>${money(product.price)} cada</span>
+              <div class="qty-row">
+                <div class="qty-controls">
+                  <button class="qty-btn" data-qty="${product.id}" data-amount="-1" type="button">−</button>
+                  <strong>${qty}</strong>
+                  <button class="qty-btn" data-qty="${product.id}" data-amount="1" type="button">+</button>
+                </div>
+                <strong>${money(product.price * qty)}</strong>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    // ============================================================
+    // SALVAR PRODUTOS EDITADOS
+    // ============================================================
+    function saveProductField(productId, field, value) {
+      const product = products.find(p => p.id === productId);
+      if (!product) return false;
+      
+      if (field === 'name') {
+        product.name = value;
+      } else if (field === 'price') {
+        product.price = parseFloat(value);
+      } else if (field === 'desc') {
+        product.desc = value;
+      } else if (field === 'img') {
+        product.img = value;
+      }
+      
+      const savedProducts = JSON.parse(localStorage.getItem('AXION_PRODUCTS_CUSTOM') || 'null');
+      if (savedProducts) {
+        const saved = savedProducts.find(p => p.id === productId);
+        if (saved) {
+          saved[field] = value;
+        }
+        localStorage.setItem('AXION_PRODUCTS_CUSTOM', JSON.stringify(savedProducts));
+      }
+      
+      renderAllGrids();
+      renderCart();
+      showToast(`✅ ${field} atualizado com sucesso!`);
+      return true;
+    }
+
+    function loadSavedProducts() {
+      const savedProducts = JSON.parse(localStorage.getItem('AXION_PRODUCTS_CUSTOM') || 'null');
+      if (savedProducts && Array.isArray(savedProducts)) {
+        for (let i = 0; i < products.length; i++) {
+          const saved = savedProducts.find(p => p.id === products[i].id);
+          if (saved) {
+            products[i].name = saved.name || products[i].name;
+            products[i].price = saved.price || products[i].price;
+            products[i].desc = saved.desc || products[i].desc;
+            products[i].img = saved.img || products[i].img;
+          }
+        }
+      }
+    }
+
+    // ============================================================
+    // MODAL DE EDIÇÃO
+    // ============================================================
+    function openEditFromBtn(productId, field) {
+      editingProductId = productId;
+      editingField = field;
+      openEditModal(productId, field);
+    }
+
+    function openEditModal(productId, field) {
+      const product = products.find(p => p.id === productId);
+      if (!product) return;
+      
+      editingProductId = productId;
+      editingField = field;
+      
+      const fieldLabels = {
+        'name': 'Nome',
+        'price': 'Preço',
+        'desc': 'Descrição',
+        'img': 'Imagem'
+      };
+      
+      document.getElementById('editProductId').textContent = productId;
+      document.getElementById('editModalTitle').textContent = `✏️ Editar ${fieldLabels[field] || field}`;
+      
+      document.getElementById('editNameInput').style.display = 'none';
+      document.getElementById('editPriceInput').style.display = 'none';
+      document.getElementById('editDescInput').style.display = 'none';
+      document.getElementById('editImgInput').style.display = 'none';
+      
+      if (field === 'name') {
+        document.getElementById('editNameInput').value = product.name;
+        document.getElementById('editNameInput').style.display = 'block';
+      } else if (field === 'price') {
+        document.getElementById('editPriceInput').value = product.price;
+        document.getElementById('editPriceInput').style.display = 'block';
+      } else if (field === 'desc') {
+        document.getElementById('editDescInput').value = product.desc || '';
+        document.getElementById('editDescInput').style.display = 'block';
+      } else if (field === 'img') {
+        document.getElementById('editImgInput').value = product.img || '';
+        document.getElementById('editImgInput').style.display = 'block';
+      }
+      
+      document.getElementById('editModal').classList.add('active');
+    }
+
+    function closeEditModal() {
+      document.getElementById('editModal').classList.remove('active');
+      editingProductId = null;
+      editingField = null;
+    }
+
+    document.getElementById('closeModal').addEventListener('click', closeEditModal);
+    document.getElementById('cancelEdit').addEventListener('click', closeEditModal);
+    
+    document.getElementById('saveEdit').addEventListener('click', function() {
+      if (!editingProductId || !editingField) return;
+      
+      let value;
+      if (editingField === 'name') {
+        value = document.getElementById('editNameInput').value.trim();
+        if (!value) {
+          showToast('❌ Digite um nome válido');
+          return;
+        }
+      } else if (editingField === 'price') {
+        value = parseFloat(document.getElementById('editPriceInput').value);
+        if (isNaN(value) || value < 0) {
+          showToast('❌ Digite um valor válido');
+          return;
+        }
+      } else if (editingField === 'desc') {
+        value = document.getElementById('editDescInput').value.trim();
+      } else if (editingField === 'img') {
+        value = document.getElementById('editImgInput').value.trim();
+        if (!value) {
+          showToast('❌ Digite um nome de imagem válido');
+          return;
+        }
+      }
+      
+      saveProductField(editingProductId, editingField, value);
+      closeEditModal();
+    });
+
+    document.getElementById('editModal').addEventListener('click', function(e) {
+      if (e.target === this) closeEditModal();
+    });
+
+    document.getElementById('editNameInput').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') document.getElementById('saveEdit').click();
+    });
+    document.getElementById('editPriceInput').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') document.getElementById('saveEdit').click();
+    });
+    document.getElementById('editImgInput').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') document.getElementById('saveEdit').click();
+    });
+
+    // ============================================================
+    // EVENT LISTENERS
+    // ============================================================
+    document.addEventListener("click", event => {
+      const addBtn = event.target.closest("[data-add]");
+      const qtyBtn = event.target.closest("[data-qty]");
+
+      if (addBtn) addToCart(Number(addBtn.dataset.add));
+      if (qtyBtn) changeQty(Number(qtyBtn.dataset.qty), Number(qtyBtn.dataset.amount));
+    });
+
+    document.getElementById("searchForm").addEventListener("submit", event => {
+      event.preventDefault();
+      state.query = document.getElementById("searchInput").value.trim();
+      renderAllGrids();
+    });
+
+    document.getElementById("searchInput").addEventListener("input", event => {
+      state.query = event.target.value.trim();
+      renderAllGrids();
+    });
+
+    document.getElementById("openCart").addEventListener("click", () => {
+      document.getElementById('cartDrawer').classList.add('open');
+    });
+
+    document.getElementById("closeCart").addEventListener("click", () => {
+      document.getElementById('cartDrawer').classList.remove('open');
+    });
+
+    document.getElementById("closeShade").addEventListener("click", () => {
+      document.getElementById('cartDrawer').classList.remove('open');
+    });
+
+    document.getElementById("applyCouponBtn").addEventListener("click", () => {
+      const input = document.getElementById("couponInput");
+      const code = input.value.trim();
+      if (!code) {
+        applyCoupon('');
+        showToast('Cupom removido');
+        return;
+      }
+      const success = applyCoupon(code);
+      showToast(success ? `✅ Cupom ${code.toUpperCase()} aplicado!` : '❌ Cupom inválido');
+    });
+
+    document.getElementById("couponInput").addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        document.getElementById("applyCouponBtn").click();
+      }
+    });
+
+    document.getElementById("checkoutBtn").addEventListener("click", () => {
+      const entries = Object.entries(state.cart);
+      if (!entries.length) {
+        alert("Adicione pelo menos um produto ao carrinho.");
+        return;
+      }
+
+      const subtotal = entries.reduce((sum, [id, qty]) => {
+        const product = products.find(item => item.id === Number(id));
+        return sum + (product ? product.price * qty : 0);
+      }, 0);
+      const discount = currentDiscount || 0;
+      const total = subtotal - discount;
+
+      const lines = entries.map(([id, qty]) => {
+        const product = products.find(item => item.id === Number(id));
+        return `${qty}x ${product.name} - ${money(product.price * qty)}`;
+      });
+      
+      let mensagem = `Olá, Axionpharma! Quero fazer este pedido:\n\n${lines.join("\n")}\n\nSubtotal: ${money(subtotal)}`;
+      if (discount > 0) mensagem += `\nCupom: ${currentCoupon} (desconto: -${money(discount)})`;
+      mensagem += `\nTotal: ${money(total)}`;
+      
+      if (currentCoupon && discount > 0) {
+        mensagem += `\n\n🔔 CUPOM BRUTUSBR USADO!\n🎯 Cupom: ${currentCoupon}\n💰 Subtotal: ${money(subtotal)}\n✨ Desconto: -${money(discount)}\n💵 Total: ${money(total)}\n🕐 ${new Date().toLocaleString('pt-BR')}`;
+        registerCouponUsage(currentCoupon, subtotal, discount);
+        updateCouponBadge();
+        showToast('📱 Cupom registrado!');
+      }
+      
+      window.open(`https://wa.me/5511920714068?text=${encodeURIComponent(mensagem)}`, '_blank');
+    });
+
+    function updateCouponBadge() {
+      const stats = getCouponStats();
+      const totalUses = Object.values(stats).reduce((sum, s) => sum + s.uses, 0);
+      const badge = document.getElementById('couponBadge');
+      if (badge) {
+        if (totalUses > 0) {
+          badge.textContent = `🎯 ${totalUses}`;
+          badge.className = 'coupon-badge visible';
+        } else {
+          badge.className = 'coupon-badge';
+        }
+      }
+    }
+
+    window.showCouponStats = function() {
+      const stats = getCouponStats();
+      console.log('📊 ESTATÍSTICAS DE CUPONS:');
+      console.table(stats);
+      return stats;
+    };
+
+    window.resetCouponLogs = function() {
+      localStorage.removeItem('coupon_usage_log');
+      updateCouponBadge();
+      showToast('🗑️ Logs resetados');
+    };
+
+    window.clearCart = function() {
+      state.cart = {};
+      renderCart();
+      showToast('🛒 Carrinho esvaziado');
+    };
+
+    window.exportProducts = function() {
+      console.log('📦 PRODUTOS ATUAIS:');
+      console.log(JSON.stringify(products, null, 2));
+      return products;
+    };
+
+    // ============================================================
+    // INICIALIZAÇÃO
+    // ============================================================
+    loadSavedProducts();
+    renderAllGrids();
+    renderCart();
+    updateCouponBadge();
+
+    console.log('✅ Axionpharma carregado!');
+    console.log(`📦 ${products.length} produtos disponíveis`);
+    console.log('🔓 Ative o modo dev clicando 7x no preço de qualquer produto');
+    console.log('🔐 Senha: axion123');
+  </script>
+</body>
+</html>
