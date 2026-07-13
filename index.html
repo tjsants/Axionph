@@ -6,20 +6,20 @@
   <title>Axionpharma | online</title>
   <style>
     :root {
-      --ink: #17212f;
-      --muted: #627087;
-      --line: #dce3ec;
-      --panel: #ffffff;
-      --soft: #f0f7fa;
-      --brand: #087f8c;
-      --brand-dark: #075b67;
-      --green: #1c9b63;
-      --red: #d93b45;
+      --ink: #ffffff;
+      --muted: #a0b0c0;
+      --line: #2a3a4a;
+      --panel: #1a1a2e;
+      --soft: #16213e;
+      --brand: #00c853;
+      --brand-dark: #00a844;
+      --green: #00c853;
+      --red: #ff4444;
       --gold: #f4b740;
       --blue: #2d7dd2;
-      --shadow: 0 14px 34px rgba(23, 33, 47, .10);
+      --shadow: 0 14px 34px rgba(0, 0, 0, .5);
       --radius: 8px;
-      --bg-body: #e8f4f8;
+      --bg-body: #0a0a0f;
     }
 
     * { box-sizing: border-box; }
@@ -83,7 +83,7 @@
       position: sticky;
       top: 0;
       z-index: 20;
-      background: rgba(255, 255, 255, .96);
+      background: rgba(10, 10, 15, .96);
       border-bottom: 1px solid var(--line);
       backdrop-filter: blur(10px);
     }
@@ -110,7 +110,7 @@
       place-items: center;
       overflow: hidden;
       background: linear-gradient(135deg, var(--brand), var(--green));
-      box-shadow: 0 8px 18px rgba(8, 127, 140, .22);
+      box-shadow: 0 8px 18px rgba(0, 200, 83, .22);
       flex-shrink: 0;
     }
 
@@ -126,6 +126,7 @@
       font-size: 40px;
       letter-spacing: -2px;
       line-height: 1;
+      color: #00c853;
     }
 
     .brand span {
@@ -140,10 +141,10 @@
       display: flex;
       min-width: 180px;
       max-width: 460px;
-      border: 1px solid #cbd7e4;
+      border: 1px solid #2a3a4a;
       border-radius: var(--radius);
       overflow: hidden;
-      background: #fff;
+      background: #1a1a2e;
     }
 
     .search input {
@@ -152,7 +153,12 @@
       outline: 0;
       padding: 12px 14px;
       font-size: 16px;
-      color: var(--ink);
+      color: #fff;
+      background: transparent;
+    }
+
+    .search input::placeholder {
+      color: #6a7a8a;
     }
 
     .search button,
@@ -178,9 +184,9 @@
     .cart-button {
       min-width: 140px;
       padding: 12px 16px;
-      background: #eff7f8;
-      color: var(--brand-dark);
-      border: 1px solid #b8dce0;
+      background: #1a2a3a;
+      color: #00c853;
+      border: 1px solid #2a4a3a;
       font-weight: 700;
       font-size: 15px;
       flex-shrink: 0;
@@ -212,11 +218,11 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      background: #fff;
+      background: #1a1a2e;
       padding: 10px 20px;
       border-radius: var(--radius);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
-      border: 1px solid var(--line);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      border: 1px solid #2a3a4a;
       flex: 1;
       min-width: 200px;
       cursor: pointer;
@@ -225,7 +231,8 @@
 
     .banner-top-text .info-box:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+      border-color: #00c853;
     }
 
     .banner-top-text .info-box .icon {
@@ -236,7 +243,7 @@
     .banner-top-text .info-box .text {
       font-size: 14px;
       font-weight: 700;
-      color: var(--ink);
+      color: #fff;
     }
 
     .banner-top-text .info-box .text small {
@@ -262,13 +269,13 @@
       overflow: hidden;
       cursor: pointer;
       transition: transform .3s ease, box-shadow .3s ease;
-      box-shadow: 0 4px 20px rgba(0,0,0,.1);
-      background: #f0f5f8;
+      box-shadow: 0 4px 20px rgba(0,0,0,.3);
+      background: #1a1a2e;
     }
 
     .banner-grande:hover {
       transform: scale(1.01);
-      box-shadow: 0 8px 35px rgba(0,0,0,.15);
+      box-shadow: 0 8px 35px rgba(0,0,0,.5);
     }
 
     .banner-grande img {
@@ -288,26 +295,26 @@
     }
 
     .destaque-card {
-      background: #fff;
+      background: #1a1a2e;
       border-radius: var(--radius);
       overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      border: 2px solid #e67e22;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      border: 2px solid #00c853;
       transition: transform .3s ease, box-shadow .3s ease;
       position: relative;
     }
 
     .destaque-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 35px rgba(230, 126, 34, 0.3);
+      box-shadow: 0 8px 35px rgba(0, 200, 83, 0.2);
     }
 
     .destaque-card .tag-topo {
       position: absolute;
       top: 8px;
       right: 8px;
-      background: #e67e22;
-      color: #fff;
+      background: #00c853;
+      color: #000;
       padding: 2px 12px;
       border-radius: 999px;
       font-size: 10px;
@@ -320,7 +327,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #f9fbfd;
+      background: #0a0a0f;
       padding: 10px;
       cursor: pointer;
       overflow: hidden;
@@ -346,6 +353,7 @@
       font-size: 14px;
       line-height: 1.2;
       min-height: 34px;
+      color: #fff;
     }
 
     .destaque-card .destaque-body .precos {
@@ -369,7 +377,7 @@
 
     .destaque-card .destaque-body .precos .frete {
       display: block;
-      color: var(--brand);
+      color: #00c853;
       font-size: 11px;
       font-weight: 700;
       margin-top: 2px;
@@ -380,7 +388,7 @@
       margin-top: 8px;
       padding: 7px;
       background: var(--brand);
-      color: #fff;
+      color: #000;
       font-weight: 900;
       font-size: 13px;
       border: 0;
@@ -391,6 +399,7 @@
 
     .destaque-card .add-destaque:hover {
       background: var(--brand-dark);
+      color: #fff;
     }
 
     main {
@@ -413,7 +422,7 @@
       margin: 0;
       font-size: 22px;
       letter-spacing: 0;
-      color: var(--brand-dark);
+      color: #00c853;
     }
 
     .section-head p {
@@ -425,7 +434,7 @@
     .filter-badge {
       display: inline-block;
       background: var(--brand);
-      color: #fff;
+      color: #000;
       padding: 4px 12px;
       border-radius: 999px;
       font-size: 12px;
@@ -460,20 +469,24 @@
       display: flex;
       flex-direction: column;
       min-height: 330px;
-      background: #fff;
-      border: 1px solid var(--line);
+      background: #1a1a2e;
+      border: 1px solid #2a3a4a;
       border-radius: var(--radius);
       overflow: hidden;
-      box-shadow: 0 8px 20px rgba(23, 33, 47, .05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, .3);
       position: relative;
+    }
+
+    .product-card:hover {
+      border-color: #00c853;
     }
 
     .product-id {
       position: absolute;
       top: 8px;
       left: 8px;
-      background: rgba(0,0,0,0.7);
-      color: #fff;
+      background: rgba(0, 200, 83, 0.8);
+      color: #000;
       font-size: 10px;
       font-weight: 800;
       padding: 2px 8px;
@@ -491,8 +504,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #f9fbfd;
-      border-bottom: 1px solid #edf2f7;
+      background: #0a0a0f;
+      border-bottom: 1px solid #2a3a4a;
       overflow: hidden;
       padding: 8px;
       flex-shrink: 0;
@@ -515,7 +528,7 @@
       position: fixed;
       inset: 0;
       z-index: 9999;
-      background: rgba(0, 0, 0, 0.9);
+      background: rgba(0, 0, 0, 0.95);
       display: none;
       align-items: center;
       justify-content: center;
@@ -532,7 +545,7 @@
       max-height: 90%;
       object-fit: contain;
       border-radius: 8px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.8);
       animation: zoomIn 0.3s ease;
     }
 
@@ -575,14 +588,14 @@
       flex: 1;
       flex-direction: column;
       padding: 10px 12px 12px;
-      background: #fff;
+      background: #1a1a2e;
       position: relative;
       z-index: 1;
       min-height: 160px;
     }
 
     .product-category {
-      color: var(--brand-dark);
+      color: #00c853;
       font-size: 10px;
       font-weight: 800;
       text-transform: uppercase;
@@ -596,6 +609,7 @@
       line-height: 1.2;
       font-weight: 700;
       cursor: default;
+      color: #fff;
     }
 
     .desc {
@@ -636,7 +650,7 @@
       margin-top: 8px;
       padding: 8px;
       background: var(--brand);
-      color: #fff;
+      color: #000;
       font-weight: 900;
       font-size: 13px;
       border: 0;
@@ -648,13 +662,14 @@
     .add-btn:hover {
       transform: translateY(-1px);
       background: var(--brand-dark);
+      color: #fff;
     }
 
     .filter-reset-btn {
       display: none;
       padding: 8px 20px;
       background: var(--brand);
-      color: #fff;
+      color: #000;
       border: none;
       border-radius: var(--radius);
       font-weight: 700;
@@ -666,6 +681,7 @@
 
     .filter-reset-btn:hover {
       background: var(--brand-dark);
+      color: #fff;
     }
 
     .filter-reset-btn.visible {
@@ -676,7 +692,7 @@
       position: fixed;
       inset: 0;
       z-index: 999;
-      background: rgba(0,0,0,0.6);
+      background: rgba(0,0,0,0.8);
       display: none;
       align-items: center;
       justify-content: center;
@@ -687,17 +703,19 @@
     }
 
     .modal-box {
-      background: #fff;
+      background: #1a1a2e;
       border-radius: var(--radius);
       padding: 30px;
       max-width: 500px;
       width: 90%;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
       position: relative;
+      border: 1px solid #2a3a4a;
     }
 
     .modal-box h3 {
       margin: 0 0 10px;
+      color: #fff;
     }
 
     .modal-box .close-modal {
@@ -720,17 +738,20 @@
       font-weight: 700;
       margin-top: 12px;
       font-size: 14px;
+      color: #fff;
     }
 
     .modal-box input,
     .modal-box textarea {
       width: 100%;
       padding: 10px 12px;
-      border: 1px solid var(--line);
+      border: 1px solid #2a3a4a;
       border-radius: 6px;
       font-size: 16px;
       margin-top: 4px;
       font-family: inherit;
+      background: #0a0a0f;
+      color: #fff;
     }
 
     .modal-box textarea {
@@ -755,20 +776,21 @@
 
     .modal-box .btn-save {
       background: var(--brand);
-      color: #fff;
+      color: #000;
     }
 
     .modal-box .btn-save:hover {
       background: var(--brand-dark);
+      color: #fff;
     }
 
     .modal-box .btn-cancel {
-      background: #eef2f6;
-      color: var(--ink);
+      background: #2a3a4a;
+      color: #fff;
     }
 
     .modal-box .btn-cancel:hover {
-      background: #dce3ec;
+      background: #3a4a5a;
     }
 
     .drawer {
@@ -783,7 +805,7 @@
     .shade {
       position: absolute;
       inset: 0;
-      background: rgba(23, 33, 47, .44);
+      background: rgba(0, 0, 0, .7);
       opacity: 0;
       transition: opacity .18s ease;
     }
@@ -797,12 +819,13 @@
       bottom: 0;
       width: min(400px, 100%);
       padding: 16px;
-      background: #fff;
+      background: #1a1a2e;
       transform: translateX(102%);
       transition: transform .2s ease;
       display: flex;
       flex-direction: column;
-      box-shadow: -20px 0 40px rgba(23, 33, 47, .18);
+      box-shadow: -20px 0 40px rgba(0, 0, 0, .5);
+      border-left: 1px solid #2a3a4a;
     }
 
     .drawer.open .cart-panel { transform: translateX(0); }
@@ -813,22 +836,28 @@
       justify-content: space-between;
       gap: 12px;
       padding-bottom: 12px;
-      border-bottom: 1px solid var(--line);
+      border-bottom: 1px solid #2a3a4a;
     }
 
     .cart-head h2 {
       margin: 0;
       font-size: 20px;
+      color: #fff;
     }
 
     .close-cart {
       width: 36px;
       height: 36px;
       border-radius: var(--radius);
-      border: 1px solid var(--line);
-      background: #fff;
+      border: 1px solid #2a3a4a;
+      background: transparent;
+      color: #fff;
       cursor: pointer;
       font-size: 20px;
+    }
+
+    .close-cart:hover {
+      background: #2a3a4a;
     }
 
     .cart-items {
@@ -848,7 +877,7 @@
       grid-template-columns: 46px 1fr;
       gap: 10px;
       padding: 10px 0;
-      border-bottom: 1px solid #eef2f6;
+      border-bottom: 1px solid #2a3a4a;
     }
 
     .cart-thumb {
@@ -857,7 +886,7 @@
       border-radius: 8px;
       display: grid;
       place-items: center;
-      color: #fff;
+      color: #000;
       background: var(--brand);
       font-weight: 800;
       font-size: 12px;
@@ -874,6 +903,7 @@
       display: block;
       font-size: 13px;
       line-height: 1.3;
+      color: #fff;
     }
 
     .cart-line span {
@@ -898,8 +928,8 @@
     .qty-btn {
       width: 28px;
       height: 28px;
-      background: #eef5f6;
-      color: var(--brand-dark);
+      background: #2a3a4a;
+      color: #00c853;
       font-weight: 900;
       font-size: 14px;
       border: 0;
@@ -907,9 +937,13 @@
       cursor: pointer;
     }
 
+    .qty-btn:hover {
+      background: #3a4a5a;
+    }
+
     .cart-total {
       padding-top: 12px;
-      border-top: 1px solid var(--line);
+      border-top: 1px solid #2a3a4a;
     }
 
     .total-row {
@@ -919,6 +953,7 @@
       margin-bottom: 12px;
       font-size: 16px;
       font-weight: 900;
+      color: #fff;
     }
 
     .checkout {
@@ -927,16 +962,20 @@
       border: 0;
       border-radius: var(--radius);
       background: var(--green);
-      color: #fff;
+      color: #000;
       font-weight: 900;
       font-size: 15px;
       cursor: pointer;
     }
 
+    .checkout:hover {
+      background: #00b844;
+    }
+
     .coupon-section {
       margin: 8px 0 12px;
       padding: 10px;
-      background: #f5f8fb;
+      background: #0a0a0f;
       border-radius: 6px;
       border: 1px dashed var(--brand);
     }
@@ -952,20 +991,26 @@
       flex: 1;
       min-width: 120px;
       padding: 8px 12px;
-      border: 1px solid var(--line);
+      border: 1px solid #2a3a4a;
       border-radius: 6px;
       font-size: 13px;
       outline: none;
+      background: #0a0a0f;
+      color: #fff;
     }
 
     .coupon-section .coupon-input-group input:focus {
       border-color: var(--brand);
     }
 
+    .coupon-section .coupon-input-group input::placeholder {
+      color: #6a7a8a;
+    }
+
     .coupon-section .coupon-input-group button {
       padding: 8px 16px;
       background: var(--brand);
-      color: #fff;
+      color: #000;
       border: 0;
       border-radius: 6px;
       font-weight: 700;
@@ -976,6 +1021,7 @@
 
     .coupon-section .coupon-input-group button:hover {
       background: var(--brand-dark);
+      color: #fff;
     }
 
     .coupon-section .coupon-message {
@@ -999,7 +1045,7 @@
       bottom: 24px;
       z-index: 70;
       transform: translate(-50%, 110px);
-      background: #11333b;
+      background: #1a2a3a;
       color: #fff;
       border-radius: var(--radius);
       padding: 10px 16px;
@@ -1009,6 +1055,7 @@
       font-size: 14px;
       text-align: center;
       max-width: 90%;
+      border: 1px solid #00c853;
     }
 
     .toast.show {
@@ -1020,12 +1067,12 @@
       top: -8px;
       right: -8px;
       background: var(--gold);
-      color: var(--ink);
+      color: #000;
       border-radius: 999px;
       padding: 2px 8px;
       font-size: 10px;
       font-weight: 900;
-      border: 2px solid #fff;
+      border: 2px solid #1a1a2e;
       display: none;
     }
 
@@ -1034,9 +1081,10 @@
     }
 
     footer {
-      background: #122730;
+      background: #0a0a0f;
       color: #d9eef3;
       padding: 24px 0;
+      border-top: 1px solid #2a3a4a;
     }
 
     .footer-grid {
@@ -1046,15 +1094,19 @@
 
     footer h3 {
       margin: 0 0 8px;
-      color: #fff;
+      color: #00c853;
       font-size: 15px;
     }
 
     footer p, footer a {
       display: block;
       margin: 4px 0;
-      color: #c0d5db;
+      color: #8a9aaa;
       font-size: 13px;
+    }
+
+    footer a:hover {
+      color: #00c853;
     }
 
     @media (max-width: 1024px) {
@@ -1168,7 +1220,7 @@
       <div class="destaque-card">
         <span class="tag-topo">🔥 DESTAQUE</span>
         <div class="destaque-img" onclick="openImageModal('185.jpg')">
-          <img src="185.jpg" alt="TIRZEC 15" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23f0f5f8%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 font-size=%2214%22 text-anchor=%22middle%22 dominant-baseline=%22central%22 fill=%22%23627087%22 font-family=%22Arial%22%3ETIRZEC%3C/text%3E%3C/svg%3E'">
+          <img src="185.jpg" alt="TIRZEC 15" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%231a1a2e%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 font-size=%2214%22 text-anchor=%22middle%22 dominant-baseline=%22central%22 fill=%22%23627087%22 font-family=%22Arial%22%3ETIRZEC%3C/text%3E%3C/svg%3E'">
         </div>
         <div class="destaque-body">
           <h4>🔥 TIRZEC 15 Tirzepatida 15mg/0,5mL</h4>
@@ -1185,7 +1237,7 @@
       <div class="destaque-card">
         <span class="tag-topo">🔥 DESTAQUE</span>
         <div class="destaque-img" onclick="openImageModal('186.jpg')">
-          <img src="186.jpg" alt="T.G. 15" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23f0f5f8%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 font-size=%2214%22 text-anchor=%22middle%22 dominant-baseline=%22central%22 fill=%22%23627087%22 font-family=%22Arial%22%3ET.G.%3C/text%3E%3C/svg%3E'">
+          <img src="186.jpg" alt="T.G. 15" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%231a1a2e%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 font-size=%2214%22 text-anchor=%22middle%22 dominant-baseline=%22central%22 fill=%22%23627087%22 font-family=%22Arial%22%3ET.G.%3C/text%3E%3C/svg%3E'">
         </div>
         <div class="destaque-body">
           <h4>🔥 T.G. 15 Tirzepatida 15mg/0,5mL - 4 frascos</h4>
@@ -1202,7 +1254,7 @@
       <div class="destaque-card">
         <span class="tag-topo">🔥 DESTAQUE</span>
         <div class="destaque-img" onclick="openImageModal('187.jpg')">
-          <img src="187.jpg" alt="Lipoless MD 15" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23f0f5f8%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 font-size=%2214%22 text-anchor=%22middle%22 dominant-baseline=%22central%22 fill=%22%23627087%22 font-family=%22Arial%22%3ELipoless%3C/text%3E%3C/svg%3E'">
+          <img src="187.jpg" alt="Lipoless MD 15" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%231a1a2e%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 font-size=%2214%22 text-anchor=%22middle%22 dominant-baseline=%22central%22 fill=%22%23627087%22 font-family=%22Arial%22%3ELipoless%3C/text%3E%3C/svg%3E'">
         </div>
         <div class="destaque-body">
           <h4>🔥 Lipoless MD 15 Tirzepatida 15mg/0,6mL</h4>
@@ -1310,7 +1362,7 @@
 
     function getProductImage(product) {
       if (product.img) return product.img;
-      return `data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23f0f5f8%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 font-size=%2214%22 text-anchor=%22middle%22 dominant-baseline=%22central%22 fill=%22%23627087%22 font-family=%22Arial%22%3E${encodeURIComponent(product.name)}%3C/text%3E%3C/svg%3E`;
+      return `data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%231a1a2e%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 font-size=%2214%22 text-anchor=%22middle%22 dominant-baseline=%22central%22 fill=%22%23627087%22 font-family=%22Arial%22%3E${encodeURIComponent(product.name)}%3C/text%3E%3C/svg%3E`;
     }
 
     // ============================================================
@@ -1503,7 +1555,7 @@
               src="${getProductImage(product)}" 
               alt="${product.name}"
               loading="lazy"
-              onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23f0f5f8%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 font-size=%2214%22 text-anchor=%22middle%22 dominant-baseline=%22central%22 fill=%22%23627087%22 font-family=%22Arial%22%3E${encodeURIComponent(product.name)}%3C/text%3E%3C/svg%3E'"
+              onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%231a1a2e%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 font-size=%2214%22 text-anchor=%22middle%22 dominant-baseline=%22central%22 fill=%22%23627087%22 font-family=%22Arial%22%3E${encodeURIComponent(product.name)}%3C/text%3E%3C/svg%3E'"
             >
           </div>
           <div class="product-body">
@@ -1544,7 +1596,7 @@
               src="${getProductImage(product)}" 
               alt="${product.name}"
               loading="lazy"
-              onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23f0f5f8%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 font-size=%2214%22 text-anchor=%22middle%22 dominant-baseline=%22central%22 fill=%22%23627087%22 font-family=%22Arial%22%3E${encodeURIComponent(product.name)}%3C/text%3E%3C/svg%3E'"
+              onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%231a1a2e%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 font-size=%2214%22 text-anchor=%22middle%22 dominant-baseline=%22central%22 fill=%22%23627087%22 font-family=%22Arial%22%3E${encodeURIComponent(product.name)}%3C/text%3E%3C/svg%3E'"
             >
           </div>
           <div class="product-body">
