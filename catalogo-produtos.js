@@ -15,7 +15,7 @@ window.AXION_PRODUCTS = [
   "img": "185.jpg"
 },
   {
-  "id": 172,
+  "id": 170,
   "name": "T.G. 15 Tirzepatida 60ml (bujão)",
   "category": "Emagrecimento",
   "price": 1350.00,
@@ -23,7 +23,7 @@ window.AXION_PRODUCTS = [
   "tag": "🔥 DESTAQUE",
   "desc": "T.G. 15 - Tirzepatida 15mg/0,5mL. 4 frascos viais com solução injetável. Duplo agonista GLP-1/GIP. Administração subcutânea semanal.",
   "code": "TG15",
-  "img": "172.jpg"
+  "img": "170.jpg"
 },
 {
   "id": 171,
