@@ -23,7 +23,7 @@ window.AXION_PRODUCTS = [
   "tag": "🔥 DESTAQUE",
   "desc": "T.G. 15 - Tirzepatida 15mg/0,5mL. 4 frascos viais com solução injetável. Duplo agonista GLP-1/GIP. Administração subcutânea semanal.",
   "code": "TG15",
-  "img": "170.jpg"
+  "img": "1900.jpg"
 },
 {
   "id": 171,
