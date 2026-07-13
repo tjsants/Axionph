@@ -783,7 +783,7 @@ window.AXION_PRODUCTS = [
 },
 
 // ============================================================
-// LANDERLAN - 35 PRODUTOS (IDs 71 a 105)
+// LANDERLAN - PRODUTOS MANTIDOS (IDs 71 a 87, 90, 93, 94, 95, 99, 100, 101, 104)
 // ============================================================
 {
   "id": 71,
@@ -831,7 +831,7 @@ window.AXION_PRODUCTS = [
 },
 {
   "id": 75,
-  "name": "Testenat Enantato 250mg ",
+  "name": "Testenat Enantato 250mg - 4ml",
   "category": "Ganho de Massa",
   "price": 120.00,
   "old": null,
@@ -853,12 +853,12 @@ window.AXION_PRODUCTS = [
 },
 {
   "id": 77,
-  "name": "Durateston 250mg - 10ml (bujao)",
+  "name": "Durateston 250mg - 10ml (bujão)",
   "category": "Ganho de Massa",
   "price": 270.00,
   "old": null,
   "tag": null,
-  "desc": "Durateston 250mg - 1mL. Produto LANDERLAN. Administração intramuscular.",
+  "desc": "Durateston 250mg/mL - 10mL. Produto LANDERLAN. Administração intramuscular.",
   "code": "DU1",
   "img": "77.jpg"
 },
@@ -935,7 +935,7 @@ window.AXION_PRODUCTS = [
   "price": 260.00,
   "old": null,
   "tag": null,
-  "desc": "Decaland Nandrolona 200mg/mL - 5mL. Produto LANDERLAN. Administração intramuscular semanal.",
+  "desc": "Decaland Nandrolona 200mg/mL - 10mL. Produto LANDERLAN. Administração intramuscular semanal.",
   "code": "DN5",
   "img": "84.jpg"
 },
@@ -973,28 +973,6 @@ window.AXION_PRODUCTS = [
   "img": "87.jpg"
 },
 {
-  "id": 88,
-  "name": "Lipoland Tirzepatida 10mg - 1 frasco",
-  "category": "Emagrecimento",
-  "price": 1100.00,
-  "old": null,
-  "tag": null,
-  "desc": "Lipoland Tirzepatida 10mg - 1 frasco liofilizado. Produto LANDERLAN. Administração subcutânea semanal.",
-  "code": "LT10",
-  "img": "88.jpg"
-},
-{
-  "id": 89,
-  "name": "Lipoland Tirzepatida 15mg - 1 frasco",
-  "category": "Emagrecimento",
-  "price": 1700.00,
-  "old": null,
-  "tag": null,
-  "desc": "Lipoland Tirzepatida 15mg - 1 frasco liofilizado. Produto LANDERLAN. Administração subcutânea semanal.",
-  "code": "LT15",
-  "img": "89.jpg"
-},
-{
   "id": 90,
   "name": "Lipoland 15mg - Kit com 4 Frascos",
   "category": "Emagrecimento",
@@ -1004,28 +982,6 @@ window.AXION_PRODUCTS = [
   "desc": "Lipoland Tirzepatida 15mg - Kit com 4 frascos. Produto LANDERLAN. Administração subcutânea semanal.",
   "code": "L15F",
   "img": "90.jpg"
-},
-{
-  "id": 91,
-  "name": "Cipionato 3x2 Landerlan",
-  "category": "Ganho de Massa",
-  "price": 90.00,
-  "old": null,
-  "tag": null,
-  "desc": "Cipionato de Testosterona 200mg/2mL - 3 ampolas. Produto Landerlan. Administração intramuscular.",
-  "code": "CT-LAN",
-  "img": "91.jpg"
-},
-{
-  "id": 92,
-  "name": "Durateston  Landerlan",
-  "category": "Ganho de Massa",
-  "price": 26.00,
-  "old": null,
-  "tag": null,
-  "desc": "Durateston 250mg - . Produto Landerlan. Administração intramuscular.",
-  "code": "DUR1-LAN",
-  "img": "92.jpg"
 },
 {
   "id": 93,
@@ -1061,39 +1017,6 @@ window.AXION_PRODUCTS = [
   "img": "95.jpg"
 },
 {
-  "id": 96,
-  "name": "Enantato 4ml Landerlan",
-  "category": "Ganho de Massa",
-  "price": 85./00,
-  "old": null,
-  "tag": null,
-  "desc": "Enantato de Testosterona 250mg/mL - 4mL. Produto Landerlan. Administração intramuscular.",
-  "code": "ET-LAN",
-  "img": "96.jpg"
-},
-{
-  "id": 97,
-  "name": "Deca 5ml Landerlan",
-  "category": "Ganho de Massa",
-  "price": 85.00,
-  "old": null,
-  "tag": null,
-  "desc": "Deca 200mg/mL - 5mL. Produto Landerlan. Administração intramuscular semanal.",
-  "code": "DEC-LAN",
-  "img": "97.jpg"
-},
-{
-  "id": 98,
-  "name": "GH 100ui Landerlan",
-  "category": "Ganho de Massa",
-  "price": 2445.00,
-  "old": null,
-  "tag": null,
-  "desc": "GH 100UI - Caixa com 10 frascos. Produto Landerlan. Administração subcutânea diária.",
-  "code": "GH100-LAN",
-  "img": "98.jpg"
-},
-{
   "id": 99,
   "name": "Oxandrolona 5mg Landerlan",
   "category": "Ganho de Massa",
@@ -1127,28 +1050,6 @@ window.AXION_PRODUCTS = [
   "img": "101.jpg"
 },
 {
-  "id": 102,
-  "name": "Hemogenin Landerlan",
-  "category": "Ganho de Massa",
-  "price": 160.00,
-  "old": null,
-  "tag": null,
-  "desc": "Hemogenin 50mg - 50 comprimidos. Produto Landerlan. Uso oral diário.",
-  "code": "HEM-LAN",
-  "img": "102.jpg"
-},
-{
-  "id": 103,
-  "name": "Dianabol Landerlan",
-  "category": "Ganho de Massa",
-  "price": 125.00,
-  "old": null,
-  "tag": null,
-  "desc": "Dianabol 10mg - 100 comprimidos. Produto Landerlan. Uso oral diário.",
-  "code": "DIA-LAN",
-  "img": "103.jpg"
-},
-{
   "id": 104,
   "name": "Proviron Landerlan",
   "category": "Ganho de Massa",
@@ -1159,20 +1060,9 @@ window.AXION_PRODUCTS = [
   "code": "PRO-LAN",
   "img": "104.jpg"
 },
-{
-  "id": 105,
-  "name": "Stanozolol Oral Landerlan",
-  "category": "Ganho de Massa",
-  "price": 85.00,
-  "old": null,
-  "tag": null,
-  "desc": "Stanozolol 10mg - 100 comprimidos. Produto Landerlan. Uso oral diário.",
-  "code": "STO-LAN",
-  "img": "105.jpg"
-},
 
 // ============================================================
-// LANDERGOLD - 23 PRODUTOS (IDs 106 a 128)
+// LANDERGOLD - 22 PRODUTOS (IDs 106 a 112, 114 a 120, 122 a 128)
 // ============================================================
 {
   "id": 106,
@@ -1252,17 +1142,6 @@ window.AXION_PRODUCTS = [
   "img": "112.jpg"
 },
 {
-  "id": 113,
-  "name": "Testenat Enantato 250mg - 10ml",
-  "category": "Ganho de Massa",
-  "price": 260.00,
-  "old": null,
-  "tag": null,
-  "desc": "Testenat Enantato 250mg/mL - 10mL. Produto LANDERGOLD. Administração intramuscular semanal.",
-  "code": "TET250",
-  "img": "113.jpg"
-},
-{
   "id": 114,
   "name": "Trembolona Hexahidroxibencil 51mg - 10ml",
   "category": "Ganho de Massa",
@@ -1340,15 +1219,70 @@ window.AXION_PRODUCTS = [
   "img": "120.jpg"
 },
 {
-  "id": 121,
-  "name": "NPP LanderGold",
+  "id": 122,
+  "name": "Masteron LanderGold",
+  "category": "Ganho de Massa",
+  "price": 260.00,
+  "old": null,
+  "tag": null,
+  "desc": "Masteron Propionato 100mg/mL - 10mL. Produto LanderGold. Administração intramuscular em dias alternados.",
+  "code": "MAS-LG",
+  "img": "122.jpg"
+},
+{
+  "id": 123,
+  "name": "Boldenona LanderGold",
   "category": "Ganho de Massa",
   "price": 250.00,
   "old": null,
   "tag": null,
-  "desc": "NPP 100mg/mL - 10mL. Produto LanderGold. Administração intramuscular em dias alternados.",
-  "code": "NPP-LG",
-  "img": "121.jpg"
+  "desc": "Boldenona 250mg/mL - 10mL. Produto LanderGold. Administração intramuscular semanal.",
+  "code": "BOL-LG",
+  "img": "123.jpg"
+},
+{
+  "id": 124,
+  "name": "Trembolona Acetato LanderGold",
+  "category": "Ganho de Massa",
+  "price": 280.00,
+  "old": null,
+  "tag": null,
+  "desc": "Trembolona Acetato 100mg/mL - 10mL. Produto LanderGold. Administração intramuscular em dias alternados.",
+  "code": "TRENA-LG",
+  "img": "124.jpg"
+},
+{
+  "id": 125,
+  "name": "Trembolona Enantato LanderGold",
+  "category": "Ganho de Massa",
+  "price": 280.00,
+  "old": null,
+  "tag": null,
+  "desc": "Trembolona Enantato 200mg/mL - 10mL. Produto LanderGold. Administração intramuscular semanal.",
+  "code": "TRENE-LG",
+  "img": "125.jpg"
+},
+{
+  "id": 126,
+  "name": "TriTrembo (Blend) LanderGold",
+  "category": "Ganho de Massa",
+  "price": 310.00,
+  "old": null,
+  "tag": null,
+  "desc": "TriTrembo 200mg/mL - 10mL. Blend de 3 ésteres de Trembolona. Produto LanderGold. Administração intramuscular.",
+  "code": "TRB-LG",
+  "img": "126.jpg"
+},
+{
+  "id": 127,
+  "name": "TESTOSTERONA PROPIONATO LanderGold",
+  "category": "Ganho de Massa",
+  "price": 230.00,
+  "old": null,
+  "tag": null,
+  "desc": "Propionato de Testosterona 100mg/mL - 10mL. Produto LanderGold. Administração intramuscular em dias alternados.",
+  "code": "PT-LG",
+  "img": "127.jpg"
 },
 {
   "id": 128,
@@ -1363,7 +1297,7 @@ window.AXION_PRODUCTS = [
 },
 
 // ============================================================
-// MUSCLE LABS - 36 PRODUTOS (IDs 129 a 164)
+// MUSCLE LABS - 36 PRODUTOS (IDs 129 a 160, 163, 164)
 // ============================================================
 {
   "id": 129,
@@ -1586,28 +1520,6 @@ window.AXION_PRODUCTS = [
   "img": "150.jpg"
 },
 {
-  "id": 151,
-  "name": "Deca Muscle Labs",
-  "category": "Ganho de Massa",
-  "price": 230.00,
-  "old": null,
-  "tag": null,
-  "desc": "Deca 200mg/mL - 10mL. Produto Muscle Labs. Administração intramuscular semanal.",
-  "code": "DEC-ML",
-  "img": "151.jpg"
-},
-{
-  "id": 152,
-  "name": "NPP Muscle Labs",
-  "category": "Ganho de Massa",
-  "price": 155.00,
-  "old": null,
-  "tag": null,
-  "desc": "NPP 100mg/mL - 10mL. Produto Muscle Labs. Administração intramuscular em dias alternados.",
-  "code": "NPP-ML",
-  "img": "152.jpg"
-},
-{
   "id": 153,
   "name": "Masteron Muscle Labs",
   "category": "Ganho de Massa",
@@ -1639,17 +1551,6 @@ window.AXION_PRODUCTS = [
   "desc": "Trembolona Enantato 200mg/mL - 10mL. Produto Muscle Labs. Administração intramuscular semanal.",
   "code": "TRENE-ML",
   "img": "155.jpg"
-},
-{
-  "id": 156,
-  "name": "TriTrembo Muscle Labs",
-  "category": "Ganho de Massa",
-  "price": 250.00,
-  "old": null,
-  "tag": null,
-  "desc": "TriTrembo 200mg/mL - 10mL. Blend de 3 ésteres de Trembolona. Produto Muscle Labs. Administração intramuscular.",
-  "code": "TRB-ML",
-  "img": "156.jpg"
 },
 {
   "id": 157,
@@ -1685,28 +1586,6 @@ window.AXION_PRODUCTS = [
   "img": "160.jpg"
 },
 {
-  "id": 161,
-  "name": "HCG 5000ui Muscle Labs",
-  "category": "Ganho de Massa",
-  "price": 175.00,
-  "old": null,
-  "tag": null,
-  "desc": "HCG 5000UI. Produto Muscle Labs. Administração intramuscular ou subcutânea.",
-  "code": "HCG-ML",
-  "img": "161.jpg"
-},
-{
-  "id": 162,
-  "name": "IGF1-LR3 (PRODUTO FRACIONADO) Muscle Labs",
-  "category": "Ganho de Massa",
-  "price": 145.00,
-  "old": null,
-  "tag": null,
-  "desc": "IGF1-LR3 fracionado. Produto Muscle Labs. Administração subcutânea.",
-  "code": "IGFF-ML",
-  "img": "162.jpg"
-},
-{
   "id": 163,
   "name": "Anastrozol Muscle Labs",
   "category": "Ganho de Massa",
@@ -1727,5 +1606,262 @@ window.AXION_PRODUCTS = [
   "desc": "Turinabol 10mg - 50 comprimidos. Produto Muscle Labs. Uso oral diário.",
   "code": "TUR-ML",
   "img": "164.jpg"
+},
+
+// ============================================================
+// NOVOS PRODUTOS OXYGEN PHARMA (IDs 165 a 187)
+// ============================================================
+{
+  "id": 165,
+  "name": "RETAGEN 160mg Retatrutida - Oxygen Pharma",
+  "category": "Emagrecimento",
+  "price": 0.00,
+  "old": 0.00,
+  "tag": null,
+  "desc": "RETAGEN 160mg - Retatrutida. Agonista triplo GLP-1/GIP/Glucagon. 1 frasco multidose. Administração subcutânea semanal. Produto Oxygen Pharma.",
+  "code": "RET160-OX",
+  "img": "165.jpg"
+},
+{
+  "id": 166,
+  "name": "CBL 514 50mg - Oxygen Pharma",
+  "category": "Emagrecimento",
+  "price": 0.00,
+  "old": 0.00,
+  "tag": null,
+  "desc": "CBL 514 50mg - 1 frasco + 2ml água para injeção. Administração subcutânea semanal. Produto Oxygen Pharma.",
+  "code": "CBL-OX",
+  "img": "166.jpg"
+},
+{
+  "id": 167,
+  "name": "RETAGEN 60mg Retatrutida - Oxygen Pharma",
+  "category": "Emagrecimento",
+  "price": 0.00,
+  "old": 0.00,
+  "tag": null,
+  "desc": "RETAGEN 60mg - Retatrutida. Agonista triplo GLP-1/GIP/Glucagon. Administração subcutânea semanal. Produto Oxygen Pharma.",
+  "code": "RET60-OX",
+  "img": "167.jpg"
+},
+{
+  "id": 168,
+  "name": "RETAGEN 80mg Retatrutida - Oxygen Pharma",
+  "category": "Emagrecimento",
+  "price": 0.00,
+  "old": 0.00,
+  "tag": null,
+  "desc": "RETAGEN 80mg - Retatrutida. Agonista triplo GLP-1/GIP/Glucagon. 1 frasco multidose + 4,8ml água. Administração subcutânea semanal. Produto Oxygen Pharma.",
+  "code": "RET80-OX",
+  "img": "168.jpg"
+},
+{
+  "id": 169,
+  "name": "KLOW 80mg Blend (GHK-Cu, TB500, BPC157, KPV) Caneta - Oxygen Pharma",
+  "category": "Peptídeos",
+  "price": 1754.91,
+  "old": 1949.90,
+  "tag": "-10%",
+  "desc": "KLOW 80mg - Blend de peptídeos (GHK-Cu, TB500, BPC157, KPV) em caneta aplicadora. Para regeneração celular, recuperação e rejuvenescimento. Produto Oxygen Pharma. Administração subcutânea.",
+  "code": "KLOW-OX",
+  "img": "169.jpg"
+},
+{
+  "id": 170,
+  "name": "NAD+ 1000mg + Vitamin B12 4000mcg Caneta - Oxygen Pharma",
+  "category": "Peptídeos",
+  "price": 1791.81,
+  "old": 1990.90,
+  "tag": "-10%",
+  "desc": "NAD+ 1000mg + Vitamina B12 4000mcg - Caneta aplicadora. Para energia celular, longevidade e metabolismo. Produto OXYGEN PHARMA. Administração subcutânea semanal.",
+  "code": "NAD1000-OX",
+  "img": "170.jpg"
+},
+{
+  "id": 171,
+  "name": "RETAGEN 40mg Retatrutida Caneta - Oxygen Pharma",
+  "category": "Emagrecimento",
+  "price": 1664.91,
+  "old": 1849.90,
+  "tag": "-10%",
+  "desc": "RETAGEN 40mg - Retatrutida em caneta aplicadora. Agonista triplo GLP-1/GIP/Glucagon. Administração subcutânea semanal. Produto Oxygen Pharma.",
+  "code": "RET40C-OX",
+  "img": "171.jpg"
+},
+{
+  "id": 172,
+  "name": "TIRZEGEN 60mg Tirzepatida Caneta - Oxygen Pharma",
+  "category": "Emagrecimento",
+  "price": 1251.81,
+  "old": 1390.90,
+  "tag": "-10%",
+  "desc": "TIRZEGEN 60mg - Tirzepatida em caneta aplicadora. Duplo agonista GLP-1/GIP para emagrecimento. Administração subcutânea semanal. Produto Oxygen Pharma.",
+  "code": "TIR60-OX",
+  "img": "172.jpg"
+},
+{
+  "id": 173,
+  "name": "RETAGEN 120mg Retatrutida - Oxygen Pharma",
+  "category": "Emagrecimento",
+  "price": 0.00,
+  "old": 0.00,
+  "tag": null,
+  "desc": "RETAGEN 120mg - Retatrutida. Agonista triplo GLP-1/GIP/Glucagon. 1 frasco multidose + 6ml água. Administração subcutânea semanal. Produto Oxygen Pharma.",
+  "code": "RET120-OX",
+  "img": "173.jpg"
+},
+{
+  "id": 174,
+  "name": "Kisspeptin 10mg (Liofilizada) + Água Bacteriostática - Oxygen Pharma",
+  "category": "Peptídeos",
+  "price": 1034.91,
+  "old": 1149.90,
+  "tag": "-10%",
+  "desc": "Kisspeptin 10mg - Peptídeo liofilizado com água bacteriostática. Para função hormonal e fertilidade. Produto Oxygen Pharma. Administração subcutânea.",
+  "code": "KISS-OX",
+  "img": "174.jpg"
+},
+{
+  "id": 175,
+  "name": "NAD+ 500mg (Liofilizada) + Água Bacteriostática - Oxygen Pharma",
+  "category": "Peptídeos",
+  "price": 1071.81,
+  "old": 1190.90,
+  "tag": "-10%",
+  "desc": "NAD+ 500mg - Peptídeo liofilizado com água bacteriostática. Para energia celular e longevidade. Produto Oxygen Pharma. Administração subcutânea.",
+  "code": "NAD500-OX",
+  "img": "175.jpg"
+},
+{
+  "id": 176,
+  "name": "RETAGEN 40mg Retatrutida (4 Ampolas Líquidas) - Oxygen Pharma",
+  "category": "Emagrecimento",
+  "price": 1161.81,
+  "old": 1290.90,
+  "tag": "-10%",
+  "desc": "RETAGEN 40mg - Retatrutida em 4 ampolas líquidas de 10mg cada. Agonista triplo GLP-1/GIP/Glucagon. Administração subcutânea semanal. Produto Oxygen Pharma.",
+  "code": "RET40A-OX",
+  "img": "176.jpg"
+},
+{
+  "id": 177,
+  "name": "Cagrisema 5mg (Liofilizada) + Água Bacteriostática - Oxygen Pharma",
+  "category": "Emagrecimento",
+  "price": 1071.81,
+  "old": 1190.90,
+  "tag": "-10%",
+  "desc": "Cagrisema 5mg - Peptídeo liofilizado com água bacteriostática. Para emagrecimento e controle de apetite. Produto Oxygen Pharma. Administração subcutânea.",
+  "code": "CAGR-OX",
+  "img": "177.jpg"
+},
+{
+  "id": 178,
+  "name": "BPC-157 10mg (Liofilizada) + Água Bacteriostática - Oxygen Pharma",
+  "category": "Peptídeos",
+  "price": 891.81,
+  "old": 990.90,
+  "tag": "-10%",
+  "desc": "BPC-157 10mg - Peptídeo liofilizado com água bacteriostática. Para recuperação muscular, cicatrização e saúde intestinal. Produto Oxygen Pharma. Administração subcutânea.",
+  "code": "BPC10-OX",
+  "img": "178.jpg"
+},
+{
+  "id": 179,
+  "name": "HGH Fragment 10mg (Liofilizada) + Água Bacteriostática - Oxygen Pharma",
+  "category": "Peptídeos",
+  "price": 1431.81,
+  "old": 1590.90,
+  "tag": "-10%",
+  "desc": "HGH Fragment 10mg - Fragmento do Hormônio do Crescimento. Para queima de gordura e metabolismo. Produto Oxygen Pharma. Administração subcutânea.",
+  "code": "HGHF-OX",
+  "img": "179.jpg"
+},
+{
+  "id": 180,
+  "name": "DSIP 5mg (Liofilizada) + Água Bacteriostática - Oxygen Pharma",
+  "category": "Peptídeos",
+  "price": 1071.81,
+  "old": 1190.90,
+  "tag": "-10%",
+  "desc": "DSIP 5mg - Peptídeo liofilizado com água bacteriostática. Para regulação do sono e recuperação. Produto Oxygen Pharma. Administração subcutânea.",
+  "code": "DSIP-OX",
+  "img": "180.jpg"
+},
+{
+  "id": 181,
+  "name": "Epitalon 50mg (Liofilizada) + Água Bacteriostática - Oxygen Pharma",
+  "category": "Peptídeos",
+  "price": 891.81,
+  "old": 990.90,
+  "tag": "-10%",
+  "desc": "Epitalon 50mg - Peptídeo liofilizado com água bacteriostática. Para longevidade, rejuvenescimento e regulação do sono. Produto Oxygen Pharma. Administração subcutânea.",
+  "code": "EPI-OX",
+  "img": "181.jpg"
+},
+{
+  "id": 182,
+  "name": "KPV 10mg (Liofilizada) + Água Bacteriostática - Oxygen Pharma",
+  "category": "Peptídeos",
+  "price": 801.81,
+  "old": 890.90,
+  "tag": "-10%",
+  "desc": "KPV 10mg - Peptídeo liofilizado com água bacteriostática. Anti-inflamatório e imunomodulador. Produto Oxygen Pharma. Administração subcutânea.",
+  "code": "KPV-OX",
+  "img": "182.jpg"
+},
+{
+  "id": 183,
+  "name": "GHK-Cu 100mg Caneta - Oxygen Pharma",
+  "category": "Peptídeos",
+  "price": 1611.81,
+  "old": 1790.90,
+  "tag": "-10%",
+  "desc": "GHK-Cu 100mg - Caneta aplicadora. Peptídeo para regeneração celular, pele e cicatrização. Produto Oxygen Pharma. Administração subcutânea.",
+  "code": "GHK100C-OX",
+  "img": "183.jpg"
+},
+{
+  "id": 184,
+  "name": "GHK-Cu 100mg (Liofilizada) + Água Bacteriostática - Oxygen Pharma",
+  "category": "Peptídeos",
+  "price": 891.81,
+  "old": 990.90,
+  "tag": "-10%",
+  "desc": "GHK-Cu 100mg - Peptídeo liofilizado com água bacteriostática. Para regeneração celular, pele e cicatrização. Produto Oxygen Pharma. Administração subcutânea.",
+  "code": "GHK100-OX",
+  "img": "184.jpg"
+},
+{
+  "id": 185,
+  "name": "TIRZEC 15 Tirzepatida 15mg/0,5mL - 1 frasco",
+  "category": "Emagrecimento",
+  "price": 0.00,
+  "old": 0.00,
+  "tag": null,
+  "desc": "TIRZEC 15 - Tirzepatida 15mg/0,5mL. 1 frasco com solução injetável. Duplo agonista GLP-1/GIP. Administração subcutânea semanal. Laboratório QUIM.",
+  "code": "TIRZ15",
+  "img": "185.jpg"
+},
+{
+  "id": 186,
+  "name": "T.G. 15 Tirzepatida 15mg/0,5mL - 4 frascos",
+  "category": "Emagrecimento",
+  "price": 0.00,
+  "old": 0.00,
+  "tag": null,
+  "desc": "T.G. 15 - Tirzepatida 15mg/0,5mL. 4 frascos viais com solução injetável. Duplo agonista GLP-1/GIP. Administração subcutânea semanal.",
+  "code": "TG15",
+  "img": "186.jpg"
+},
+{
+  "id": 187,
+  "name": "Lipoless MD 15 Tirzepatida 15mg/0,6mL - Vial Multidose",
+  "category": "Emagrecimento",
+  "price": 0.00,
+  "old": 0.00,
+  "tag": null,
+  "desc": "Lipoless MD 15 - Tirzepatida 15mg/0,6mL. Vial multidose de 2,4mL (4 doses fixas de 15mg/0,6mL). Duplo agonista GLP-1/GIP. Administração subcutânea semanal. Produto ETICOS.",
+  "code": "LIPO15",
+  "img": "187.jpg"
 }
 ];
