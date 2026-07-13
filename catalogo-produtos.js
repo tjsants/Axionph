@@ -1478,17 +1478,7 @@ window.AXION_PRODUCTS = [
   "code": "DECA-BTV",
   "img": "29.jpg"
 },
-{
-  "id": 30,
-  "name": "Enantato de Metenolona (Primobolan 100mg/10ml) Bratva Labs",
-  "category": "Ganho de Massa",
-  "price": 450.00,
-  "old": null,
-  "tag": null,
-  "desc": "Enantato de Metenolona 100mg/mL - 10mL. Primobolan para ganhos de qualidade. Produto Bratva Labs. Administração intramuscular semanal.",
-  "code": "PRIMO-BTV",
-  "img": "30.jpg"
-},
+
 {
   "id": 31,
   "name": "Enantato de Testosterona (250mg/10ml) Bratva Labs",
@@ -1801,28 +1791,7 @@ window.AXION_PRODUCTS = [
   "code": "MAS-LG",
   "img": "122.jpg"
 },
-{
-  "id": 123,
-  "name": "Boldenona LanderGold",
-  "category": "Ganho de Massa",
-  "price": 250.00,
-  "old": null,
-  "tag": null,
-  "desc": "Boldenona 250mg/mL - 10mL. Produto LanderGold. Administração intramuscular semanal.",
-  "code": "BOL-LG",
-  "img": "123.jpg"
-},
-{
-  "id": 124,
-  "name": "Trembolona Acetato LanderGold",
-  "category": "Ganho de Massa",
-  "price": 280.00,
-  "old": null,
-  "tag": null,
-  "desc": "Trembolona Acetato 100mg/mL - 10mL. Produto LanderGold. Administração intramuscular em dias alternados.",
-  "code": "TRENA-LG",
-  "img": "124.jpg"
-},
+
 {
   "id": 128,
   "name": "CLEMBUTEROL LanderGold",
