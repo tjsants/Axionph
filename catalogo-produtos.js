@@ -14,9 +14,31 @@ window.AXION_PRODUCTS = [
   "code": "TIRZ15",
   "img": "185.jpg"
 },
+  {
+  "id": 172,
+  "name": "T.G. 15 Tirzepatida 60ml (bujão)",
+  "category": "Emagrecimento",
+  "price": 1350.00,
+  "old": 1900.00,
+  "tag": "🔥 DESTAQUE",
+  "desc": "T.G. 15 - Tirzepatida 15mg/0,5mL. 4 frascos viais com solução injetável. Duplo agonista GLP-1/GIP. Administração subcutânea semanal.",
+  "code": "TG15",
+  "img": "172.jpg"
+},
+{
+  "id": 171,
+  "name": "Lipoless MD 15 Tirzepatida 60ml (bujão)",
+  "category": "Emagrecimento",
+  "price": 1370.00,
+  "old": 1800.00,
+  "tag": "🔥 DESTAQUE",
+  "desc": "Lipoless MD 15 - Tirzepatida 15mg/0,6mL. Vial multidose de 2,4mL (4 doses fixas de 15mg/0,6mL). Duplo agonista GLP-1/GIP. Administração subcutânea semanal. Produto ETICOS.",
+  "code": "LIPO15",
+  "img": "171.jpg"
+},
 {
   "id": 186,
-  "name": "T.G. 15 Tirzepatida 15mg/0,5mL - 4 frascos",
+  "name": "T.G. 15 Tirzepatida 15ml (4 ampolas)",
   "category": "Emagrecimento",
   "price": 1350.00,
   "old": 1900.00,
