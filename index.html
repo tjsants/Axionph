@@ -294,7 +294,6 @@
       box-shadow: 0 4px 20px rgba(0,0,0,0.08);
       border: 2px solid #e67e22;
       transition: transform .3s ease, box-shadow .3s ease;
-      cursor: pointer;
       position: relative;
     }
 
@@ -317,19 +316,25 @@
     }
 
     .destaque-card .destaque-img {
-      height: 140px;
+      height: 180px;
       display: flex;
       align-items: center;
       justify-content: center;
       background: #f9fbfd;
       padding: 10px;
+      cursor: pointer;
+      overflow: hidden;
     }
 
     .destaque-card .destaque-img img {
+      width: 100%;
       height: 100%;
-      width: auto;
-      max-width: 100%;
-      object-fit: contain;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .destaque-card .destaque-img img:hover {
+      transform: scale(1.05);
     }
 
     .destaque-card .destaque-body {
@@ -1056,6 +1061,7 @@
       .product-grid { grid-template-columns: repeat(3, 1fr); }
       .product-art { height: 160px; min-height: 160px; max-height: 160px; }
       .destaque-topo { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+      .destaque-card .destaque-img { height: 140px; }
     }
 
     @media (max-width: 768px) {
@@ -1079,7 +1085,7 @@
       .whatsapp-float { width: 56px; height: 56px; font-size: 30px; bottom: 20px; right: 20px; }
       .whatsapp-float svg { width: 30px; height: 30px; }
       .destaque-topo { grid-template-columns: repeat(3, 1fr); gap: 8px; }
-      .destaque-card .destaque-img { height: 80px; }
+      .destaque-card .destaque-img { height: 100px; }
       .destaque-card .destaque-body h4 { font-size: 11px; min-height: 26px; }
       .destaque-card .destaque-body .precos .new { font-size: 15px; }
       .destaque-card .add-destaque { font-size: 10px; padding: 5px; }
@@ -1110,7 +1116,7 @@
       .cart-panel { width: 100%; padding: 10px; }
       .cart-head h2 { font-size: 16px; }
       .destaque-topo { grid-template-columns: 1fr; gap: 10px; }
-      .destaque-card .destaque-img { height: 100px; }
+      .destaque-card .destaque-img { height: 160px; }
     }
   </style>
 </head>
@@ -1157,55 +1163,55 @@
 
   <div class="wrap">
     <!-- PRODUTOS EM DESTAQUE NO TOPO -->
-    <div class="destaque-topo" id="destaqueTopo">
-      <!-- TG - ID 185 -->
-      <div class="destaque-card" onclick="addToCart(185)">
-        <span class="tag-topo">🔥 TOP</span>
-        <div class="destaque-img">
-          <img src="185.jpg" alt="TG Retatrutida" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23f0f5f8%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 font-size=%2214%22 text-anchor=%22middle%22 dominant-baseline=%22central%22 fill=%22%23627087%22 font-family=%22Arial%22%3ETG%3C/text%3E%3C/svg%3E'">
+    <div class="destaque-topo">
+      <!-- TIRZEC - ID 185 -->
+      <div class="destaque-card">
+        <span class="tag-topo">🔥 DESTAQUE</span>
+        <div class="destaque-img" onclick="openImageModal('185.jpg')">
+          <img src="185.jpg" alt="TIRZEC 15" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23f0f5f8%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 font-size=%2214%22 text-anchor=%22middle%22 dominant-baseline=%22central%22 fill=%22%23627087%22 font-family=%22Arial%22%3ETIRZEC%3C/text%3E%3C/svg%3E'">
         </div>
         <div class="destaque-body">
-          <h4>🔥 TG (Retatrutida) 40mg - PROMOÇÃO</h4>
+          <h4>🔥 TIRZEC 15 Tirzepatida 15mg/0,5mL</h4>
+          <div class="precos">
+            <span class="old">R$ 1.950</span>
+            <span class="new">R$ 1.380</span>
+            <span class="frete">🚚 FRETE GRÁTIS</span>
+          </div>
+          <button class="add-destaque" onclick="addToCart(185)">Adicionar ao carrinho</button>
+        </div>
+      </div>
+
+      <!-- T.G. - ID 186 -->
+      <div class="destaque-card">
+        <span class="tag-topo">🔥 DESTAQUE</span>
+        <div class="destaque-img" onclick="openImageModal('186.jpg')">
+          <img src="186.jpg" alt="T.G. 15" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23f0f5f8%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 font-size=%2214%22 text-anchor=%22middle%22 dominant-baseline=%22central%22 fill=%22%23627087%22 font-family=%22Arial%22%3ET.G.%3C/text%3E%3C/svg%3E'">
+        </div>
+        <div class="destaque-body">
+          <h4>🔥 T.G. 15 Tirzepatida 15mg/0,5mL - 4 frascos</h4>
+          <div class="precos">
+            <span class="old">R$ 1.900</span>
+            <span class="new">R$ 1.350</span>
+            <span class="frete">🚚 FRETE GRÁTIS</span>
+          </div>
+          <button class="add-destaque" onclick="addToCart(186)">Adicionar ao carrinho</button>
+        </div>
+      </div>
+
+      <!-- Lipoless - ID 187 -->
+      <div class="destaque-card">
+        <span class="tag-topo">🔥 DESTAQUE</span>
+        <div class="destaque-img" onclick="openImageModal('187.jpg')">
+          <img src="187.jpg" alt="Lipoless MD 15" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23f0f5f8%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 font-size=%2214%22 text-anchor=%22middle%22 dominant-baseline=%22central%22 fill=%22%23627087%22 font-family=%22Arial%22%3ELipoless%3C/text%3E%3C/svg%3E'">
+        </div>
+        <div class="destaque-body">
+          <h4>🔥 Lipoless MD 15 Tirzepatida 15mg/0,6mL</h4>
           <div class="precos">
             <span class="old">R$ 1.800</span>
-            <span class="new">R$ 1.120</span>
+            <span class="new">R$ 1.370</span>
             <span class="frete">🚚 FRETE GRÁTIS</span>
           </div>
-          <button class="add-destaque" onclick="event.stopPropagation(); addToCart(185)">Adicionar</button>
-        </div>
-      </div>
-
-      <!-- TIRZEC - ID 186 -->
-      <div class="destaque-card" onclick="addToCart(186)">
-        <span class="tag-topo">🔥 TOP</span>
-        <div class="destaque-img">
-          <img src="186.jpg" alt="TIRZEC Tirzepatida" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23f0f5f8%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 font-size=%2214%22 text-anchor=%22middle%22 dominant-baseline=%22central%22 fill=%22%23627087%22 font-family=%22Arial%22%3ETIRZEC%3C/text%3E%3C/svg%3E'">
-        </div>
-        <div class="destaque-body">
-          <h4>🔥 TIRZEC (Tirzepatida) 60mg - PROMOÇÃO</h4>
-          <div class="precos">
-            <span class="old">R$ 2.500</span>
-            <span class="new">R$ 1.300</span>
-            <span class="frete">🚚 FRETE GRÁTIS</span>
-          </div>
-          <button class="add-destaque" onclick="event.stopPropagation(); addToCart(186)">Adicionar</button>
-        </div>
-      </div>
-
-      <!-- LIPOLEES - ID 187 -->
-      <div class="destaque-card" onclick="addToCart(187)">
-        <span class="tag-topo">🔥 TOP</span>
-        <div class="destaque-img">
-          <img src="187.jpg" alt="LIPOLEES Lipoland" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23f0f5f8%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 font-size=%2214%22 text-anchor=%22middle%22 dominant-baseline=%22central%22 fill=%22%23627087%22 font-family=%22Arial%22%3ELIPOLEES%3C/text%3E%3C/svg%3E'">
-        </div>
-        <div class="destaque-body">
-          <h4>🔥 LIPOLEES (Lipoland) 15mg Kit 4 Frascos</h4>
-          <div class="precos">
-            <span class="old">R$ 2.500</span>
-            <span class="new">R$ 1.300</span>
-            <span class="frete">🚚 FRETE GRÁTIS</span>
-          </div>
-          <button class="add-destaque" onclick="event.stopPropagation(); addToCart(187)">Adicionar</button>
+          <button class="add-destaque" onclick="addToCart(187)">Adicionar ao carrinho</button>
         </div>
       </div>
     </div>
