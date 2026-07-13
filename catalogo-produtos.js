@@ -1251,39 +1251,7 @@ window.AXION_PRODUCTS = [
   "code": "TRENA-LG",
   "img": "124.jpg"
 },
-{
-  "id": 125,
-  "name": "Trembolona Enantato LanderGold",
-  "category": "Ganho de Massa",
-  "price": 280.00,
-  "old": null,
-  "tag": null,
-  "desc": "Trembolona Enantato 200mg/mL - 10mL. Produto LanderGold. Administração intramuscular semanal.",
-  "code": "TRENE-LG",
-  "img": "125.jpg"
-},
-{
-  "id": 126,
-  "name": "TriTrembo (Blend) LanderGold",
-  "category": "Ganho de Massa",
-  "price": 310.00,
-  "old": null,
-  "tag": null,
-  "desc": "TriTrembo 200mg/mL - 10mL. Blend de 3 ésteres de Trembolona. Produto LanderGold. Administração intramuscular.",
-  "code": "TRB-LG",
-  "img": "126.jpg"
-},
-{
-  "id": 127,
-  "name": "TESTOSTERONA PROPIONATO LanderGold",
-  "category": "Ganho de Massa",
-  "price": 230.00,
-  "old": null,
-  "tag": null,
-  "desc": "Propionato de Testosterona 100mg/mL - 10mL. Produto LanderGold. Administração intramuscular em dias alternados.",
-  "code": "PT-LG",
-  "img": "127.jpg"
-},
+
 {
   "id": 128,
   "name": "CLEMBUTEROL LanderGold",
