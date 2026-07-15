@@ -4,6 +4,16 @@ window.AXION_PRODUCTS = [
 // 🔥 DESTAQUE - TIRZEC, T.G., LIPOLESS (IDs 185, 186, 187)
 // ============================================================
 {
+    id: 180,
+    name: "GHK-CU 100mg - Peptide Biotech",
+    category: "Peptídeos",
+    price: 699.00,
+    old: 950.00,
+    desc: "GHK-CU 100mg - Pó Liofilizado para uso subcutâneo. Peptídeo bioativo para regeneração tecidual.",
+    tag: "🔥 OFERTA",
+    img: "180.jpg"
+  },
+{
   "id": 185,
   "name": "TIRZEC 15 Tirzepatida 15mg/0,5mL - 1 frasco",
   "category": "Emagrecimento",
