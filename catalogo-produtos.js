@@ -1510,7 +1510,6 @@ window.AXION_PRODUCTS = [
   "code": "DECA-BTV",
   "img": "29.jpg"
 },
-
 {
   "id": 31,
   "name": "Enantato de Testosterona (250mg/10ml) Bratva Labs",
@@ -1823,7 +1822,6 @@ window.AXION_PRODUCTS = [
   "code": "MAS-LG",
   "img": "122.jpg"
 },
-
 {
   "id": 128,
   "name": "CLEMBUTEROL LanderGold",
@@ -1834,5 +1832,594 @@ window.AXION_PRODUCTS = [
   "desc": "Clembuterol 40mcg - 100 comprimidos. Produto LanderGold. Uso oral diário.",
   "code": "CLE-LG",
   "img": "128.jpg"
+},
+
+// ============================================================
+// NOVOS PRODUTOS - IDs 1000 a 1052
+// ============================================================
+
+// LANDERLAN GOLD - NOVOS
+{
+  id: 1000,
+  name: "Clembuterol Cloridrato 0,04mg - LANDERLAN GOLD",
+  category: "Emagrecimento",
+  price: 160.00,
+  old: null,
+  tag: null,
+  desc: "Clembuterol Cloridrato 0,04mg - LANDERLAN GOLD",
+  code: "CLE-GOLD",
+  img: "1000.jpg"
+},
+{
+  id: 1001,
+  name: "Testoland Depot 200mg/2mL - LANDERLAN GOLD",
+  category: "Ganho de Massa",
+  price: 200.00,
+  old: null,
+  tag: null,
+  desc: "Testoland Depot 200mg/2mL - LANDERLAN GOLD",
+  code: "TD-GOLD",
+  img: "1001.jpg"
+},
+{
+  id: 1002,
+  name: "Lipoland Tirzepatida 10mg/0,5ml - LANDERLAN",
+  category: "Emagrecimento",
+  price: 1100.00,
+  old: null,
+  tag: null,
+  desc: "Lipoland Tirzepatida 10mg/0,5ml - 4 seringas - LANDERLAN",
+  code: "LIPO10",
+  img: "1002.jpg"
+},
+{
+  id: 1003,
+  name: "Lipoland Tirzepatida 15mg - 4 Frascos - LANDERLAN",
+  category: "Emagrecimento",
+  price: 1350.00,
+  old: null,
+  tag: null,
+  desc: "Lipoland Tirzepatida 15mg - 4 Frascos - LANDERLAN",
+  code: "LIPO15-4F",
+  img: "1003.jpg"
+},
+{
+  id: 1004,
+  name: "Lipoland Tirzepatida 15mg - LANDERLAN",
+  category: "Emagrecimento",
+  price: 1700.00,
+  old: null,
+  tag: null,
+  desc: "Lipoland Tirzepatida 15mg - LANDERLAN",
+  code: "LIPO15",
+  img: "1004.jpg"
+},
+{
+  id: 1005,
+  name: "Trembolona Hexahidroxibencil 51mg/ml - LANDERGOLD",
+  category: "Ganho de Massa",
+  price: 255.00,
+  old: null,
+  tag: null,
+  desc: "Trembolona Hexahidroxibencil 51mg/ml - LANDERGOLD",
+  code: "THB51",
+  img: "1005.jpg"
+},
+{
+  id: 1006,
+  name: "Tritembo Gold 200mg/ml - LANDERGOLD",
+  category: "Ganho de Massa",
+  price: 276.00,
+  old: null,
+  tag: null,
+  desc: "Tritembo Gold 200mg/ml - LANDERGOLD",
+  code: "TRIGOLD",
+  img: "1006.jpg"
+},
+{
+  id: 1007,
+  name: "Parabolan - Trembolona Acetato - LANDERLAN",
+  category: "Ganho de Massa",
+  price: 250.00,
+  old: null,
+  tag: null,
+  desc: "Parabolan - Trembolona Acetato - Solução Injetável - LANDERLAN",
+  code: "PARA",
+  img: "1007.jpg"
+},
+{
+  id: 1008,
+  name: "Retagen Retatrutida 40mg - 4 Ampolas - OXYGEN PHARMA",
+  category: "Emagrecimento",
+  price: 1200.00,
+  old: null,
+  tag: "🔥 NOVO",
+  desc: "Retagen Retatrutida 40mg (4 vials x 10mg) - Triple GLP-1/GIP/Glucagon - OXYGEN PHARMA",
+  code: "RET40-OX",
+  img: "1008.jpg"
+},
+{
+  id: 1009,
+  name: "Nandrolona Fenilpropionato 100mg/10ml - LANDERGOLD",
+  category: "Ganho de Massa",
+  price: 200.00,
+  old: null,
+  tag: null,
+  desc: "Nandrolona Fenilpropionato 100mg/10ml - LANDERGOLD",
+  code: "NFP100",
+  img: "1009.jpg"
+},
+{
+  id: 1010,
+  name: "HCG Humano 5.000ui - LANDERGOLD",
+  category: "Ganho de Massa",
+  price: 260.00,
+  old: null,
+  tag: null,
+  desc: "Gonadotropina Corionica Humana 5.000ui - Pó liofilizado para injetável - LANDERGOLD",
+  code: "HCG5-LG",
+  img: "1010.jpg"
+},
+{
+  id: 1011,
+  name: "Testenat Depot - Enantato Testosterona 250mg/mL - COLD PREMIUM",
+  category: "Ganho de Massa",
+  price: 220.00,
+  old: null,
+  tag: null,
+  desc: "Testenat Depot - Enantato Testosterona 250mg/mL - Solução Oleosa Injetável",
+  code: "TESTENAT",
+  img: "1011.jpg"
+},
+{
+  id: 1012,
+  name: "Metandrostenolona Dianabol 10mg/100comp - LANDERLAN",
+  category: "Ganho de Massa",
+  price: 110.00,
+  old: null,
+  tag: null,
+  desc: "Metandrostenolona/Dianabol 10mg/100comp - LANDERLAN",
+  code: "DIA-LAN",
+  img: "1012.jpg"
+},
+{
+  id: 1013,
+  name: "Oxitolan Hemogenin Oral 50mg/20comp - LANDERLAN",
+  category: "Ganho de Massa",
+  price: 85.00,
+  old: null,
+  tag: null,
+  desc: "Oxitolan/Hemogenin Oral 50mg/20comp - LANDERLAN",
+  code: "HEMO-LAN",
+  img: "1013.jpg"
+},
+{
+  id: 1014,
+  name: "Andronic/Mesterolona 25mg/20comp - LANDERLAN",
+  category: "Ganho de Massa",
+  price: 115.00,
+  old: null,
+  tag: null,
+  desc: "Andronic/Mesterolona 25mg/20comp - ANDROLOGY",
+  code: "MEST25",
+  img: "1014.jpg"
+},
+{
+  id: 1015,
+  name: "Drostenoland Masteron 10mg/50comp - LANDERLAN",
+  category: "Ganho de Massa",
+  price: 185.00,
+  old: null,
+  tag: null,
+  desc: "Drostenoland Masteron 10mg/50comp - ANDROLOGY",
+  code: "MAST10",
+  img: "1015.jpg"
+},
+{
+  id: 1016,
+  name: "Enantato de Testosterona 250mg/10ml - LANDERGOLD",
+  category: "Ganho de Massa",
+  price: 200.00,
+  old: null,
+  tag: null,
+  desc: "Testenat Enantato de Testosterona 250mg/10ml - LANDERGOLD",
+  code: "ET-LG2",
+  img: "1016.jpg"
+},
+{
+  id: 1017,
+  name: "Drostanolona Masteron Propionato 100mg/ml - LANDERGOLD",
+  category: "Ganho de Massa",
+  price: 250.00,
+  old: null,
+  tag: null,
+  desc: "Drostanolona Masteron Propionato 100mg/ml - LANDERGOLD",
+  code: "MAST-LG",
+  img: "1017.jpg"
+},
+{
+  id: 1018,
+  name: "Boldenona Undecilenato 250mg/ml - LANDERGOLD",
+  category: "Ganho de Massa",
+  price: 205.00,
+  old: null,
+  tag: null,
+  desc: "Boldenona Undecilenato 250mg/ml - LANDERGOLD",
+  code: "BOLD-LG",
+  img: "1018.jpg"
+},
+{
+  id: 1019,
+  name: "Durateston Plus Gold 250mg/ml - LANDERGOLD",
+  category: "Ganho de Massa",
+  price: 200.00,
+  old: null,
+  tag: null,
+  desc: "Durateston Plus Gold 250mg/ml - LANDERGOLD",
+  code: "DURA-LG",
+  img: "1019.jpg"
+},
+{
+  id: 1020,
+  name: "Propionato Landergold 100mg/1ml - LANDERGOLD",
+  category: "Ganho de Massa",
+  price: 200.00,
+  old: null,
+  tag: null,
+  desc: "Propionato Landergold 100mg/1ml - LANDERGOLD",
+  code: "PROP-LG",
+  img: "1020.jpg"
+},
+{
+  id: 1021,
+  name: "Retagen Retatrutida 40mg - Solução Líquida - OXYGEN PHARMA",
+  category: "Emagrecimento",
+  price: 1399.00,
+  old: null,
+  tag: "🔥 NOVO",
+  desc: "Retagen Retatrutida 40mg - 4 Ampolas Líquidas (10mg cada) - Triple Agonist GLP-1/GIP/Glucagon",
+  code: "RET40L-OX",
+  img: "1021.jpg"
+},
+{
+  id: 1022,
+  name: "Retagen Retatrutida 60mg - OXYGEN PHARMA",
+  category: "Emagrecimento",
+  price: 1999.00,
+  old: null,
+  tag: "🔥 NOVO",
+  desc: "Retagen Retatrutida 60mg - Agonista triplo GLP-1/GIP/Glucagon",
+  code: "RET60-OX2",
+  img: "1022.jpg"
+},
+{
+  id: 1023,
+  name: "KLOW 80mg - Blend Peptídeos (GHK-Cu, TB500, BPC157, KPV) - OXYGEN PHARMA",
+  category: "Peptídeos",
+  price: 1754.91,
+  old: 1949.90,
+  tag: "-10%",
+  desc: "KLOW 80mg - Blend de peptídeos (GHK-Cu, TB500, BPC157, KPV) em caneta aplicadora",
+  code: "KLOW-OX2",
+  img: "1023.jpg"
+},
+{
+  id: 1024,
+  name: "NAD+ 1000mg + Vitamin B12 4000mcg Caneta - OXYGEN PHARMA",
+  category: "Peptídeos",
+  price: 1791.81,
+  old: 1990.90,
+  tag: "-10%",
+  desc: "NAD+ 1000mg + Vitamina B12 4000mcg - Caneta aplicadora para energia e longevidade",
+  code: "NAD1000-OX2",
+  img: "1024.jpg"
+},
+{
+  id: 1025,
+  name: "CBL 514 50mg - OXYGEN PHARMA",
+  category: "Emagrecimento",
+  price: 1300.00,
+  old: null,
+  tag: null,
+  desc: "CBL 514 50mg - 1 frasco + 2ml água para injeção - Administração subcutânea semanal",
+  code: "CBL-OX2",
+  img: "1025.jpg"
+},
+{
+  id: 1026,
+  name: "GHK-Cu 100mg Caneta - OXYGEN PHARMA",
+  category: "Peptídeos",
+  price: 1611.81,
+  old: 1790.90,
+  tag: "-10%",
+  desc: "GHK-Cu 100mg - Caneta aplicadora para regeneração celular",
+  code: "GHK100C-OX2",
+  img: "1026.jpg"
+},
+{
+  id: 1027,
+  name: "TIRZEGEN 60mg Tirzepatida Caneta - OXYGEN PHARMA",
+  category: "Emagrecimento",
+  price: 1850.81,
+  old: 1390.90,
+  tag: "-10%",
+  desc: "TIRZEGEN 60mg - Tirzepatida em caneta aplicadora - Agonista GLP-1/GIP",
+  code: "TIR60-OX2",
+  img: "1027.jpg"
+},
+{
+  id: 1028,
+  name: "Enantato de Testosterona 250mg/10ml - COOPER PHARMA",
+  category: "Ganho de Massa",
+  price: 695.00,
+  old: null,
+  tag: null,
+  desc: "Enantato de Testosterona 250mg/10ml - COOPER PHARMA",
+  code: "ET-CP2",
+  img: "1028.jpg"
+},
+{
+  id: 1029,
+  name: "Durateston 250mg/10ml - COOPER PHARMA",
+  category: "Ganho de Massa",
+  price: 580.00,
+  old: null,
+  tag: null,
+  desc: "Durateston 250mg/10ml - COOPER PHARMA",
+  code: "DUR-CP2",
+  img: "1029.jpg"
+},
+{
+  id: 1030,
+  name: "Deca 200mg/10ml - COOPER PHARMA",
+  category: "Ganho de Massa",
+  price: 500.00,
+  old: null,
+  tag: null,
+  desc: "Deca 200mg/10ml - COOPER PHARMA",
+  code: "DEC-CP2",
+  img: "1030.jpg"
+},
+{
+  id: 1031,
+  name: "Primobolan 100mg/10ml - COOPER PHARMA",
+  category: "Ganho de Massa",
+  price: 580.00,
+  old: null,
+  tag: null,
+  desc: "Primobolan 100mg/10ml - COOPER PHARMA",
+  code: "PRI-CP2",
+  img: "1031.jpg"
+},
+{
+  id: 1032,
+  name: "Masteron Propionato 100mg/10ml - COOPER PHARMA",
+  category: "Ganho de Massa",
+  price: 610.00,
+  old: null,
+  tag: null,
+  desc: "Masteron Propionato 100mg/10ml - COOPER PHARMA",
+  code: "MAS-CP2",
+  img: "1032.jpg"
+},
+{
+  id: 1033,
+  name: "Trembolona Acetato 100mg/10ml - COOPER PHARMA",
+  category: "Ganho de Massa",
+  price: 650.00,
+  old: null,
+  tag: null,
+  desc: "Trembolona Acetato 100mg/10ml - COOPER PHARMA",
+  code: "TRENA-CP2",
+  img: "1033.jpg"
+},
+{
+  id: 1034,
+  name: "Stanozolol Oral 10mg/100comp - MUSCLE LABS",
+  category: "Ganho de Massa",
+  price: 150.00,
+  old: null,
+  tag: null,
+  desc: "Stanozolol Oral 10mg/100comp - MUSCLE LABS",
+  code: "STO-ML2",
+  img: "1034.jpg"
+},
+{
+  id: 1035,
+  name: "Oxandrolona 5mg/100comp - MUSCLE LABS",
+  category: "Ganho de Massa",
+  price: 180.00,
+  old: null,
+  tag: null,
+  desc: "Oxandrolona 5mg/100comp - MUSCLE LABS",
+  code: "OXA5-ML2",
+  img: "1035.jpg"
+},
+{
+  id: 1036,
+  name: "Enantato de Testosterona 250mg/10ml - MUSCLE LABS",
+  category: "Ganho de Massa",
+  price: 270.00,
+  old: null,
+  tag: null,
+  desc: "Enantato de Testosterona 250mg/10ml - MUSCLE LABS",
+  code: "ET-ML2",
+  img: "1036.jpg"
+},
+{
+  id: 1037,
+  name: "Durateston 250mg/10ml - MUSCLE LABS",
+  category: "Ganho de Massa",
+  price: 270.00,
+  old: null,
+  tag: null,
+  desc: "Durateston 250mg/10ml - MUSCLE LABS",
+  code: "DUR-ML2",
+  img: "1037.jpg"
+},
+{
+  id: 1038,
+  name: "Deca 200mg/10ml - MUSCLE LABS",
+  category: "Ganho de Massa",
+  price: 270.00,
+  old: null,
+  tag: null,
+  desc: "Deca 200mg/10ml - MUSCLE LABS",
+  code: "DEC-ML2",
+  img: "1038.jpg"
+},
+{
+  id: 1039,
+  name: "Primobolan 100mg/10ml - MUSCLE LABS",
+  category: "Ganho de Massa",
+  price: 480.00,
+  old: null,
+  tag: null,
+  desc: "Primobolan 100mg/10ml - MUSCLE LABS",
+  code: "PRI-ML2",
+  img: "1039.jpg"
+},
+{
+  id: 1040,
+  name: "Masteron Propionato 100mg/10ml - MUSCLE LABS",
+  category: "Ganho de Massa",
+  price: 320.00,
+  old: null,
+  tag: null,
+  desc: "Masteron Propionato 100mg/10ml - MUSCLE LABS",
+  code: "MAS-ML2",
+  img: "1040.jpg"
+},
+{
+  id: 1041,
+  name: "Trembolona Acetato 100mg/10ml - MUSCLE LABS",
+  category: "Ganho de Massa",
+  price: 330.00,
+  old: null,
+  tag: null,
+  desc: "Trembolona Acetato 100mg/10ml - MUSCLE LABS",
+  code: "TRENA-ML2",
+  img: "1041.jpg"
+},
+{
+  id: 1042,
+  name: "Enantato de Testosterona 250mg/10ml - BRATVA LABS",
+  category: "Ganho de Massa",
+  price: 350.00,
+  old: null,
+  tag: null,
+  desc: "Enantato de Testosterona 250mg/10ml - BRATVA LABS",
+  code: "ET-BTV2",
+  img: "1042.jpg"
+},
+{
+  id: 1043,
+  name: "Decanoato de Nandrolona 200mg/10ml - BRATVA LABS",
+  category: "Ganho de Massa",
+  price: 200.00,
+  old: null,
+  tag: null,
+  desc: "Decanoato de Nandrolona 200mg/10ml - BRATVA LABS",
+  code: "DEC-BTV2",
+  img: "1043.jpg"
+},
+{
+  id: 1044,
+  name: "Propionato de Drostanolona 100mg/10ml - BRATVA LABS",
+  category: "Ganho de Massa",
+  price: 190.00,
+  old: null,
+  tag: null,
+  desc: "Propionato de Drostanolona 100mg/10ml - BRATVA LABS",
+  code: "MAST-BTV2",
+  img: "1044.jpg"
+},
+{
+  id: 1045,
+  name: "Acetato de Trembolona 100mg/10ml - BRATVA LABS",
+  category: "Ganho de Massa",
+  price: 250.00,
+  old: null,
+  tag: null,
+  desc: "Acetato de Trembolona 100mg/10ml - BRATVA LABS",
+  code: "TRENA-BTV2",
+  img: "1045.jpg"
+},
+{
+  id: 1046,
+  name: "Sales de Testosterona 250mg/10ml - BRATVA LABS",
+  category: "Ganho de Massa",
+  price: 230.00,
+  old: null,
+  tag: null,
+  desc: "Sales de Testosterona 250mg/10ml - BRATVA LABS",
+  code: "DUR-BTV2",
+  img: "1046.jpg"
+},
+{
+  id: 1047,
+  name: "Undecilenato de Boldenona 250mg/10ml - BRATVA LABS",
+  category: "Ganho de Massa",
+  price: 210.00,
+  old: null,
+  tag: null,
+  desc: "Undecilenato de Boldenona 250mg/10ml - BRATVA LABS",
+  code: "BOLD-BTV2",
+  img: "1047.jpg"
+},
+{
+  id: 1048,
+  name: "Fenilpropionato de Nandrolona 100mg/10ml - BRATVA LABS",
+  category: "Ganho de Massa",
+  price: 220.00,
+  old: null,
+  tag: null,
+  desc: "Fenilpropionato de Nandrolona 100mg/10ml - BRATVA LABS",
+  code: "NPP-BTV2",
+  img: "1048.jpg"
+},
+{
+  id: 1049,
+  name: "Dianabol 10mg/100comp - MUSCLE LABS",
+  category: "Ganho de Massa",
+  price: 140.00,
+  old: null,
+  tag: null,
+  desc: "Dianabol 10mg/100comp - MUSCLE LABS",
+  code: "DIA-ML2",
+  img: "1049.jpg"
+},
+{
+  id: 1050,
+  name: "Hemogenin 50mg/50comp - MUSCLE LABS",
+  category: "Ganho de Massa",
+  price: 150.00,
+  old: null,
+  tag: null,
+  desc: "Hemogenin 50mg/50comp - MUSCLE LABS",
+  code: "HEM-ML2",
+  img: "1050.jpg"
+},
+{
+  id: 1051,
+  name: "Proviron 25mg/50comp - MUSCLE LABS",
+  category: "Ganho de Massa",
+  price: 180.00,
+  old: null,
+  tag: null,
+  desc: "Proviron 25mg/50comp - MUSCLE LABS",
+  code: "PRO-ML2",
+  img: "1051.jpg"
+},
+{
+  id: 1052,
+  name: "Turinabol 10mg/50comp - MUSCLE LABS",
+  category: "Ganho de Massa",
+  price: 155.00,
+  old: null,
+  tag: null,
+  desc: "Turinabol 10mg/50comp - MUSCLE LABS",
+  code: "TUR-ML2",
+  img: "1052.jpg"
 }
 ];
