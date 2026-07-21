@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Axionpharma | online</title>
   <style>
-    /* ========== ESTILOS COMPLETOS ========== */
     :root {
       --ink: #ffffff;
       --muted: #a0b0c0;
@@ -666,7 +665,6 @@
       display: inline-block;
     }
 
-    /* ========== MODAL CLIENTE ========== */
     .modal-overlay {
       position: fixed;
       inset: 0;
@@ -812,7 +810,6 @@
       display: block;
     }
 
-    /* ========== DRAWER / CARRINHO ========== */
     .drawer {
       position: fixed;
       inset: 0;
@@ -992,7 +989,6 @@
       background: #00b844;
     }
 
-    /* ========== COUPOM ========== */
     .coupon-section {
       margin: 8px 0 12px;
       padding: 10px;
@@ -1101,7 +1097,6 @@
       display: block;
     }
 
-    /* ========== FOOTER ========== */
     footer {
       background: #0a0a0f;
       color: #d9eef3;
@@ -1142,7 +1137,6 @@
       font-weight: 600;
     }
 
-    /* ========== RESPONSIVO ========== */
     @media (max-width: 1024px) {
       .product-grid { grid-template-columns: repeat(3, 1fr); }
       .product-art { height: 160px; min-height: 160px; max-height: 160px; }
@@ -1209,12 +1203,12 @@
 </head>
 <body>
 
-  <!-- ========== WHATSAPP FLUTUANTE ========== -->
+  <!-- WHATSAPP FLUTUANTE -->
   <a href="https://wa.me/5511920714068" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
-  <!-- ========== HEADER ========== -->
+  <!-- HEADER -->
   <header class="header">
     <div class="wrap header-main">
       <a class="brand" href="#">
@@ -1239,7 +1233,7 @@
     </div>
   </header>
 
-  <!-- ========== BANNER TOPO ========== -->
+  <!-- BANNER TOPO -->
   <div class="wrap banner-top-text">
     <div class="info-box emagrecimento" onclick="filterByCategory('Emagrecimento')">
       <span class="icon">💊</span>
@@ -1251,7 +1245,7 @@
     </div>
   </div>
 
-  <!-- ========== DESTAQUES ========== -->
+  <!-- DESTAQUES -->
   <div class="wrap">
     <div class="destaque-topo">
       <div class="destaque-card">
@@ -1304,14 +1298,14 @@
     </div>
   </div>
 
-  <!-- ========== BANNER GRANDE ========== -->
+  <!-- BANNER GRANDE -->
   <div class="wrap">
     <div class="banner-grande" onclick="resetAllFilters();">
       <img src="root/destaque1.jpg" alt="Promoção Axionpharma" loading="lazy" onerror="this.style.display='none'">
     </div>
   </div>
 
-  <!-- ========== PRODUTOS ========== -->
+  <!-- PRODUTOS -->
   <main class="wrap">
     <section id="categoria-todos">
       <div class="section-head">
@@ -1327,13 +1321,13 @@
     </section>
   </main>
 
-  <!-- ========== MODAL IMAGEM ========== -->
+  <!-- MODAL IMAGEM -->
   <div class="image-modal" id="imageModal" onclick="closeImageModal()">
     <button class="close-modal-img" onclick="closeImageModal()">✕</button>
     <img id="modalImage" src="" alt="Produto ampliado">
   </div>
 
-  <!-- ========== MODAL DADOS DO CLIENTE ========== -->
+  <!-- MODAL CLIENTE -->
   <div class="modal-overlay" id="clientModal">
     <div class="modal-box">
       <button class="close-modal" id="closeClientModal">✕</button>
@@ -1358,7 +1352,7 @@
     </div>
   </div>
 
-  <!-- ========== CARRINHO ========== -->
+  <!-- CARRINHO -->
   <div class="drawer" id="cartDrawer" aria-hidden="true">
     <div class="shade" id="closeShade"></div>
     <aside class="cart-panel" aria-label="Carrinho de compras">
@@ -1384,10 +1378,10 @@
     </aside>
   </div>
 
-  <!-- ========== TOAST ========== -->
+  <!-- TOAST -->
   <div class="toast" id="toast">Produto adicionado ao carrinho</div>
 
-  <!-- ========== FOOTER ========== -->
+  <!-- FOOTER -->
   <footer>
     <div class="wrap footer-grid">
       <div>
@@ -1423,7 +1417,122 @@
     </div>
   </footer>
 
-  <!-- ========== SCRIPT ========== -->
+  <!-- ============================================================ -->
+  <!-- PRODUTOS -->
+  <!-- ============================================================ -->
+  <script>
+    window.AXION_PRODUCTS = [
+      // ===== EMRAGRECIMENTO =====
+      {
+        id: 185,
+        name: "🔥 TIRZEC 15 Tirzepatida 15mg/0,5mL",
+        category: "Emagrecimento",
+        price: 1380,
+        old: 1950,
+        desc: "Tirzepatida 15mg/0,5mL - Emagrecimento",
+        tag: "🔥 PROMOÇÃO",
+        img: "185.jpg"
+      },
+      {
+        id: 186,
+        name: "🔥 T.G. 15 Tirzepatida 15mg/0,5mL - 4 frascos",
+        category: "Emagrecimento",
+        price: 1350,
+        old: 1900,
+        desc: "Tirzepatida 15mg/0,5mL - Kit com 4 frascos",
+        tag: "🔥 PROMOÇÃO",
+        img: "186.jpg"
+      },
+      {
+        id: 187,
+        name: "🔥 Lipoless MD 15 Tirzepatida 15mg/0,6mL",
+        category: "Emagrecimento",
+        price: 1370,
+        old: 1800,
+        desc: "Tirzepatida 15mg/0,6mL - Emagrecimento",
+        tag: "🔥 PROMOÇÃO",
+        img: "187.jpg"
+      },
+      {
+        id: 188,
+        name: "Semaglutida 2mg - Emagrecimento",
+        category: "Emagrecimento",
+        price: 450,
+        old: 680,
+        desc: "Semaglutida 2mg - Auxilia no emagrecimento",
+        img: "188.jpg"
+      },
+      {
+        id: 189,
+        name: "Liraglutida 3mg - Emagrecimento",
+        category: "Emagrecimento",
+        price: 520,
+        old: 750,
+        desc: "Liraglutida 3mg - Para controle de peso",
+        img: "189.jpg"
+      },
+
+      // ===== GANHO DE MASSA =====
+      {
+        id: 190,
+        name: "💪 Whey Protein Isolado 900g",
+        category: "Ganho de Massa",
+        price: 120,
+        old: 180,
+        desc: "Whey Protein Isolado - 900g - Sabor Chocolate",
+        img: "190.jpg"
+      },
+      {
+        id: 191,
+        name: "💪 Creatina Monohidratada 300g",
+        category: "Ganho de Massa",
+        price: 85,
+        old: 120,
+        desc: "Creatina Monohidratada 300g - Pureza 99%",
+        img: "191.jpg"
+      },
+      {
+        id: 192,
+        name: "💪 BCAA 2:1:1 180 cápsulas",
+        category: "Ganho de Massa",
+        price: 65,
+        old: 90,
+        desc: "BCAA 2:1:1 - 180 cápsulas - Recuperação muscular",
+        img: "192.jpg"
+      },
+      {
+        id: 193,
+        name: "💪 Glutamina 300g",
+        category: "Ganho de Massa",
+        price: 70,
+        old: 100,
+        desc: "Glutamina 300g - Recuperação e imunidade",
+        img: "193.jpg"
+      },
+      {
+        id: 194,
+        name: "💪 Albumina 900g",
+        category: "Ganho de Massa",
+        price: 90,
+        old: 130,
+        desc: "Albumina 900g - Sabor Baunilha",
+        img: "194.jpg"
+      },
+      {
+        id: 195,
+        name: "💪 Hipercalórico 3kg",
+        category: "Ganho de Massa",
+        price: 110,
+        old: 160,
+        desc: "Hipercalórico 3kg - Sabor Morango",
+        img: "195.jpg"
+      }
+    ];
+  </script>
+
+  <!-- ============================================================ -->
+  <!-- SCRIPT PRINCIPAL -->
+  <!-- ============================================================ -->
   <script>
     // ============================================================
     // CONFIGURAÇÕES
@@ -1447,7 +1556,7 @@
     };
 
     // ============================================================
-    // PRODUTOS (importado do catalogo-produtos.js)
+    // PRODUTOS
     // ============================================================
     const products = window.AXION_PRODUCTS || [];
     
@@ -1711,7 +1820,6 @@
           body: JSON.stringify(clientData)
         });
         
-        // Com 'no-cors' não podemos ler a resposta, mas o dado foi enviado
         return { success: true };
       } catch (error) {
         console.error('Erro ao salvar:', error);
@@ -1729,7 +1837,6 @@
         return;
       }
       
-      // Abre o modal de dados do cliente
       document.getElementById('clientModal').classList.add('active');
       document.getElementById('clientName').focus();
     });
@@ -1759,7 +1866,6 @@
       
       errorEl.classList.remove('visible');
       
-      // Monta os dados do pedido
       const entries = Object.entries(state.cart);
       const subtotal = entries.reduce((sum, [id, qty]) => {
         const product = products.find(item => item.id === Number(id));
@@ -1774,13 +1880,11 @@
         return `${qty}x ${product.name} - ${money(product.price * qty)}`;
       });
       
-      // Define o número do WhatsApp baseado no cupom
       let numeroDestino = DEFAULT_WHATSAPP;
       if (currentCoupon && COUPON_NUMBERS[currentCoupon]) {
         numeroDestino = COUPON_NUMBERS[currentCoupon];
       }
       
-      // Dados para o Google Sheets
       const clientData = {
         nome: name,
         telefone: phone,
@@ -1793,13 +1897,10 @@
         status: 'Confirmado'
       };
       
-      // Fecha o modal
       document.getElementById('clientModal').classList.remove('active');
       
-      // Mostra loading
       showToast('⏳ Salvando pedido...');
       
-      // Salva no Google Sheets
       const result = await saveToGoogleSheets(clientData);
       
       if (result.success) {
@@ -1808,7 +1909,6 @@
         showToast('⚠️ Pedido registrado, mas erro ao salvar na planilha', true);
       }
       
-      // Prepara mensagem do WhatsApp
       let mensagem = `Olá, Axionpharma! Quero fazer este pedido:\n\n`;
       mensagem += lines.join("\n");
       mensagem += `\n\n👤 Cliente: ${name}`;
@@ -1822,17 +1922,14 @@
       
       mensagem += `\n💰 Total: ${money(total)}`;
       
-      // Abre o WhatsApp
       window.open(`https://wa.me/${numeroDestino}?text=${encodeURIComponent(mensagem)}`, '_blank');
       
-      // Limpa o carrinho após finalizar
       state.cart = {};
       currentCoupon = null;
       currentDiscount = 0;
       renderCart();
     });
 
-    // Fechar modal com ESC
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         document.getElementById('clientModal').classList.remove('active');
@@ -1906,7 +2003,6 @@
     console.log('   Sem cupom → 5511920714068 (padrão)');
     console.log('📊 Google Sheets URL:', GOOGLE_SHEETS_URL);
   </script>
-<!-- ========== CARREGA OS PRODUTOS ========== -->
-<script src="catalogo-produtos.js"></script>
+
 </body>
 </html>
