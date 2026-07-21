@@ -1418,117 +1418,9 @@
   </footer>
 
   <!-- ============================================================ -->
-  <!-- PRODUTOS -->
+  <!-- CARREGA O CATÁLOGO ORIGINAL -->
   <!-- ============================================================ -->
-  <script>
-    window.AXION_PRODUCTS = [
-      // ===== EMRAGRECIMENTO =====
-      {
-        id: 185,
-        name: "🔥 TIRZEC 15 Tirzepatida 15mg/0,5mL",
-        category: "Emagrecimento",
-        price: 1380,
-        old: 1950,
-        desc: "Tirzepatida 15mg/0,5mL - Emagrecimento",
-        tag: "🔥 PROMOÇÃO",
-        img: "185.jpg"
-      },
-      {
-        id: 186,
-        name: "🔥 T.G. 15 Tirzepatida 15mg/0,5mL - 4 frascos",
-        category: "Emagrecimento",
-        price: 1350,
-        old: 1900,
-        desc: "Tirzepatida 15mg/0,5mL - Kit com 4 frascos",
-        tag: "🔥 PROMOÇÃO",
-        img: "186.jpg"
-      },
-      {
-        id: 187,
-        name: "🔥 Lipoless MD 15 Tirzepatida 15mg/0,6mL",
-        category: "Emagrecimento",
-        price: 1370,
-        old: 1800,
-        desc: "Tirzepatida 15mg/0,6mL - Emagrecimento",
-        tag: "🔥 PROMOÇÃO",
-        img: "187.jpg"
-      },
-      {
-        id: 188,
-        name: "Semaglutida 2mg - Emagrecimento",
-        category: "Emagrecimento",
-        price: 450,
-        old: 680,
-        desc: "Semaglutida 2mg - Auxilia no emagrecimento",
-        img: "188.jpg"
-      },
-      {
-        id: 189,
-        name: "Liraglutida 3mg - Emagrecimento",
-        category: "Emagrecimento",
-        price: 520,
-        old: 750,
-        desc: "Liraglutida 3mg - Para controle de peso",
-        img: "189.jpg"
-      },
-
-      // ===== GANHO DE MASSA =====
-      {
-        id: 190,
-        name: "💪 Whey Protein Isolado 900g",
-        category: "Ganho de Massa",
-        price: 120,
-        old: 180,
-        desc: "Whey Protein Isolado - 900g - Sabor Chocolate",
-        img: "190.jpg"
-      },
-      {
-        id: 191,
-        name: "💪 Creatina Monohidratada 300g",
-        category: "Ganho de Massa",
-        price: 85,
-        old: 120,
-        desc: "Creatina Monohidratada 300g - Pureza 99%",
-        img: "191.jpg"
-      },
-      {
-        id: 192,
-        name: "💪 BCAA 2:1:1 180 cápsulas",
-        category: "Ganho de Massa",
-        price: 65,
-        old: 90,
-        desc: "BCAA 2:1:1 - 180 cápsulas - Recuperação muscular",
-        img: "192.jpg"
-      },
-      {
-        id: 193,
-        name: "💪 Glutamina 300g",
-        category: "Ganho de Massa",
-        price: 70,
-        old: 100,
-        desc: "Glutamina 300g - Recuperação e imunidade",
-        img: "193.jpg"
-      },
-      {
-        id: 194,
-        name: "💪 Albumina 900g",
-        category: "Ganho de Massa",
-        price: 90,
-        old: 130,
-        desc: "Albumina 900g - Sabor Baunilha",
-        img: "194.jpg"
-      },
-      {
-        id: 195,
-        name: "💪 Hipercalórico 3kg",
-        category: "Ganho de Massa",
-        price: 110,
-        old: 160,
-        desc: "Hipercalórico 3kg - Sabor Morango",
-        img: "195.jpg"
-      }
-    ];
-  </script>
+  <script src="catalogo-produtos.js"></script>
 
   <!-- ============================================================ -->
   <!-- SCRIPT PRINCIPAL -->
@@ -1538,10 +1430,8 @@
     // CONFIGURAÇÕES
     // ============================================================
     
-    // 🔥 SUBSTITUA PELA SUA URL DO GOOGLE APPS SCRIPT
     const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycby3uADUKMrn8ZNg7c-Ht6RQ6rsjzjlr-QpHD9bISqnRcUkis2bYKOdzYeidRYstrYfmtg/exec';
     
-    // NÚMEROS DE WHATSAPP PARA CADA CUPOM
     const COUPON_NUMBERS = {
       'BRUTUSBR': '5511973199487',
       'DIEGO10': '5511912478162'
@@ -1549,14 +1439,13 @@
     
     const DEFAULT_WHATSAPP = '5511920714068';
     
-    // CUPONS DISPONÍVEIS
     const COUPON_CONFIG = {
       'BRUTUSBR': { discount: 0.10, type: 'percentual', description: '10% OFF - BrutusBR' },
       'DIEGO10': { discount: 0.10, type: 'percentual', description: '10% OFF - Diego10' }
     };
 
     // ============================================================
-    // PRODUTOS
+    // PRODUTOS - VEM DO catalogo-produtos.js
     // ============================================================
     const products = window.AXION_PRODUCTS || [];
     
