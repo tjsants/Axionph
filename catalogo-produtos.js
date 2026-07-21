@@ -366,7 +366,7 @@ window.AXION_PRODUCTS = [
   "id": 2,
   "name": "AOD (AOD-9604) 5mg OxygenKW",
   "category": "Peptídeos",
-  "price": 520.00,
+  "price": 999.00,
   "old": null,
   "tag": null,
   "desc": "AOD (AOD-9604) 5mg OxygenKW - Peptídeo para queima de gordura e aceleração do metabolismo. Administração subcutânea diária.",
@@ -1030,10 +1030,10 @@ window.AXION_PRODUCTS = [
   "img": "144.jpg"
 },
 {
-  "id": 146,
-  "name": "Propionato de Testosterona Muscle Labs",
+  "id": 146, 
+  "name": "Masteron Drostolona Muscle Labs",
   "category": "Ganho de Massa",
-  "price": 270.00,
+  "price": 320.00,
   "old": null,
   "tag": null,
   "desc": "Propionato de Testosterona 100mg/mL - 10mL. Produto Muscle Labs. Administração intramuscular em dias alternados.",
