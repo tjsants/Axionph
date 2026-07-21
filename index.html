@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Axionpharma | online</title>
   <style>
+    /* ========== ESTILOS COMPLETOS ========== */
     :root {
       --ink: #ffffff;
       --muted: #a0b0c0;
@@ -48,7 +49,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 36px;
       transition: transform .2s ease, box-shadow .2s ease;
       cursor: pointer;
       border: none;
@@ -286,7 +286,6 @@
       max-height: none;
     }
 
-    /* PRODUTOS DESTAQUE NO TOPO */
     .destaque-topo {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -429,27 +428,6 @@
       margin: 4px 0 0;
       color: var(--muted);
       font-size: 14px;
-    }
-
-    .filter-badge {
-      display: inline-block;
-      background: var(--brand);
-      color: #000;
-      padding: 4px 12px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 700;
-      margin-left: 10px;
-    }
-
-    .filter-badge .clear-filter {
-      margin-left: 6px;
-      cursor: pointer;
-      font-weight: 900;
-    }
-
-    .filter-badge .clear-filter:hover {
-      color: #ff6b6b;
     }
 
     .catalog-layout {
@@ -688,14 +666,16 @@
       display: inline-block;
     }
 
+    /* ========== MODAL CLIENTE ========== */
     .modal-overlay {
       position: fixed;
       inset: 0;
       z-index: 999;
-      background: rgba(0,0,0,0.8);
+      background: rgba(0,0,0,0.85);
       display: none;
       align-items: center;
       justify-content: center;
+      backdrop-filter: blur(5px);
     }
 
     .modal-overlay.active {
@@ -708,43 +688,57 @@
       padding: 30px;
       max-width: 500px;
       width: 90%;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.8);
       position: relative;
       border: 1px solid #2a3a4a;
+      max-height: 90vh;
+      overflow-y: auto;
     }
 
     .modal-box h3 {
       margin: 0 0 10px;
       color: #fff;
+      font-size: 22px;
     }
 
     .modal-box .close-modal {
       position: absolute;
       top: 12px;
       right: 16px;
-      font-size: 24px;
+      font-size: 28px;
       cursor: pointer;
       border: none;
       background: none;
       color: var(--muted);
+      transition: color 0.2s;
     }
 
     .modal-box .close-modal:hover {
       color: var(--red);
     }
 
+    .modal-box .subtitle {
+      color: var(--muted);
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
     .modal-box label {
       display: block;
       font-weight: 700;
-      margin-top: 12px;
+      margin-top: 16px;
       font-size: 14px;
       color: #fff;
     }
 
-    .modal-box input,
-    .modal-box textarea {
+    .modal-box label .required {
+      color: var(--red);
+      margin-left: 4px;
+    }
+
+    .modal-box input {
       width: 100%;
-      padding: 10px 12px;
+      padding: 12px 14px;
       border: 1px solid #2a3a4a;
       border-radius: 6px;
       font-size: 16px;
@@ -752,36 +746,50 @@
       font-family: inherit;
       background: #0a0a0f;
       color: #fff;
+      transition: border-color 0.3s;
     }
 
-    .modal-box textarea {
-      min-height: 80px;
-      resize: vertical;
+    .modal-box input:focus {
+      outline: none;
+      border-color: var(--brand);
+    }
+
+    .modal-box input::placeholder {
+      color: #4a5a6a;
     }
 
     .modal-box .modal-buttons {
       display: flex;
       gap: 10px;
-      margin-top: 16px;
+      margin-top: 24px;
     }
 
     .modal-box .modal-buttons button {
       flex: 1;
-      padding: 10px;
+      padding: 12px;
       border: none;
       border-radius: var(--radius);
       font-weight: 700;
+      font-size: 16px;
       cursor: pointer;
+      transition: all 0.2s ease;
     }
 
-    .modal-box .btn-save {
+    .modal-box .btn-confirm {
       background: var(--brand);
       color: #000;
     }
 
-    .modal-box .btn-save:hover {
+    .modal-box .btn-confirm:hover {
       background: var(--brand-dark);
       color: #fff;
+      transform: scale(1.02);
+    }
+
+    .modal-box .btn-confirm:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
     }
 
     .modal-box .btn-cancel {
@@ -793,6 +801,18 @@
       background: #3a4a5a;
     }
 
+    .modal-box .error-msg {
+      color: var(--red);
+      font-size: 13px;
+      margin-top: 6px;
+      display: none;
+    }
+
+    .modal-box .error-msg.visible {
+      display: block;
+    }
+
+    /* ========== DRAWER / CARRINHO ========== */
     .drawer {
       position: fixed;
       inset: 0;
@@ -972,6 +992,7 @@
       background: #00b844;
     }
 
+    /* ========== COUPOM ========== */
     .coupon-section {
       margin: 8px 0 12px;
       padding: 10px;
@@ -1080,6 +1101,7 @@
       display: block;
     }
 
+    /* ========== FOOTER ========== */
     footer {
       background: #0a0a0f;
       color: #d9eef3;
@@ -1088,8 +1110,10 @@
     }
 
     .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
       align-items: flex-start;
-      flex-wrap: wrap;
     }
 
     footer h3 {
@@ -1098,7 +1122,7 @@
       font-size: 15px;
     }
 
-    footer p, footer a {
+    footer p, footer a, footer .contact-item {
       display: block;
       margin: 4px 0;
       color: #8a9aaa;
@@ -1109,11 +1133,22 @@
       color: #00c853;
     }
 
+    .contact-item .label {
+      color: var(--muted);
+    }
+
+    .contact-item .number {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    /* ========== RESPONSIVO ========== */
     @media (max-width: 1024px) {
       .product-grid { grid-template-columns: repeat(3, 1fr); }
       .product-art { height: 160px; min-height: 160px; max-height: 160px; }
       .destaque-topo { grid-template-columns: repeat(3, 1fr); gap: 12px; }
       .destaque-card .destaque-img { height: 140px; }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 768px) {
@@ -1133,8 +1168,8 @@
       .product-card h3 { font-size: 13px; min-height: 28px; }
       .price { font-size: 17px; }
       .add-btn { font-size: 12px; padding: 7px; }
-      .footer-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-      .whatsapp-float { width: 56px; height: 56px; font-size: 30px; bottom: 20px; right: 20px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 16px; }
+      .whatsapp-float { width: 56px; height: 56px; bottom: 20px; right: 20px; }
       .whatsapp-float svg { width: 30px; height: 30px; }
       .destaque-topo { grid-template-columns: repeat(3, 1fr); gap: 8px; }
       .destaque-card .destaque-img { height: 100px; }
@@ -1174,10 +1209,12 @@
 </head>
 <body>
 
+  <!-- ========== WHATSAPP FLUTUANTE ========== -->
   <a href="https://wa.me/5511920714068" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
 
+  <!-- ========== HEADER ========== -->
   <header class="header">
     <div class="wrap header-main">
       <a class="brand" href="#">
@@ -1202,6 +1239,7 @@
     </div>
   </header>
 
+  <!-- ========== BANNER TOPO ========== -->
   <div class="wrap banner-top-text">
     <div class="info-box emagrecimento" onclick="filterByCategory('Emagrecimento')">
       <span class="icon">💊</span>
@@ -1213,10 +1251,9 @@
     </div>
   </div>
 
+  <!-- ========== DESTAQUES ========== -->
   <div class="wrap">
-    <!-- PRODUTOS EM DESTAQUE NO TOPO -->
     <div class="destaque-topo">
-      <!-- TIRZEC - ID 185 -->
       <div class="destaque-card">
         <span class="tag-topo">🔥 DESTAQUE</span>
         <div class="destaque-img" onclick="openImageModal('185.jpg')">
@@ -1233,7 +1270,6 @@
         </div>
       </div>
 
-      <!-- T.G. - ID 186 -->
       <div class="destaque-card">
         <span class="tag-topo">🔥 DESTAQUE</span>
         <div class="destaque-img" onclick="openImageModal('186.jpg')">
@@ -1250,7 +1286,6 @@
         </div>
       </div>
 
-      <!-- Lipoless - ID 187 -->
       <div class="destaque-card">
         <span class="tag-topo">🔥 DESTAQUE</span>
         <div class="destaque-img" onclick="openImageModal('187.jpg')">
@@ -1269,17 +1304,15 @@
     </div>
   </div>
 
+  <!-- ========== BANNER GRANDE ========== -->
   <div class="wrap">
     <div class="banner-grande" onclick="resetAllFilters();">
       <img src="root/destaque1.jpg" alt="Promoção Axionpharma" loading="lazy" onerror="this.style.display='none'">
     </div>
   </div>
 
+  <!-- ========== PRODUTOS ========== -->
   <main class="wrap">
-    
-    <!-- ============================================================ -->
-    <!-- TODOS OS PRODUTOS - APENAS ESTA SEÇÃO É EXIBIDA -->
-    <!-- ============================================================ -->
     <section id="categoria-todos">
       <div class="section-head">
         <div>
@@ -1292,45 +1325,45 @@
         <div class="product-grid" id="grid-todos"></div>
       </div>
     </section>
-
   </main>
 
-  <!-- MODAL DE IMAGEM -->
+  <!-- ========== MODAL IMAGEM ========== -->
   <div class="image-modal" id="imageModal" onclick="closeImageModal()">
     <button class="close-modal-img" onclick="closeImageModal()">✕</button>
     <img id="modalImage" src="" alt="Produto ampliado">
   </div>
 
-  <footer>
-    <div class="wrap footer-grid">
-      <div>
-        <h3>Axionpharma</h3>
-        <p>Farmácia online com catálogo editável, pedidos por carrinho e atendimento local.</p>
-      </div>
-      <div>
-        <h3>Atendimento</h3>
-        <a href="https://wa.me/5511920714068" target="_blank">WhatsApp: (11)92071-4068</a>
-      </div>
-      <div>
-        <h3>Institucional</h3>
-        <a href="#">Sobre a loja</a>
-        <a href="#">Política de entrega</a>
-        <a href="#">Trocas e devoluções</a>
-      </div>
-      <div>
-        <h3>Horários</h3>
-        <p>Segunda a sábado: 8h às 20h</p>
-        <p>Domingo: 9h às 14h</p>
+  <!-- ========== MODAL DADOS DO CLIENTE ========== -->
+  <div class="modal-overlay" id="clientModal">
+    <div class="modal-box">
+      <button class="close-modal" id="closeClientModal">✕</button>
+      <h3>📋 Complete seus dados</h3>
+      <p class="subtitle">Preencha seus dados para finalizar o pedido</p>
+      
+      <label for="clientName">Nome completo <span class="required">*</span></label>
+      <input type="text" id="clientName" placeholder="Ex: João Silva" required>
+      
+      <label for="clientPhone">WhatsApp <span class="required">*</span></label>
+      <input type="tel" id="clientPhone" placeholder="(11) 99999-9999" required>
+      
+      <label for="clientEmail">E-mail (opcional)</label>
+      <input type="email" id="clientEmail" placeholder="seu@email.com">
+      
+      <div class="error-msg" id="modalError">Preencha todos os campos obrigatórios</div>
+      
+      <div class="modal-buttons">
+        <button class="btn-cancel" id="cancelClientModal">Cancelar</button>
+        <button class="btn-confirm" id="confirmClientData">✅ Finalizar Pedido</button>
       </div>
     </div>
-  </footer>
+  </div>
 
-  <!-- CARRINHO -->
+  <!-- ========== CARRINHO ========== -->
   <div class="drawer" id="cartDrawer" aria-hidden="true">
     <div class="shade" id="closeShade"></div>
     <aside class="cart-panel" aria-label="Carrinho de compras">
       <div class="cart-head">
-        <h2>Seu carrinho</h2>
+        <h2>🛒 Seu carrinho</h2>
         <button class="close-cart" id="closeCart" type="button" aria-label="Fechar">×</button>
       </div>
       <div class="cart-items" id="cartItems"></div>
@@ -1346,34 +1379,109 @@
           <span>Total</span>
           <span id="cartTotal">R$ 0,00</span>
         </div>
-        <button class="checkout" type="button" id="checkoutBtn">Enviar pedido pelo WhatsApp</button>
+        <button class="checkout" type="button" id="checkoutBtn">Finalizar compra</button>
       </div>
     </aside>
   </div>
 
+  <!-- ========== TOAST ========== -->
   <div class="toast" id="toast">Produto adicionado ao carrinho</div>
 
-  <script src="catalogo-produtos.js"></script>
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <h3>Axionpharma</h3>
+        <p>Farmácia online com catálogo editável, pedidos por carrinho e atendimento local.</p>
+      </div>
+      <div>
+        <h3>Atendimento</h3>
+        <div class="contact-item">
+          <span class="label">📞 Geral:</span>
+          <span class="number">(11) 92071-4068</span>
+        </div>
+        <div class="contact-item">
+          <span class="label">👤 Brutus:</span>
+          <span class="number">(11) 97319-9487</span>
+        </div>
+        <div class="contact-item">
+          <span class="label">👤 Diego:</span>
+          <span class="number">(11) 91247-8162</span>
+        </div>
+      </div>
+      <div>
+        <h3>Institucional</h3>
+        <a href="#">Sobre a loja</a>
+        <a href="#">Política de entrega</a>
+        <a href="#">Trocas e devoluções</a>
+      </div>
+      <div>
+        <h3>Horários</h3>
+        <p>Segunda a sábado: 8h às 20h</p>
+        <p>Domingo: 9h às 14h</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPT ========== -->
   <script>
     // ============================================================
-    // DADOS DOS PRODUTOS
+    // CONFIGURAÇÕES
     // ============================================================
-    const products = window.AXION_PRODUCTS || [];
-
-    // ============================================================
-    // MAPEAMENTO DE CUPONS PARA NÚMEROS DE WHATSAPP
-    // ============================================================
+    
+    // 🔥 SUBSTITUA PELA SUA URL DO GOOGLE APPS SCRIPT
+    const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycby3uADUKMrn8ZNg7c-Ht6RQ6rsjzjlr-QpHD9bISqnRcUkis2bYKOdzYeidRYstrYfmtg/exec';
+    
+    // NÚMEROS DE WHATSAPP PARA CADA CUPOM
     const COUPON_NUMBERS = {
       'BRUTUSBR': '5511973199487',
       'DIEGO10': '5511912478162'
     };
-
-    // NÚMERO PADRÃO (quando não usa cupom)
+    
     const DEFAULT_WHATSAPP = '5511920714068';
+    
+    // CUPONS DISPONÍVEIS
+    const COUPON_CONFIG = {
+      'BRUTUSBR': { discount: 0.10, type: 'percentual', description: '10% OFF - BrutusBR' },
+      'DIEGO10': { discount: 0.10, type: 'percentual', description: '10% OFF - Diego10' }
+    };
 
+    // ============================================================
+    // PRODUTOS (importado do catalogo-produtos.js)
+    // ============================================================
+    const products = window.AXION_PRODUCTS || [];
+    
     function getProductImage(product) {
       if (product.img) return product.img;
       return `data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%231a1a2e%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 font-size=%2214%22 text-anchor=%22middle%22 dominant-baseline=%22central%22 fill=%22%23627087%22 font-family=%22Arial%22%3E${encodeURIComponent(product.name)}%3C/text%3E%3C/svg%3E`;
+    }
+
+    const money = value => value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+
+    // ============================================================
+    // ESTADO GLOBAL
+    // ============================================================
+    const state = {
+      filter: "Todos",
+      query: "",
+      cart: {}
+    };
+
+    let currentCoupon = null;
+    let currentDiscount = 0;
+    let toastTimer = null;
+
+    // ============================================================
+    // TOAST
+    // ============================================================
+    const toastEl = document.getElementById("toast");
+    
+    function showToast(msg, isError = false) {
+      toastEl.textContent = msg;
+      toastEl.style.borderColor = isError ? '#ff4444' : '#00c853';
+      toastEl.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toastEl.classList.remove("show"), 3000);
     }
 
     // ============================================================
@@ -1394,23 +1502,13 @@
       document.getElementById('imageModal').classList.remove('active');
     }
 
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        closeImageModal();
-      }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeImageModal();
     });
 
     // ============================================================
     // CUPOM
     // ============================================================
-    const COUPON_CONFIG = {
-      'BRUTUSBR': { discount: 0.10, type: 'percentual', description: 'Cupom BrutusBR - 10% OFF' },
-      'DIEGO10': { discount: 0.10, type: 'percentual', description: 'Cupom Diego10 - 10% OFF' }
-    };
-
-    let currentCoupon = null;
-    let currentDiscount = 0;
-
     function applyCoupon(code) {
       const input = document.getElementById('couponInput');
       const messageEl = document.getElementById('couponMessage');
@@ -1457,51 +1555,20 @@
       messageEl.innerHTML = `
         ✅ Cupom <strong>${normalizedCode}</strong> aplicado! 
         Desconto: ${couponData.type === 'percentual' ? (couponData.discount * 100) + '%' : 'R$ ' + couponData.discount.toFixed(2)}
-        ${couponData.description ? '<br><small>' + couponData.description + '</small>' : ''}
       `;
       messageEl.className = 'coupon-message success';
       renderCart();
       return true;
     }
 
-    function registerCouponUsage(couponCode, cartTotal, discountAmount) {
-      const logEntry = {
-        timestamp: new Date().toISOString(),
-        coupon: couponCode.toUpperCase(),
-        cartTotal: cartTotal,
-        discount: discountAmount,
-        finalTotal: cartTotal - discountAmount
-      };
-      const logs = JSON.parse(localStorage.getItem('coupon_usage_log') || '[]');
-      logs.push(logEntry);
-      localStorage.setItem('coupon_usage_log', JSON.stringify(logs));
-    }
-
-    function getCouponStats() {
-      const logs = JSON.parse(localStorage.getItem('coupon_usage_log') || '[]');
-      const stats = {};
-      logs.forEach(log => {
-        const coupon = log.coupon;
-        if (!stats[coupon]) stats[coupon] = { uses: 0, totalDiscount: 0 };
-        stats[coupon].uses++;
-        stats[coupon].totalDiscount += log.discount;
-      });
-      return stats;
-    }
-
     // ============================================================
     // FILTROS
     // ============================================================
-    let currentFilter = 'Todos';
-
     function filterByCategory(categoria) {
       document.getElementById('searchInput').value = '';
       state.query = '';
       state.filter = categoria;
-      currentFilter = categoria;
-      
       document.getElementById('resetFilterBtn').classList.add('visible');
-      
       renderAllGrids();
       const count = getFilteredProducts().length;
       showToast(`🔍 ${count} produtos encontrados`);
@@ -1511,10 +1578,7 @@
       document.getElementById('searchInput').value = '';
       state.query = '';
       state.filter = 'Todos';
-      currentFilter = 'Todos';
-      
       document.getElementById('resetFilterBtn').classList.remove('visible');
-      
       renderAllGrids();
       showToast('✅ Todos os produtos');
     }
@@ -1530,72 +1594,11 @@
     }
 
     // ============================================================
-    // ESTADO
+    // RENDERIZAÇÃO DOS PRODUTOS
     // ============================================================
-    const state = {
-      filter: "Todos",
-      query: "",
-      cart: {}
-    };
-
-    const money = value => value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
-    const toast = document.getElementById("toast");
-
-    function renderGrid(gridId, mainCategory) {
-      const grid = document.getElementById(gridId);
-      if (!grid) return;
-      
-      let list = [...products];
-      
-      if (state.filter !== "Todos") {
-        list = list.filter(p => p.category === state.filter);
-      }
-      
-      if (state.query) {
-        list = list.filter(p => {
-          const searchText = `${p.name} ${p.category} ${p.desc || ''}`.toLowerCase();
-          return searchText.includes(state.query.toLowerCase());
-        });
-      }
-      
-      grid.innerHTML = list.map(product => `
-        <article class="product-card" data-id="${product.id}">
-          <span class="product-id">#${product.id}</span>
-          <div class="product-art" onclick="openImageModal('${getProductImage(product)}')">
-            ${product.tag ? `<span class="badge">${product.tag}</span>` : ''}
-            <img 
-              src="${getProductImage(product)}" 
-              alt="${product.name}"
-              loading="lazy"
-              onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%231a1a2e%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 font-size=%2214%22 text-anchor=%22middle%22 dominant-baseline=%22central%22 fill=%22%23627087%22 font-family=%22Arial%22%3E${encodeURIComponent(product.name)}%3C/text%3E%3C/svg%3E'"
-            >
-          </div>
-          <div class="product-body">
-            <span class="product-category">${product.category}</span>
-            <h3>${product.name}</h3>
-            <p class="desc">${product.desc || ''}</p>
-            <div class="price-row">
-              ${product.old ? `<span class="old-price">${money(product.old)}</span>` : ""}
-              <span class="price">${money(product.price)}</span>
-            </div>
-            <button class="add-btn" data-add="${product.id}" type="button">Adicionar</button>
-          </div>
-        </article>
-      `).join("");
-    }
-
     function renderAllGrids() {
       const gridTodos = document.getElementById('grid-todos');
-      let list = [...products];
-      if (state.filter !== "Todos") {
-        list = list.filter(p => p.category === state.filter);
-      }
-      if (state.query) {
-        list = list.filter(p => {
-          const searchText = `${p.name} ${p.category} ${p.desc || ''}`.toLowerCase();
-          return searchText.includes(state.query.toLowerCase());
-        });
-      }
+      let list = getFilteredProducts();
       
       document.getElementById('resultText').textContent = `${list.length} produto${list.length === 1 ? "" : "s"} encontrado${list.length === 1 ? "" : "s"}.`;
       
@@ -1625,13 +1628,9 @@
       `).join("");
     }
 
-    function showToast(msg) {
-      toast.textContent = msg || "Produto adicionado ao carrinho";
-      toast.classList.add("show");
-      window.clearTimeout(showToast.timer);
-      showToast.timer = window.setTimeout(() => toast.classList.remove("show"), 3000);
-    }
-
+    // ============================================================
+    // CARRINHO
+    // ============================================================
     function addToCart(id) {
       state.cart[id] = (state.cart[id] || 0) + 1;
       renderCart();
@@ -1699,7 +1698,149 @@
     }
 
     // ============================================================
-    // EVENT LISTENERS
+    // SALVAR NO GOOGLE SHEETS
+    // ============================================================
+    async function saveToGoogleSheets(clientData) {
+      try {
+        const response = await fetch(GOOGLE_SHEETS_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(clientData)
+        });
+        
+        // Com 'no-cors' não podemos ler a resposta, mas o dado foi enviado
+        return { success: true };
+      } catch (error) {
+        console.error('Erro ao salvar:', error);
+        return { success: false, error: error.message };
+      }
+    }
+
+    // ============================================================
+    // CHECKOUT - ABRE MODAL PARA DADOS DO CLIENTE
+    // ============================================================
+    document.getElementById("checkoutBtn").addEventListener("click", () => {
+      const entries = Object.entries(state.cart);
+      if (!entries.length) {
+        showToast('❌ Adicione produtos ao carrinho', true);
+        return;
+      }
+      
+      // Abre o modal de dados do cliente
+      document.getElementById('clientModal').classList.add('active');
+      document.getElementById('clientName').focus();
+    });
+
+    // ============================================================
+    // MODAL DO CLIENTE - EVENTOS
+    // ============================================================
+    document.getElementById('closeClientModal').addEventListener('click', () => {
+      document.getElementById('clientModal').classList.remove('active');
+    });
+
+    document.getElementById('cancelClientModal').addEventListener('click', () => {
+      document.getElementById('clientModal').classList.remove('active');
+    });
+
+    document.getElementById('confirmClientData').addEventListener('click', async () => {
+      const name = document.getElementById('clientName').value.trim();
+      const phone = document.getElementById('clientPhone').value.trim();
+      const email = document.getElementById('clientEmail').value.trim();
+      const errorEl = document.getElementById('modalError');
+      
+      if (!name || !phone) {
+        errorEl.textContent = '⚠️ Nome e WhatsApp são obrigatórios';
+        errorEl.classList.add('visible');
+        return;
+      }
+      
+      errorEl.classList.remove('visible');
+      
+      // Monta os dados do pedido
+      const entries = Object.entries(state.cart);
+      const subtotal = entries.reduce((sum, [id, qty]) => {
+        const product = products.find(item => item.id === Number(id));
+        return sum + (product ? product.price * qty : 0);
+      }, 0);
+      
+      const discount = currentDiscount || 0;
+      const total = subtotal - discount;
+      
+      const lines = entries.map(([id, qty]) => {
+        const product = products.find(item => item.id === Number(id));
+        return `${qty}x ${product.name} - ${money(product.price * qty)}`;
+      });
+      
+      // Define o número do WhatsApp baseado no cupom
+      let numeroDestino = DEFAULT_WHATSAPP;
+      if (currentCoupon && COUPON_NUMBERS[currentCoupon]) {
+        numeroDestino = COUPON_NUMBERS[currentCoupon];
+      }
+      
+      // Dados para o Google Sheets
+      const clientData = {
+        nome: name,
+        telefone: phone,
+        email: email || '',
+        produtos: lines.join(' | '),
+        subtotal: money(subtotal),
+        cupom: currentCoupon || 'Nenhum',
+        desconto: discount > 0 ? money(discount) : 'R$ 0,00',
+        total: money(total),
+        status: 'Confirmado'
+      };
+      
+      // Fecha o modal
+      document.getElementById('clientModal').classList.remove('active');
+      
+      // Mostra loading
+      showToast('⏳ Salvando pedido...');
+      
+      // Salva no Google Sheets
+      const result = await saveToGoogleSheets(clientData);
+      
+      if (result.success) {
+        showToast('✅ Pedido registrado com sucesso!');
+      } else {
+        showToast('⚠️ Pedido registrado, mas erro ao salvar na planilha', true);
+      }
+      
+      // Prepara mensagem do WhatsApp
+      let mensagem = `Olá, Axionpharma! Quero fazer este pedido:\n\n`;
+      mensagem += lines.join("\n");
+      mensagem += `\n\n👤 Cliente: ${name}`;
+      mensagem += `\n📱 Telefone: ${phone}`;
+      if (email) mensagem += `\n📧 E-mail: ${email}`;
+      mensagem += `\n\nSubtotal: ${money(subtotal)}`;
+      
+      if (discount > 0) {
+        mensagem += `\n🎯 Cupom: ${currentCoupon} (desconto: -${money(discount)})`;
+      }
+      
+      mensagem += `\n💰 Total: ${money(total)}`;
+      
+      // Abre o WhatsApp
+      window.open(`https://wa.me/${numeroDestino}?text=${encodeURIComponent(mensagem)}`, '_blank');
+      
+      // Limpa o carrinho após finalizar
+      state.cart = {};
+      currentCoupon = null;
+      currentDiscount = 0;
+      renderCart();
+    });
+
+    // Fechar modal com ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.getElementById('clientModal').classList.remove('active');
+      }
+    });
+
+    // ============================================================
+    // EVENT LISTENERS GERAIS
     // ============================================================
     document.addEventListener("click", event => {
       const addBtn = event.target.closest("[data-add]");
@@ -1741,7 +1882,7 @@
         return;
       }
       const success = applyCoupon(code);
-      showToast(success ? `✅ Cupom ${code.toUpperCase()} aplicado!` : '❌ Cupom inválido');
+      showToast(success ? `✅ Cupom ${code.toUpperCase()} aplicado!` : '❌ Cupom inválido', !success);
     });
 
     document.getElementById("couponInput").addEventListener("keydown", (e) => {
@@ -1752,109 +1893,19 @@
     });
 
     // ============================================================
-    // CHECKOUT - REDIRECIONA PARA O NÚMERO CORRETO BASEADO NO CUPOM
-    // ============================================================
-    document.getElementById("checkoutBtn").addEventListener("click", () => {
-      const entries = Object.entries(state.cart);
-      if (!entries.length) {
-        alert("Adicione pelo menos um produto ao carrinho.");
-        return;
-      }
-
-      const subtotal = entries.reduce((sum, [id, qty]) => {
-        const product = products.find(item => item.id === Number(id));
-        return sum + (product ? product.price * qty : 0);
-      }, 0);
-      
-      const discount = currentDiscount || 0;
-      const total = subtotal - discount;
-
-      const lines = entries.map(([id, qty]) => {
-        const product = products.find(item => item.id === Number(id));
-        return `${qty}x ${product.name} - ${money(product.price * qty)}`;
-      });
-      
-      // ============================================
-      // DEFINE O NÚMERO COM BASE NO CUPOM
-      // ============================================
-      let numeroDestino = DEFAULT_WHATSAPP; // Número padrão (sem cupom)
-      
-      // Verifica se o cupom atual tem um número específico mapeado
-      if (currentCoupon && COUPON_NUMBERS[currentCoupon]) {
-        numeroDestino = COUPON_NUMBERS[currentCoupon];
-      }
-      
-      let mensagem = `Olá, Axionpharma! Quero fazer este pedido:\n\n${lines.join("\n")}\n\nSubtotal: ${money(subtotal)}`;
-      
-      if (discount > 0) {
-        mensagem += `\nCupom: ${currentCoupon} (desconto: -${money(discount)})`;
-      }
-      
-      mensagem += `\nTotal: ${money(total)}`;
-      
-      if (currentCoupon && discount > 0) {
-        mensagem += `\n\n🔔 CUPOM UTILIZADO!\n🎯 Cupom: ${currentCoupon}\n💰 Subtotal: ${money(subtotal)}\n✨ Desconto: -${money(discount)}\n💵 Total: ${money(total)}\n🕐 ${new Date().toLocaleString('pt-BR')}`;
-        registerCouponUsage(currentCoupon, subtotal, discount);
-        updateCouponBadge();
-        showToast('📱 Cupom registrado!');
-      }
-      
-      // Abre o WhatsApp com o número correto
-      window.open(`https://wa.me/${numeroDestino}?text=${encodeURIComponent(mensagem)}`, '_blank');
-    });
-
-    function updateCouponBadge() {
-      const stats = getCouponStats();
-      const totalUses = Object.values(stats).reduce((sum, s) => sum + s.uses, 0);
-      const badge = document.getElementById('couponBadge');
-      if (badge) {
-        if (totalUses > 0) {
-          badge.textContent = `🎯 ${totalUses}`;
-          badge.className = 'coupon-badge visible';
-        } else {
-          badge.className = 'coupon-badge';
-        }
-      }
-    }
-
-    window.showCouponStats = function() {
-      const stats = getCouponStats();
-      console.log('📊 ESTATÍSTICAS DE CUPONS:');
-      console.table(stats);
-      return stats;
-    };
-
-    window.resetCouponLogs = function() {
-      localStorage.removeItem('coupon_usage_log');
-      updateCouponBadge();
-      showToast('🗑️ Logs resetados');
-    };
-
-    window.clearCart = function() {
-      state.cart = {};
-      renderCart();
-      showToast('🛒 Carrinho esvaziado');
-    };
-
-    window.exportProducts = function() {
-      console.log('📦 PRODUTOS ATUAIS:');
-      console.log(JSON.stringify(products, null, 2));
-      return products;
-    };
-
-    // ============================================================
     // INICIALIZAÇÃO
     // ============================================================
     renderAllGrids();
     renderCart();
-    updateCouponBadge();
 
     console.log('✅ Axionpharma carregado!');
     console.log(`📦 ${products.length} produtos disponíveis`);
-    console.log('📱 Mapeamento de cupons para WhatsApp:');
+    console.log('📱 Mapeamento de cupons:');
     console.log('   BRUTUSBR → 5511973199487');
     console.log('   DIEGO10 → 5511912478162');
     console.log('   Sem cupom → 5511920714068 (padrão)');
+    console.log('📊 Google Sheets URL:', GOOGLE_SHEETS_URL);
   </script>
+
 </body>
 </html>
