@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -1396,10 +1395,6 @@
           <span class="number">(11) 92071-4068</span>
         </div>
         <div class="contact-item">
-          <span class="label">👤 Brutus:</span>
-          <span class="number">(11) 97319-9487</span>
-        </div>
-        <div class="contact-item">
           <span class="label">👤 Diego:</span>
           <span class="number">(11) 91247-8162</span>
         </div>
@@ -1434,14 +1429,12 @@
     const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycby3uADUKMrn8ZNg7c-Ht6RQ6rsjzjlr-QpHD9bISqnRcUkis2bYKOdzYeidRYstrYfmtg/exec';
     
     const COUPON_NUMBERS = {
-      'BRUTUSBR': '5511973199487',
       'DIEGO10': '5511912478162'
     };
     
     const DEFAULT_WHATSAPP = '5511920714068';
     
     const COUPON_CONFIG = {
-      'BRUTUSBR': { discount: 0.10, type: 'percentual', description: '10% OFF - BrutusBR' },
       'DIEGO10': { discount: 0.10, type: 'percentual', description: '10% OFF - Diego10' }
     };
 
@@ -1888,7 +1881,6 @@
     console.log('✅ Axionpharma carregado!');
     console.log(`📦 ${products.length} produtos disponíveis`);
     console.log('📱 Mapeamento de cupons:');
-    console.log('   BRUTUSBR → 5511973199487');
     console.log('   DIEGO10 → 5511912478162');
     console.log('   Sem cupom → 5511920714068 (padrão)');
     console.log('📊 Google Sheets URL:', GOOGLE_SHEETS_URL);
