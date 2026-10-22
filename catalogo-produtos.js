@@ -46,7 +46,65 @@ window.AXION_PRODUCTS = [
     code: "KLOW-AXION",
     img: "Klowaxion.jpg"
   },
-
+  
+  // ============================================================
+  // ALPHA PHARMA (Adicionados com preço de R$ 500,00)
+  // ============================================================
+  {
+    id: 4000,
+    name: "Nandrobolin-250 (Nandrolona Decanoato) - Alpha Pharma",
+    category: "ALPHA PHARMA", 
+    price: 500.00,
+    old: null,
+    tag: "🔥 NOVO",
+    desc: "Nandrolona Decanoato 250mg/ml - 10ml multidose vial. I.M. only. Alpha Pharma Healthcare.",
+    code: "NANDRO-A",
+    img: "IMG-20260910-WA0063.jpg"
+  },
+  {
+    id: 4001,
+    name: "Induject-250 (Testosterona Blend) - Alpha Pharma",
+    category: "ALPHA PHARMA",
+    price: 500.00,
+    old: null,
+    tag: "🔥 NOVO",
+    desc: "Testosterona Blend 250mg/ml - 10ml multidose vial. I.M. only. Alpha Pharma Healthcare.",
+    code: "INDUJ-A",
+    img: "IMG-20260910-WA0062.jpg"
+  },
+  {
+    id: 4002,
+    name: "Mastebolin (Drostanolona Propionato) - Alpha Pharma",
+    category: "ALPHA PHARMA",
+    price: 500.00,
+    old: null,
+    tag: "🔥 NOVO",
+    desc: "Drostanolona Propionato 100mg/ml - 10ml multidose vial. I.M. only. Alpha Pharma Healthcare.",
+    code: "MASTEB-A",
+    img: "IMG-20260910-WA0059.jpg"
+  },
+  {
+    id: 4003,
+    name: "Testobolin (Testosterona Enantato) - Alpha Pharma",
+    category: "ALPHA PHARMA",
+    price: 500.00,
+    old: null,
+    tag: "🔥 NOVO",
+    desc: "Testosterona Enantato 250mg/ml - 10ml multidose vial. I.M. only. Alpha Pharma Healthcare.",
+    code: "TESTOB-A",
+    img: "IMG-20260910-WA0061.jpg"
+  },
+  {
+    id: 4004,
+    name: "Alphabolin (Metenolona Enantato) - Alpha Pharma",
+    category: "ALPHA PHARMA",
+    price: 500.00,
+    old: null,
+    tag: "🔥 NOVO",
+    desc: "Metenolona Enantato 100mg/ml - 10ml multidose vial. I.M. only. Alpha Pharma Healthcare.",
+    code: "ALPHAB-A",
+    img: "IMG-20260910-WA0058.jpg"
+  },
   // ============================================================
   // NOVOS PRODUTOS ADICIONADOS (Quenavim, Tizena, Dysport)
   // ============================================================
