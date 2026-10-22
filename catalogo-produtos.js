@@ -1,54 +1,6 @@
 window.AXION_PRODUCTS = [
   // ============================================================
-  // NOVOS PRODUTOS - LINHA AXION PEPTIDES
-  // ============================================================
-  {
-    id: 3000,
-    name: "Tirzepatide 60mg - Axion Peptides",
-    category: "Emagrecimento",
-    price: 1400.00,
-    old: null,
-    tag: "🔥 NOVO",
-    desc: "Tirzepatide 60 MG - 1 Vial Liofilizado. Pureza 99% HPLC. Diluir em 2ml de água bacteriostática. Axion Peptides.",
-    code: "TIR-AXION",
-    img: "Tirzeaxion.jpg"
-  },
-  {
-    id: 3001,
-    name: "Glow 70mg - Axion Peptides",
-    category: "Peptídeos",
-    price: 1100.00,
-    old: null,
-    tag: "🔥 NOVO",
-    desc: "Glow 70 MG - 1 Vial Liofilizado. Pureza 99% HPLC. Diluir em 2ml de água bacteriostática. Axion Peptides.",
-    code: "GLOW-AXION",
-    img: "Glowaxion.jpg"
-  },
-  {
-    id: 3002,
-    name: "GHK-Cu 100mg - Axion Peptides",
-    category: "Peptídeos",
-    price: 700.00,
-    old: null,
-    tag: "🔥 NOVO",
-    desc: "GHK-Cu 100 MG - 1 Vial Liofilizado. Pureza 99% HPLC. Diluir em 2ml de água bacteriostática. Axion Peptides.",
-    code: "GHK-AXION",
-    img: "Ghkaxion.jpg"
-  },
-  {
-    id: 3003,
-    name: "Klow 80mg - Axion Peptides",
-    category: "Peptídeos",
-    price: 1300.00,
-    old: null,
-    tag: "🔥 NOVO",
-    desc: "Klow 80 MG - 1 Vial Liofilizado. Pureza 99% HPLC. Diluir em 2ml de água bacteriostática. Axion Peptides.",
-    code: "KLOW-AXION",
-    img: "Klowaxion.jpg"
-  },
-  
-  // ============================================================
-  // ALPHA PHARMA (Adicionados com preço de R$ 500,00)
+  // ALPHA PHARMA (Preço R$ 500,00)
   // ============================================================
   {
     id: 4000,
@@ -105,6 +57,55 @@ window.AXION_PRODUCTS = [
     code: "ALPHAB-A",
     img: "IMG-20260910-WA0058.jpg"
   },
+
+  // ============================================================
+  // NOVOS PRODUTOS - LINHA AXION PEPTIDES
+  // ============================================================
+  {
+    id: 3000,
+    name: "Tirzepatide 60mg - Axion Peptides",
+    category: "Emagrecimento",
+    price: 1400.00,
+    old: null,
+    tag: "🔥 NOVO",
+    desc: "Tirzepatide 60 MG - 1 Vial Liofilizado. Pureza 99% HPLC. Diluir em 2ml de água bacteriostática. Axion Peptides.",
+    code: "TIR-AXION",
+    img: "Tirzeaxion.jpg"
+  },
+  {
+    id: 3001,
+    name: "Glow 70mg - Axion Peptides",
+    category: "Peptídeos",
+    price: 1100.00,
+    old: null,
+    tag: "🔥 NOVO",
+    desc: "Glow 70 MG - 1 Vial Liofilizado. Pureza 99% HPLC. Diluir em 2ml de água bacteriostática. Axion Peptides.",
+    code: "GLOW-AXION",
+    img: "Glowaxion.jpg"
+  },
+  {
+    id: 3002,
+    name: "GHK-Cu 100mg - Axion Peptides",
+    category: "Peptídeos",
+    price: 700.00,
+    old: null,
+    tag: "🔥 NOVO",
+    desc: "GHK-Cu 100 MG - 1 Vial Liofilizado. Pureza 99% HPLC. Diluir em 2ml de água bacteriostática. Axion Peptides.",
+    code: "GHK-AXION",
+    img: "Ghkaxion.jpg"
+  },
+  {
+    id: 3003,
+    name: "Klow 80mg - Axion Peptides",
+    category: "Peptídeos",
+    price: 1300.00,
+    old: null,
+    tag: "🔥 NOVO",
+    desc: "Klow 80 MG - 1 Vial Liofilizado. Pureza 99% HPLC. Diluir em 2ml de água bacteriostática. Axion Peptides.",
+    code: "KLOW-AXION",
+    img: "Klowaxion.jpg"
+  },
+  
   // ============================================================
   // NOVOS PRODUTOS ADICIONADOS (Quenavim, Tizena, Dysport)
   // ============================================================
