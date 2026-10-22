@@ -366,4 +366,668 @@
 
   <!-- WHATSAPP FLUTUANTE -->
   <a href="https://wa.me/5511920714068" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
-    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="wrap header-main">
+      <a class="brand" onclick="showBrandsScreen()">
+        <span class="brand-mark">
+          <img src="logoaxion.jpg" alt="Axionpharma">
+        </span>
+        <span>
+          <strong>Axionpharma</strong>
+          <span>cuidado perto de voce</span>
+        </span>
+      </a>
+
+      <form class="search" id="searchForm">
+        <input id="searchInput" type="search" placeholder="Buscar produtos...">
+        <button type="submit" aria-label="Buscar">⌕</button>
+      </form>
+
+      <button class="cart-button" id="openCart" type="button">
+        Carrinho <span class="count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- TELA DE PASTAS (MARCAS COM FOTO REDONDA) -->
+  <!-- ============================================================ -->
+  <div class="wrap" id="brands-screen">
+    <div class="brand-grid" id="brands-grid">
+      <!-- As marcas serão desenhadas pelo JS aqui -->
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- VITRINE DE PRODUTOS (ESCONDIDA INICIALMENTE) -->
+  <!-- ============================================================ -->
+  <div id="products-screen" style="display: none; padding-top: 20px;">
+    <main class="wrap">
+      <section id="categoria-todos">
+        <div class="section-head">
+          <div>
+            <h2 id="current-brand-title" style="color: var(--silver);">📦 Produtos</h2>
+            <p id="resultText">Carregando produtos...</p>
+          </div>
+          <button class="filter-reset-btn visible" id="resetFilterBtn" onclick="showBrandsScreen()">⬅ Voltar para Marcas</button>
+        </div>
+        <div class="catalog-layout">
+          <div class="product-grid" id="grid-todos"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- MODAL IMAGEM -->
+  <div class="image-modal" id="imageModal" onclick="closeImageModal()" style="position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.9); display: none; align-items: center; justify-content: center; cursor: pointer; padding: 20px; backdrop-filter: blur(5px);">
+    <button class="close-modal-img" onclick="closeImageModal()" style="position: absolute; top: 20px; right: 30px; font-size: 40px; color: #fff; cursor: pointer; background: none; border: none; transition: color 0.2s;">✕</button>
+    <img id="modalImage" src="" alt="Produto ampliado" style="max-width: 90%; max-height: 90%; object-fit: contain; border-radius: 12px; box-shadow: 0 0 50px rgba(0,0,0,0.8);">
+  </div>
+
+  <!-- MODAL CLIENTE -->
+  <div class="modal-overlay" id="clientModal">
+    <div class="modal-box">
+      <button class="close-modal" id="closeClientModal">✕</button>
+      <h3>📋 Complete seus dados</h3>
+      <p class="subtitle">Preencha seus dados para finalizar o pedido</p>
+      
+      <label for="clientName">Nome completo <span class="required">*</span></label>
+      <input type="text" id="clientName" placeholder="Ex: João Silva" required>
+      
+      <label for="clientPhone">WhatsApp <span class="required">*</span></label>
+      <input type="tel" id="clientPhone" placeholder="(11) 99999-9999" required>
+      
+      <label for="clientEmail">E-mail (opcional)</label>
+      <input type="email" id="clientEmail" placeholder="seu@email.com">
+      
+      <div class="error-msg" id="modalError">Preencha todos os campos obrigatórios</div>
+      
+      <div class="modal-buttons">
+        <button class="btn-cancel" id="cancelClientModal">Cancelar</button>
+        <button class="btn-confirm" id="confirmClientData">✅ Finalizar Pedido</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARRINHO -->
+  <div class="drawer" id="cartDrawer" aria-hidden="true">
+    <div class="shade" id="closeShade"></div>
+    <aside class="cart-panel" aria-label="Carrinho de compras">
+      <div class="cart-head">
+        <h2>🛒 Seu carrinho</h2>
+        <button class="close-cart" id="closeCart" type="button" aria-label="Fechar">×</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="coupon-section">
+        <div class="coupon-input-group">
+          <input type="text" id="couponInput" placeholder="Digite seu cupom" autocomplete="off">
+          <button id="applyCouponBtn" type="button">Aplicar</button>
+        </div>
+        <div class="coupon-message" id="couponMessage"></div>
+      </div>
+      <div class="cart-total">
+        <div class="total-row">
+          <span>Total</span>
+          <span id="cartTotal">R$ 0,00</span>
+        </div>
+        <button class="checkout" type="button" id="checkoutBtn">Finalizar compra</button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast">Produto adicionado ao carrinho</div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <h3>Axionpharma</h3>
+        <p>Farmácia online com catálogo editável, pedidos por carrinho e atendimento local.</p>
+      </div>
+      <div>
+        <h3>Atendimento</h3>
+        <div class="contact-item"><span class="label">📞 Geral:</span> <span class="number">(11) 92071-4068</span></div>
+        <div class="contact-item"><span class="label">👤 Diego:</span> <span class="number">(11) 91247-8162</span></div>
+      </div>
+      <div>
+        <h3>Institucional</h3>
+        <a href="#">Sobre a loja</a>
+        <a href="#">Política de entrega</a>
+        <a href="#">Trocas e devoluções</a>
+      </div>
+      <div>
+        <h3>Horários</h3>
+        <p>Segunda a sábado: 8h às 20h</p>
+        <p>Domingo: 9h às 14h</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================ -->
+  <!-- SCRIPTS -->
+  <!-- ============================================================ -->
+  <script src="catalogo-produtos.js"></script>
+
+  <script>
+    // ============================================================
+    // CONFIGURAÇÕES (MANTIDAS)
+    // ============================================================
+    const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycby3uADUKMrn8ZNg7c-Ht6RQ6rsjzjlr-QpHD9bISqnRcUkis2bYKOdzYeidRYstrYfmtg/exec';
+    const COUPON_NUMBERS = { 'DIEGO10': '5511912478162', 'TJSANTOS': '5513996387906' };
+    const DEFAULT_WHATSAPP = '5511920714068';
+    const COUPON_CONFIG = {
+      'DIEGO10': { discount: 0.10, type: 'percentual', description: '10% OFF - Diego10' },
+      'TJSANTOS': { discount: 0.10, type: 'percentual', description: '10% OFF - TJSANTOS' }
+    };
+
+    const products = window.AXION_PRODUCTS || [];
+    
+    function getProductImage(product) {
+      if (product.img) return product.img;
+      return `data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23141414%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 font-size=%2214%22 text-anchor=%22middle%22 dominant-baseline=%22central%22 fill=%22%23666666%22 font-family=%22Arial%22%3E${encodeURIComponent(product.name)}%3C/text%3E%3C/svg%3E`;
+    }
+
+    const money = value => value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+
+    // ============================================================
+    // ESTADO GLOBAL
+    // ============================================================
+    const state = { filter: "Todos", query: "", cart: {} };
+    let currentCoupon = null;
+    let currentDiscount = 0;
+    let toastTimer = null;
+
+    // ============================================================
+    // DEFINIÇÃO DAS MARCAS (PASTAS)
+    // ============================================================
+    const MARCAS_DISPONIVEIS = [
+      "AXION PEPTIDES",
+      "LANDERLAN",
+      "LANDERGOLD",
+      "OXYGEN KW",
+      "OXYGEN PHARMA",
+      "MUSCLE LABS",
+      "COOPER PHARMA",
+      "BRATVA LABS",
+      "PEPTÍDEOS",
+      "EMAGRECIMENTO"
+    ];
+
+    // Função que filtra os produtos baseado na pasta escolhida
+    function getProductsByBrand(brandName) {
+      if (!brandName || brandName === "Todos") return products;
+      
+      if (brandName === "EMAGRECIMENTO") {
+        const keywordsEmagrecimento = ["EMAGRECIMENTO", "TIRZEPATIDA", "TIRZEC", "LIPOLESS", "T.G.", "MONJAURO", "SAXENDA", "OZEMPIC", "MOURNAJARO", "RETATRUTIDA", "SEMAGLUTIDA", "CLEMBUTEROL", "QUENAVIM", "TIZENA"];
+        return products.filter(product => {
+          const searchString = `${product.category || ''} ${product.name || ''} ${product.desc || ''}`.toUpperCase();
+          return keywordsEmagrecimento.some(keyword => searchString.includes(keyword)) && !searchString.includes("AXION") && !searchString.includes("LANDER") && !searchString.includes("OXYGEN") && !searchString.includes("MUSCLE") && !searchString.includes("COOPER") && !searchString.includes("BRATVA");
+        });
+      }
+      
+      if (brandName === "PEPTÍDEOS") {
+        return products.filter(product => {
+          const searchString = `${product.category || ''} ${product.name || ''}`.toUpperCase();
+          return (searchString.includes("PEPTÍDEO") || searchString.includes("PEPTIDE")) && !searchString.includes("AXION") && !searchString.includes("LANDER") && !searchString.includes("OXYGEN") && !searchString.includes("MUSCLE") && !searchString.includes("COOPER") && !searchString.includes("BRATVA");
+        });
+      }
+
+      const keyword = brandName.split(' ')[0]; 
+      
+      return products.filter(product => {
+        const searchString = `${product.category || ''} ${product.name || ''} ${product.desc || ''}`.toUpperCase();
+        
+        if (brandName === "AXION PEPTIDES") {
+          return searchString.includes("AXION") || (product.img && product.img.toLowerCase().includes("axion"));
+        }
+        
+        return searchString.includes(keyword);
+      });
+    }
+
+    // ============================================================
+    // CONTROLE DE TELAS E RENDERIZAÇÃO DAS MARCAS
+    // ============================================================
+    
+    function renderBrandsGrid() {
+      const brandGrid = document.getElementById('brands-grid');
+
+      brandGrid.innerHTML = MARCAS_DISPONIVEIS.map(brand => {
+        // Lógica para pegar as 4 primeiras letras (ex: "LANDERLAN" -> "land.jpg")
+        let prefixo = brand.substring(0, 4).toLowerCase();
+        
+        // Ajustes específicos para nomes compostos ficarem bonitos
+        if (brand === "AXION PEPTIDES") prefixo = "axio";
+        if (brand === "OXYGEN KW" || brand === "OXYGEN PHARMA") prefixo = "oxyg";
+        if (brand === "MUSCLE LABS") prefixo = "musc";
+        if (brand === "COOPER PHARMA") prefixo = "coop";
+        if (brand === "BRATVA LABS") prefixo = "brat";
+        
+        const imgName = `${prefixo}.jpg`;
+
+        return `
+          <div class="brand-card" onclick="openBrand('${brand}')">
+            <div class="brand-avatar">
+              <!-- A imagem tenta carregar o arquivo. Se não achar, mostra as 4 letras no fundo -->
+              <img src="${imgName}" alt="${brand}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <span class="fallback-text" style="display:none;">${brand.substring(0, 4)}</span>
+            </div>
+            <h3>${brand}</h3>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function openBrand(brandName) {
+      state.filter = brandName;
+      state.query = '';
+      document.getElementById('searchInput').value = '';
+      document.getElementById('brands-screen').style.display = 'none';
+      document.getElementById('products-screen').style.display = 'block';
+      document.getElementById('current-brand-title').textContent = `📦 ${brandName}`;
+      
+      renderAllGrids();
+      window.scrollTo(0,0);
+      showToast(`Mostrando: ${brandName}`);
+    }
+
+    function showBrandsScreen() {
+      state.filter = 'Todos';
+      state.query = '';
+      document.getElementById('searchInput').value = '';
+      document.getElementById('brands-screen').style.display = 'block';
+      document.getElementById('products-screen').style.display = 'none';
+      window.scrollTo(0,0);
+    }
+
+    // ============================================================
+    // TOAST E MODAL DE IMAGEM (MANTIDOS)
+    // ============================================================
+    const toastEl = document.getElementById("toast");
+    function showToast(msg, isError = false) {
+      toastEl.textContent = msg;
+      toastEl.style.borderColor = isError ? 'var(--red)' : 'var(--blue)';
+      toastEl.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toastEl.classList.remove("show"), 3000);
+    }
+
+    function openImageModal(imageSrc) {
+      const modal = document.getElementById('imageModal');
+      const img = document.getElementById('modalImage');
+      if (imageSrc && imageSrc !== '') {
+        img.src = imageSrc;
+        modal.style.display = 'flex';
+      } else {
+        showToast('❌ Imagem não disponível');
+      }
+    }
+
+    function closeImageModal() {
+      document.getElementById('imageModal').style.display = 'none';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeImageModal();
+    });
+
+    // ============================================================
+    // FILTROS E BUSCA
+    // ============================================================
+    function getFilteredProducts() {
+      let filteredByFolder = getProductsByBrand(state.filter);
+      
+      let finalFiltered = filteredByFolder.filter(product => {
+        const searchText = `${product.name} ${product.category} ${product.desc || ''}`.toLowerCase();
+        const matchesQuery = !state.query || searchText.includes(state.query.toLowerCase());
+        return matchesQuery;
+      });
+      
+      return finalFiltered;
+    }
+
+    // ============================================================
+    // RENDERIZAÇÃO DOS PRODUTOS
+    // ============================================================
+    function renderAllGrids() {
+      const gridTodos = document.getElementById('grid-todos');
+      let list = getFilteredProducts();
+      
+      document.getElementById('resultText').textContent = `${list.length} produto${list.length === 1 ? "" : "s"} encontrado${list.length === 1 ? "" : "s"}.`;
+      
+      if (list.length === 0) {
+        gridTodos.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--muted);">Nenhum produto encontrado nesta pasta.</div>`;
+        return;
+      }
+
+      gridTodos.innerHTML = list.map(product => `
+        <article class="product-card" data-id="${product.id}">
+          <span class="product-id">#${product.id}</span>
+          <div class="product-art" onclick="openImageModal('${getProductImage(product)}')">
+            ${product.tag ? `<span class="badge">${product.tag}</span>` : ''}
+            <img 
+              src="${getProductImage(product)}" 
+              alt="${product.name}"
+              loading="lazy"
+              onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%23141414%22 width=%22200%22 height=%22200%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 font-size=%2214%22 text-anchor=%22middle%22 dominant-baseline=%22central%22 fill=%22%23666666%22 font-family=%22Arial%22%3E${encodeURIComponent(product.name)}%3C/text%3E%3C/svg%3E'"
+            >
+          </div>
+          <div class="product-body">
+            <span class="product-category">${product.category}</span>
+            <h3>${product.name}</h3>
+            <p class="desc">${product.desc || ''}</p>
+            <div class="price-row">
+              ${product.old ? `<span class="old-price">${money(product.old)}</span>` : ""}
+              <span class="price">${money(product.price)}</span>
+            </div>
+            <button class="add-btn" data-add="${product.id}" type="button">Adicionar</button>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    // ============================================================
+    // CARRINHO (MANTIDO)
+    // ============================================================
+    function addToCart(id) {
+      state.cart[id] = (state.cart[id] || 0) + 1;
+      renderCart();
+      showToast('✅ Produto adicionado!');
+    }
+
+    function changeQty(id, amount) {
+      state.cart[id] = (state.cart[id] || 0) + amount;
+      if (state.cart[id] <= 0) delete state.cart[id];
+      renderCart();
+    }
+
+    function renderCart() {
+      const entries = Object.entries(state.cart);
+      const totalQty = entries.reduce((sum, [, qty]) => sum + qty, 0);
+      let subtotal = entries.reduce((sum, [id, qty]) => {
+        const product = products.find(item => item.id === Number(id));
+        return sum + (product ? product.price * qty : 0);
+      }, 0);
+      
+      const discount = currentDiscount || 0;
+      const total = subtotal - discount;
+      
+      document.getElementById('cartCount').textContent = totalQty;
+      
+      let totalHTML = money(total);
+      if (discount > 0) {
+        totalHTML = `
+          <span style="text-decoration: line-through; font-size: 14px; color: var(--muted);">${money(subtotal)}</span>
+          <span style="color: var(--blue);">${money(total)}</span>
+          <span style="font-size: 12px; color: var(--silver); display: block;">(-${money(discount)} de desconto)</span>
+        `;
+      }
+      document.getElementById('cartTotal').innerHTML = totalHTML;
+
+      const cartItems = document.getElementById('cartItems');
+      if (!entries.length) {
+        cartItems.innerHTML = `<div class="empty">Seu carrinho está vazio.</div>`;
+        return;
+      }
+
+      cartItems.innerHTML = entries.map(([id, qty]) => {
+        const product = products.find(item => item.id === Number(id));
+        if (!product) return '';
+        return `
+          <div class="cart-line">
+            <span class="cart-thumb">
+              <img src="${getProductImage(product)}" alt="${product.name}" onerror="this.style.display='none'">
+            </span>
+            <div>
+              <strong>${product.name}</strong>
+              <span>${money(product.price)} cada</span>
+              <div class="qty-row">
+                <div class="qty-controls">
+                  <button class="qty-btn" data-qty="${product.id}" data-amount="-1" type="button">−</button>
+                  <strong>${qty}</strong>
+                  <button class="qty-btn" data-qty="${product.id}" data-amount="1" type="button">+</button>
+                </div>
+                <strong>${money(product.price * qty)}</strong>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    // ============================================================
+    // CUPOM E CHECKOUT (MANTIDOS)
+    // ============================================================
+    function applyCoupon(code) {
+      const input = document.getElementById('couponInput');
+      const messageEl = document.getElementById('couponMessage');
+      
+      if (!code) {
+        input.value = '';
+        currentCoupon = null;
+        currentDiscount = 0;
+        messageEl.textContent = '';
+        messageEl.className = 'coupon-message';
+        renderCart();
+        return true;
+      }
+      
+      const normalizedCode = code.trim().toUpperCase();
+      const couponData = COUPON_CONFIG[normalizedCode];
+      
+      if (!couponData) {
+        messageEl.textContent = '❌ Cupom inválido ou expirado';
+        messageEl.className = 'coupon-message error';
+        currentCoupon = null;
+        currentDiscount = 0;
+        renderCart();
+        return false;
+      }
+      
+      const entries = Object.entries(state.cart);
+      const subtotal = entries.reduce((sum, [id, qty]) => {
+        const product = products.find(item => item.id === Number(id));
+        return sum + (product ? product.price * qty : 0);
+      }, 0);
+      
+      let discount = 0;
+      if (couponData.type === 'percentual') {
+        discount = subtotal * couponData.discount;
+      } else {
+        discount = couponData.discount;
+      }
+      discount = Math.min(discount, subtotal);
+      
+      currentCoupon = normalizedCode;
+      currentDiscount = discount;
+      
+      messageEl.innerHTML = `
+        ✅ Cupom <strong>${normalizedCode}</strong> aplicado! 
+        Desconto: ${couponData.type === 'percentual' ? (couponData.discount * 100) + '%' : 'R$ ' + couponData.discount.toFixed(2)}
+      `;
+      messageEl.className = 'coupon-message success';
+      renderCart();
+      return true;
+    }
+
+    async function saveToGoogleSheets(clientData) {
+      try {
+        await fetch(GOOGLE_SHEETS_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(clientData)
+        });
+        return { success: true };
+      } catch (error) {
+        console.error('Erro ao salvar:', error);
+        return { success: false, error: error.message };
+      }
+    }
+
+    document.getElementById("checkoutBtn").addEventListener("click", () => {
+      const entries = Object.entries(state.cart);
+      if (!entries.length) {
+        showToast('❌ Adicione produtos ao carrinho', true);
+        return;
+      }
+      document.getElementById('clientModal').classList.add('active');
+      document.getElementById('clientName').focus();
+    });
+
+    document.getElementById('closeClientModal').addEventListener('click', () => {
+      document.getElementById('clientModal').classList.remove('active');
+    });
+
+    document.getElementById('cancelClientModal').addEventListener('click', () => {
+      document.getElementById('clientModal').classList.remove('active');
+    });
+
+    document.getElementById('confirmClientData').addEventListener('click', async () => {
+      const name = document.getElementById('clientName').value.trim();
+      const phone = document.getElementById('clientPhone').value.trim();
+      const email = document.getElementById('clientEmail').value.trim();
+      const errorEl = document.getElementById('modalError');
+      
+      if (!name || !phone) {
+        errorEl.textContent = '⚠️ Nome e WhatsApp são obrigatórios';
+        errorEl.classList.add('visible');
+        return;
+      }
+      
+      errorEl.classList.remove('visible');
+      
+      const entries = Object.entries(state.cart);
+      const subtotal = entries.reduce((sum, [id, qty]) => {
+        const product = products.find(item => item.id === Number(id));
+        return sum + (product ? product.price * qty : 0);
+      }, 0);
+      
+      const discount = currentDiscount || 0;
+      const total = subtotal - discount;
+      
+      const lines = entries.map(([id, qty]) => {
+        const product = products.find(item => item.id === Number(id));
+        return `${qty}x ${product.name} - ${money(product.price * qty)}`;
+      });
+      
+      let numeroDestino = DEFAULT_WHATSAPP;
+      if (currentCoupon && COUPON_NUMBERS[currentCoupon]) {
+        numeroDestino = COUPON_NUMBERS[currentCoupon];
+      }
+      
+      const clientData = {
+        nome: name, telefone: phone, email: email || '',
+        produtos: lines.join(' | '), subtotal: money(subtotal),
+        cupom: currentCoupon || 'Nenhum', desconto: discount > 0 ? money(discount) : 'R$ 0,00',
+        total: money(total), status: 'Confirmado'
+      };
+      
+      document.getElementById('clientModal').classList.remove('active');
+      showToast('⏳ Salvando pedido...');
+      
+      const result = await saveToGoogleSheets(clientData);
+      
+      if (result.success) showToast('✅ Pedido registrado!');
+      else showToast('⚠️ Erro ao salvar na planilha', true);
+      
+      let mensagem = `Olá, Axionpharma! Quero fazer este pedido:\n\n`;
+      mensagem += lines.join("\n");
+      mensagem += `\n\n👤 Cliente: ${name}`;
+      mensagem += `\n📱 Telefone: ${phone}`;
+      if (email) mensagem += `\n📧 E-mail: ${email}`;
+      mensagem += `\n\nSubtotal: ${money(subtotal)}`;
+      if (discount > 0) mensagem += `\n🎯 Cupom: ${currentCoupon} (desconto: -${money(discount)})`;
+      mensagem += `\n💰 Total: ${money(total)}`;
+      
+      window.open(`https://wa.me/${numeroDestino}?text=${encodeURIComponent(mensagem)}`, '_blank');
+      
+      state.cart = {};
+      currentCoupon = null;
+      currentDiscount = 0;
+      renderCart();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') document.getElementById('clientModal').classList.remove('active');
+    });
+
+    // ============================================================
+    // EVENT LISTENERS GERAIS
+    // ============================================================
+    document.addEventListener("click", event => {
+      const addBtn = event.target.closest("[data-add]");
+      const qtyBtn = event.target.closest("[data-qty]");
+      if (addBtn) addToCart(Number(addBtn.dataset.add));
+      if (qtyBtn) changeQty(Number(qtyBtn.dataset.qty), Number(qtyBtn.dataset.amount));
+    });
+
+    document.getElementById("searchForm").addEventListener("submit", event => {
+      event.preventDefault();
+      state.query = document.getElementById("searchInput").value.trim();
+      if(state.query !== "") {
+        document.getElementById('brands-screen').style.display = 'none';
+        document.getElementById('products-screen').style.display = 'block';
+        document.getElementById('current-brand-title').textContent = `🔍 Buscando em todas as marcas...`;
+        state.filter = "Todos"; 
+      }
+      renderAllGrids();
+    });
+
+    document.getElementById("searchInput").addEventListener("input", event => {
+      state.query = event.target.value.trim();
+      if(state.query !== "") {
+        document.getElementById('brands-screen').style.display = 'none';
+        document.getElementById('products-screen').style.display = 'block';
+        document.getElementById('current-brand-title').textContent = `🔍 Buscando em todas as marcas...`;
+        state.filter = "Todos"; 
+      }
+      renderAllGrids();
+    });
+
+    document.getElementById("openCart").addEventListener("click", () => {
+      document.getElementById('cartDrawer').classList.add('open');
+    });
+
+    document.getElementById("closeCart").addEventListener("click", () => {
+      document.getElementById('cartDrawer').classList.remove('open');
+    });
+
+    document.getElementById("closeShade").addEventListener("click", () => {
+      document.getElementById('cartDrawer').classList.remove('open');
+    });
+
+    document.getElementById("applyCouponBtn").addEventListener("click", () => {
+      const input = document.getElementById("couponInput");
+      const code = input.value.trim();
+      if (!code) {
+        applyCoupon('');
+        showToast('Cupom removido');
+        return;
+      }
+      const success = applyCoupon(code);
+      showToast(success ? `✅ Cupom ${code.toUpperCase()} aplicado!` : '❌ Cupom inválido', !success);
+    });
+
+    document.getElementById("couponInput").addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        document.getElementById("applyCouponBtn").click();
+      }
+    });
+
+    // ============================================================
+    // INICIALIZAÇÃO
+    // ============================================================
+    renderBrandsGrid(); 
+    renderCart();
+
+  </script>
+
+</body>
+</html>
