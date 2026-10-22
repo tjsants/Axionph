@@ -11,7 +11,7 @@ window.AXION_PRODUCTS = [
     tag: "🔥 NOVO",
     desc: "Tirzepatide 60 MG - 1 Vial Liofilizado. Pureza 99% HPLC. Diluir em 2ml de água bacteriostática. Axion Peptides.",
     code: "TIR-AXION",
-    img: "tirzeaxion.jpg"
+    img: "Tirzeaxion.jpg"
   },
   {
     id: 3001,
@@ -22,7 +22,7 @@ window.AXION_PRODUCTS = [
     tag: "🔥 NOVO",
     desc: "Glow 70 MG - 1 Vial Liofilizado. Pureza 99% HPLC. Diluir em 2ml de água bacteriostática. Axion Peptides.",
     code: "GLOW-AXION",
-    img: "glowaxion.jpg"
+    img: "Glowaxion.jpg"
   },
   {
     id: 3002,
@@ -33,7 +33,7 @@ window.AXION_PRODUCTS = [
     tag: "🔥 NOVO",
     desc: "GHK-Cu 100 MG - 1 Vial Liofilizado. Pureza 99% HPLC. Diluir em 2ml de água bacteriostática. Axion Peptides.",
     code: "GHK-AXION",
-    img: "ghkaxion.jpg"
+    img: "Ghkaxion.jpg"
   },
   {
     id: 3003,
@@ -44,7 +44,7 @@ window.AXION_PRODUCTS = [
     tag: "🔥 NOVO",
     desc: "Klow 80 MG - 1 Vial Liofilizado. Pureza 99% HPLC. Diluir em 2ml de água bacteriostática. Axion Peptides.",
     code: "KLOW-AXION",
-    img: "klowaxion.jpg"
+    img: "Klowaxion.jpg"
   },
 
   // ============================================================
@@ -59,7 +59,7 @@ window.AXION_PRODUCTS = [
     tag: "🔥 NOVO",
     desc: "Quenavim - Produto para emagrecimento.",
     code: "QUENAVIM",
-    img: "999.jpg"
+    img: "Quenavim.jpg"
   },
   {
     id: 2001,
@@ -70,7 +70,7 @@ window.AXION_PRODUCTS = [
     tag: "🔥 NOVO",
     desc: "Tizena - Produto para emagrecimento.",
     code: "TIZENA",
-    img: "899.jpg"
+    img: "Tizena.jpg"
   },
   {
     id: 2002,
@@ -81,7 +81,7 @@ window.AXION_PRODUCTS = [
     tag: "🔥 NOVO",
     desc: "Dysport - Toxina botulínica.",
     code: "DYSPORT",
-    img: "799.jpg"
+    img: "Dysport.jpg"
   },
 
   // ============================================================
