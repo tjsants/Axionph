@@ -11,7 +11,7 @@ window.AXION_PRODUCTS = [
     tag: "🔥 NOVO",
     desc: "Nandrolona Decanoato 250mg/ml - 10ml multidose vial. I.M. only. Alpha Pharma Healthcare.",
     code: "NANDRO-A",
-    img: "IMG-20260910-WA0063.jpg"
+    img: "IMG-20260910-WA0060.jpg"
   },
   {
     id: 4001,
