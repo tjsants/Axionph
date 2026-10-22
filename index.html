@@ -6,7 +6,6 @@
   <title>Axionpharma | online</title>
   <style>
     :root {
-      /* PALETA MODERNA: PRETO ABSOLUTO, AZUL NEON E PRATA METÁLICO */
       --ink: #ffffff;
       --muted: #8a8a8a;
       --silver: #e0e0e0;
@@ -40,15 +39,19 @@
 
     /* ===== WHATSAPP FLUTUANTE ===== */
     .whatsapp-float {
-      position: fixed; bottom: 28px; right: 28px; z-index: 100;
-      width: 64px; height: 64px; border-radius: 50%;
+      position: fixed; bottom: 80px; right: 20px; z-index: 100;
+      width: 60px; height: 60px; border-radius: 50%;
       background: #25d366; color: #fff;
       box-shadow: 0 6px 24px rgba(37, 211, 102, .45);
       display: flex; align-items: center; justify-content: center;
       transition: transform .3s ease, box-shadow .3s ease; cursor: pointer; border: none;
     }
     .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 8px 32px rgba(37, 211, 102, .7); }
-    .whatsapp-float svg { width: 36px; height: 36px; fill: #fff; }
+    .whatsapp-float svg { width: 32px; height: 32px; fill: #fff; }
+
+    @media (min-width: 768px) {
+      .whatsapp-float { bottom: 28px; right: 28px; width: 64px; height: 64px; }
+    }
 
     .wrap { width: min(1180px, calc(100% - 28px)); margin: 0 auto; }
 
@@ -107,13 +110,17 @@
     }
 
     /* ===== TELA DE MARCAS (PASTAS) ===== */
-    #brands-screen { display: block; padding: 40px 0; }
+    #brands-screen { display: block; padding: 30px 0 100px 0; }
     
     .brand-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
       margin-top: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .brand-grid { grid-template-columns: repeat(3, 1fr); }
     }
 
     .brand-card {
@@ -122,7 +129,7 @@
       -webkit-backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.05);
       border-radius: var(--radius);
-      padding: 30px 20px;
+      padding: 30px 15px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -153,25 +160,26 @@
     
     .brand-card:hover::before { opacity: 1; }
 
-    /* ESTILO DA FOTO REDONDA (TIPO WHATSAPP) */
+    /* ESTILO DA FOTO REDONDA */
     .brand-avatar {
-      width: 80px;
-      height: 80px;
+      width: 90px;
+      height: 90px;
       border-radius: 50%;
       background: #111;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      border: 2px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      border: 2px solid rgba(0, 229, 255, 0.3);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), 0 0 15px var(--blue-glow);
       transition: all 0.4s;
       position: relative;
     }
 
     .brand-card:hover .brand-avatar {
       border-color: var(--blue);
-      box-shadow: 0 0 20px var(--blue-glow);
+      box-shadow: 0 0 25px var(--blue-glow);
+      transform: scale(1.05);
     }
 
     .brand-avatar img {
@@ -180,9 +188,9 @@
       object-fit: cover;
     }
 
-    /* Fallback caso a imagem não exista: mostra as 4 letras */
+    /* Fallback caso a imagem não exista */
     .brand-avatar .fallback-text {
-      font-size: 20px;
+      font-size: 24px;
       font-weight: 900;
       color: var(--silver);
       text-transform: uppercase;
@@ -190,7 +198,7 @@
     }
     
     .brand-card h3 { 
-      margin: 0; font-size: 15px; color: var(--silver); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600;
+      margin: 0; font-size: 13px; color: var(--silver); text-transform: uppercase; letter-spacing: 1px; font-weight: 600;
       transition: color 0.4s;
     }
     .brand-card:hover h3 { color: #fff; }
@@ -334,7 +342,6 @@
     @media (max-width: 1024px) {
       .product-grid { grid-template-columns: repeat(3, 1fr); }
       .footer-grid { grid-template-columns: repeat(2, 1fr); }
-      .brand-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 768px) {
@@ -346,11 +353,6 @@
       .cart-button { min-width: auto; padding: 10px 14px; font-size: 13px; }
       .product-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
       .footer-grid { grid-template-columns: 1fr; gap: 16px; }
-      .whatsapp-float { width: 56px; height: 56px; bottom: 20px; right: 20px; }
-      .brand-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; } 
-      .brand-card { padding: 20px 10px; }
-      .brand-avatar { width: 60px; height: 60px; }
-      .brand-card h3 { font-size: 12px; }
     }
 
     @media (max-width: 480px) {
@@ -543,19 +545,20 @@
     let toastTimer = null;
 
     // ============================================================
-    // DEFINIÇÃO DAS MARCAS (PASTAS)
+    // DEFINIÇÃO DAS MARCAS E IMAGENS (COM LETRA MAIÚSCULA E ALPHA)
     // ============================================================
     const MARCAS_DISPONIVEIS = [
-      "AXION PEPTIDES",
-      "LANDERLAN",
-      "LANDERGOLD",
-      "OXYGEN KW",
-      "OXYGEN PHARMA",
-      "MUSCLE LABS",
-      "COOPER PHARMA",
-      "BRATVA LABS",
-      "PEPTÍDEOS",
-      "EMAGRECIMENTO"
+      { nome: "AXION PEPTIDES", img: "Axio.jpg" },
+      { nome: "LANDERLAN", img: "land.jpg" }, // Atenção: A sua pasta tem "land.jpg"? Na foto não aparece. Se não tiver, ele usa o fallback.
+      { nome: "LANDERGOLD", img: "land.jpg" }, // Usando a mesma por padrão
+      { nome: "OXYGEN KW", img: "Oxyg.jpg" },
+      { nome: "OXYGEN PHARMA", img: "Oxyg2.jpg" }, // Usei a Oxyg2 que tem na sua pasta
+      { nome: "MUSCLE LABS", img: "Musc.jpg" }, // Se não tiver, usa o fallback
+      { nome: "COOPER PHARMA", img: "Coop.jpg" },
+      { nome: "BRATVA LABS", img: "Brat.jpg" }, // Se não tiver, usa o fallback
+      { nome: "ALPHA LABS", img: "Alph.jpg" },   // NOVA MARCA ADICIONADA
+      { nome: "PEPTÍDEOS", img: "Pept.jpg" },
+      { nome: "EMAGRECIMENTO", img: "Emag.jpg" }
     ];
 
     // Função que filtra os produtos baseado na pasta escolhida
@@ -566,14 +569,14 @@
         const keywordsEmagrecimento = ["EMAGRECIMENTO", "TIRZEPATIDA", "TIRZEC", "LIPOLESS", "T.G.", "MONJAURO", "SAXENDA", "OZEMPIC", "MOURNAJARO", "RETATRUTIDA", "SEMAGLUTIDA", "CLEMBUTEROL", "QUENAVIM", "TIZENA"];
         return products.filter(product => {
           const searchString = `${product.category || ''} ${product.name || ''} ${product.desc || ''}`.toUpperCase();
-          return keywordsEmagrecimento.some(keyword => searchString.includes(keyword)) && !searchString.includes("AXION") && !searchString.includes("LANDER") && !searchString.includes("OXYGEN") && !searchString.includes("MUSCLE") && !searchString.includes("COOPER") && !searchString.includes("BRATVA");
+          return keywordsEmagrecimento.some(keyword => searchString.includes(keyword)) && !searchString.includes("AXION") && !searchString.includes("LANDER") && !searchString.includes("OXYGEN") && !searchString.includes("MUSCLE") && !searchString.includes("COOPER") && !searchString.includes("BRATVA") && !searchString.includes("ALPHA");
         });
       }
       
       if (brandName === "PEPTÍDEOS") {
         return products.filter(product => {
           const searchString = `${product.category || ''} ${product.name || ''}`.toUpperCase();
-          return (searchString.includes("PEPTÍDEO") || searchString.includes("PEPTIDE")) && !searchString.includes("AXION") && !searchString.includes("LANDER") && !searchString.includes("OXYGEN") && !searchString.includes("MUSCLE") && !searchString.includes("COOPER") && !searchString.includes("BRATVA");
+          return (searchString.includes("PEPTÍDEO") || searchString.includes("PEPTIDE")) && !searchString.includes("AXION") && !searchString.includes("LANDER") && !searchString.includes("OXYGEN") && !searchString.includes("MUSCLE") && !searchString.includes("COOPER") && !searchString.includes("BRATVA") && !searchString.includes("ALPHA");
         });
       }
 
@@ -597,27 +600,14 @@
     function renderBrandsGrid() {
       const brandGrid = document.getElementById('brands-grid');
 
-      brandGrid.innerHTML = MARCAS_DISPONIVEIS.map(brand => {
-        // Lógica para pegar as 4 primeiras letras (ex: "LANDERLAN" -> "land.jpg")
-        let prefixo = brand.substring(0, 4).toLowerCase();
-        
-        // Ajustes específicos para nomes compostos ficarem bonitos
-        if (brand === "AXION PEPTIDES") prefixo = "axio";
-        if (brand === "OXYGEN KW" || brand === "OXYGEN PHARMA") prefixo = "oxyg";
-        if (brand === "MUSCLE LABS") prefixo = "musc";
-        if (brand === "COOPER PHARMA") prefixo = "coop";
-        if (brand === "BRATVA LABS") prefixo = "brat";
-        
-        const imgName = `${prefixo}.jpg`;
-
+      brandGrid.innerHTML = MARCAS_DISPONIVEIS.map(marca => {
         return `
-          <div class="brand-card" onclick="openBrand('${brand}')">
+          <div class="brand-card" onclick="openBrand('${marca.nome}')">
             <div class="brand-avatar">
-              <!-- A imagem tenta carregar o arquivo. Se não achar, mostra as 4 letras no fundo -->
-              <img src="${imgName}" alt="${brand}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <span class="fallback-text" style="display:none;">${brand.substring(0, 4)}</span>
+              <img src="${marca.img}" alt="${marca.nome}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <span class="fallback-text" style="display:none;">${marca.nome.substring(0, 4)}</span>
             </div>
-            <h3>${brand}</h3>
+            <h3>${marca.nome}</h3>
           </div>
         `;
       }).join('');
