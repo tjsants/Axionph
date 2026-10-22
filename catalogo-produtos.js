@@ -33,7 +33,7 @@ window.AXION_PRODUCTS = [
     tag: "🔥 NOVO",
     desc: "Drostanolona Propionato 100mg/ml - 10ml multidose vial. I.M. only. Alpha Pharma Healthcare.",
     code: "MASTEB-A",
-    img: "IMG-20260910-WA0059.jpg"
+    img: "IMG-20260910-WA0061.jpg"
   },
   {
     id: 4003,
@@ -44,7 +44,7 @@ window.AXION_PRODUCTS = [
     tag: "🔥 NOVO",
     desc: "Testosterona Enantato 250mg/ml - 10ml multidose vial. I.M. only. Alpha Pharma Healthcare.",
     code: "TESTOB-A",
-    img: "IMG-20260910-WA0061.jpg"
+    img: "IMG-20260910-WA0059.jpg"
   },
   {
     id: 4004,
