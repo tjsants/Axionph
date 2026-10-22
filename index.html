@@ -6,22 +6,22 @@
   <title>Axionpharma | online</title>
   <style>
     :root {
-      /* NOVA PALETA MODERNA: PRETO ABSOLUTO, AZUL NEON E PRATA METÁLICO */
+      /* PALETA MODERNA: PRETO ABSOLUTO, AZUL NEON E PRATA METÁLICO */
       --ink: #ffffff;
       --muted: #8a8a8a;
       --silver: #e0e0e0;
       --silver-gradient: linear-gradient(135deg, #ffffff 0%, #b0b0b0 100%);
       --line: #222222;
-      --panel: rgba(20, 20, 20, 0.7); /* Painel com transparência */
+      --panel: rgba(20, 20, 20, 0.7);
       --bg-body: #050505;
       
-      --blue: #00e5ff; /* Azul Neon/Ciano */
+      --blue: #00e5ff;
       --blue-dark: #00b8cc;
       --blue-glow: rgba(0, 229, 255, 0.15);
       
       --red: #ff4444; 
       --shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-      --radius: 12px; /* Bordas mais arredondadas = moderno */
+      --radius: 12px;
     }
 
     * { box-sizing: border-box; }
@@ -31,7 +31,6 @@
       color: var(--ink);
       font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       background: var(--bg-body);
-      /* Fundo com um leve gradiente radial no topo para dar profundidade */
       background-image: radial-gradient(circle at 50% -20%, rgba(0, 229, 255, 0.08) 0%, transparent 50%);
       background-attachment: fixed;
     }
@@ -59,7 +58,7 @@
     }
     .header {
       position: sticky; top: 0; z-index: 20; 
-      background: rgba(5, 5, 5, 0.85); /* Efeito de vidro */
+      background: rgba(5, 5, 5, 0.85);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -76,7 +75,6 @@
     }
     .brand-mark img { width: 100%; height: 100%; object-fit: contain; border-radius: 8px; }
     
-    /* Texto Prata Metálico com Gradiente */
     .brand strong { 
       display: block; font-size: 38px; letter-spacing: -1.5px; line-height: 1; 
       background: var(--silver-gradient);
@@ -118,7 +116,6 @@
       margin-top: 20px;
     }
 
-    /* Efeito Glassmorphism nos Cartões */
     .brand-card {
       background: var(--panel);
       backdrop-filter: blur(10px);
@@ -138,7 +135,6 @@
       overflow: hidden;
     }
 
-    /* Linha de brilho no topo do cartão */
     .brand-card::before {
       content: '';
       position: absolute;
@@ -172,7 +168,6 @@
       box-shadow: 0 0 15px var(--blue-glow);
     }
 
-    /* Ícone de etiqueta - Agora Azul Neon */
     .brand-card .brand-icon svg { width: 28px; height: 28px; fill: var(--blue); transition: fill 0.4s; }
     
     .brand-card h3 { 
@@ -528,44 +523,53 @@
     let toastTimer = null;
 
     // ============================================================
-    // DEFINIÇÃO DAS MARCAS (PASTAS)
+    // DEFINIÇÃO DAS MARCAS (PASTAS) - TODAS MANTIDAS + AXION
     // ============================================================
     const MARCAS_DISPONIVEIS = [
-      "SPECTRUM LABS",
-      "SYNEDICA",
-      "ZPHCD",
-      "BRATVA",
-      "COOPER",
-      "OXYGEN KW",
+      "AXION PEPTIDES",
       "LANDERLAN",
+      "LANDERGOLD",
+      "OXYGEN KW",
+      "OXYGEN PHARMA",
       "MUSCLE LABS",
-      "KING PHARMA",
-      "ALLUVI HEALTHCARE",
-      "ALPHALABS",
-      "NEW SCIENCE",
-      "VELTRANE",
-      "BIOGENESIS",
-      "PHARMACOM",
-      "EMAGRECEDORES",
-      "AXIONPHARMA"
+      "COOPER PHARMA",
+      "BRATVA LABS",
+      "PEPTÍDEOS",
+      "EMAGRECIMENTO"
     ];
 
     // Função que filtra os produtos baseado na pasta escolhida
     function getProductsByBrand(brandName) {
       if (!brandName || brandName === "Todos") return products;
       
-      if (brandName === "EMAGRECEDORES") {
-        const keywordsEmagrecimento = ["EMAGRECIMENTO", "TIRZEPATIDA", "TIRZEC", "LIPOLESS", "T.G.", "MONJAURO", "SAXENDA", "OZEMPIC", "MOURNAJARO", "RETATRUTIDA", "SEMAGLUTIDA"];
+      // Lógica especial para a pasta EMAGRECEDORES (produtos que não têm marca específica)
+      if (brandName === "EMAGRECIMENTO") {
+        const keywordsEmagrecimento = ["EMAGRECIMENTO", "TIRZEPATIDA", "TIRZEC", "LIPOLESS", "T.G.", "MONJAURO", "SAXENDA", "OZEMPIC", "MOURNAJARO", "RETATRUTIDA", "SEMAGLUTIDA", "CLEMBUTEROL", "QUENAVIM", "TIZENA"];
         return products.filter(product => {
           const searchString = `${product.category || ''} ${product.name || ''} ${product.desc || ''}`.toUpperCase();
-          return keywordsEmagrecimento.some(keyword => searchString.includes(keyword));
+          return keywordsEmagrecimento.some(keyword => searchString.includes(keyword)) && !searchString.includes("AXION") && !searchString.includes("LANDER") && !searchString.includes("OXYGEN") && !searchString.includes("MUSCLE") && !searchString.includes("COOPER") && !searchString.includes("BRATVA");
+        });
+      }
+      
+      // Lógica especial para a pasta PEPTÍDEOS (produtos que não têm marca específica)
+      if (brandName === "PEPTÍDEOS") {
+        return products.filter(product => {
+          const searchString = `${product.category || ''} ${product.name || ''}`.toUpperCase();
+          return (searchString.includes("PEPTÍDEO") || searchString.includes("PEPTIDE")) && !searchString.includes("AXION") && !searchString.includes("LANDER") && !searchString.includes("OXYGEN") && !searchString.includes("MUSCLE") && !searchString.includes("COOPER") && !searchString.includes("BRATVA");
         });
       }
 
-      const keyword = brandName.split(' ')[0]; 
+      // Lógica para as outras marcas (busca o nome da marca)
+      const keyword = brandName.split(' ')[0]; // Pega a primeira palavra (ex: "AXION" de "AXION PEPTIDES")
       
       return products.filter(product => {
         const searchString = `${product.category || ''} ${product.name || ''} ${product.desc || ''}`.toUpperCase();
+        
+        // Se for Axion, busca no nome, desc ou imagem
+        if (brandName === "AXION PEPTIDES") {
+          return searchString.includes("AXION") || (product.img && product.img.toLowerCase().includes("axion"));
+        }
+        
         return searchString.includes(keyword);
       });
     }
@@ -577,6 +581,7 @@
     function renderBrandsGrid() {
       const brandGrid = document.getElementById('brands-grid');
       
+      // Ícone de etiqueta VERMELHO (igual sua imagem original)
       const svgIcon = `<svg viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></svg>`;
 
       brandGrid.innerHTML = MARCAS_DISPONIVEIS.map(brand => `
@@ -665,7 +670,7 @@
       document.getElementById('resultText').textContent = `${list.length} produto${list.length === 1 ? "" : "s"} encontrado${list.length === 1 ? "" : "s"}.`;
       
       if (list.length === 0) {
-        gridTodos.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--muted);">Nenhum produto encontrado nesta pasta. Verifique se no seu arquivo catalogo-produtos.js a categoria do produto contém o nome "${state.filter}".</div>`;
+        gridTodos.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--muted);">Nenhum produto encontrado nesta pasta.</div>`;
         return;
       }
 
