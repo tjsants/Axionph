@@ -11,7 +11,7 @@ window.AXION_PRODUCTS = [
     tag: "🔥 NOVO",
     desc: "Tirzepatide 60 MG - 1 Vial Liofilizado. Pureza 99% HPLC. Diluir em 2ml de água bacteriostática. Axion Peptides.",
     code: "TIR-AXION",
-    img: "tirzepatideaxion.jpg"
+    img: "tirzeaxion.jpg"
   },
   {
     id: 3001,
@@ -33,7 +33,7 @@ window.AXION_PRODUCTS = [
     tag: "🔥 NOVO",
     desc: "GHK-Cu 100 MG - 1 Vial Liofilizado. Pureza 99% HPLC. Diluir em 2ml de água bacteriostática. Axion Peptides.",
     code: "GHK-AXION",
-    img: "ghkcuaxion.jpg"
+    img: "ghkaxion.jpg"
   },
   {
     id: 3003,
