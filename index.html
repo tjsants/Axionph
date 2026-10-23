@@ -544,12 +544,13 @@
     let toastTimer = null;
 
     // ============================================================
-    // DEFINIÇÃO DAS MARCAS E IMAGENS (ATUALIZADO COM ESTÉTICA)
+    // DEFINIÇÃO DAS MARCAS E IMAGENS
     // ============================================================
     const MARCAS_DISPONIVEIS = [
-      { nome: "ESTÉTICA", img: "0000.jpg" },
+      { nome: "ESTÉTICA", img: "este.jpg" }, // Imagem atualizada conforme pedido
       { nome: "PEPTÍDEOS", img: "Pept.jpg" },
       { nome: "EMAGRECIMENTO", img: "Emag.jpg" },
+      { nome: "HORMÔNIOS", img: "horm.jpg" }, // Imagem atualizada conforme pedido
       { nome: "AXION PEPTIDES", img: "Axio.jpg" },
       { nome: "LANDERLAN", img: "Land.jpg" },
       { nome: "LANDERGOLD", img: "Land2.jpg" },
@@ -565,25 +566,25 @@
     function getProductsByBrand(brandName) {
       if (!brandName || brandName === "Todos") return products;
       
-      // 1. FILTRO DE ESTÉTICA (Busca por Botox, Dysport, Quenavim, etc)
+      // 1. FILTRO DE ESTÉTICA
       if (brandName === "ESTÉTICA") {
-        const keywordsEstetica = ["ESTÉTICA", "BOTOX", "DYSPORT", "TOXINA", "QUENAVIM", "PREENC", "HIALUR"];
+        const keywordsEstetica = ["ESTÉTICA", "BOTOX", "DYSPORT", "TOXINA", "QUENAVIM", "PREENC", "HIALUR", "GLOW", "GHK-CU"];
         return products.filter(product => {
           const searchString = `${product.category || ''} ${product.name || ''} ${product.desc || ''}`.toUpperCase();
           return keywordsEstetica.some(keyword => searchString.includes(keyword));
         });
       }
 
-      // 2. FILTRO DE EMAGRECIMENTO (Busca por GLP-1, Tirzepatida, etc. independente da marca)
+      // 2. FILTRO DE EMAGRECIMENTO
       if (brandName === "EMAGRECIMENTO") {
-        const keywordsEmagrecimento = ["EMAGRECIMENTO", "TIRZEPATIDA", "TIRZEC", "LIPOLESS", "T.G.", "MONJAURO", "SAXENDA", "OZEMPIC", "MOURNAJARO", "RETATRUTIDA", "SEMAGLUTIDA", "CLEMBUTEROL", "QUENAVIM", "TIZENA"];
+        const keywordsEmagrecimento = ["EMAGRECIMENTO", "TIRZEPATIDA", "TIRZEC", "LIPOLESS", "T.G.", "MONJAURO", "SAXENDA", "OZEMPIC", "MOURNAJARO", "RETATRUTIDA", "SEMAGLUTIDA", "CLEMBUTEROL", "QUENAVIM", "TIZENA", "GLUCONEX", "TIRZEDRAL"];
         return products.filter(product => {
           const searchString = `${product.category || ''} ${product.name || ''} ${product.desc || ''}`.toUpperCase();
           return keywordsEmagrecimento.some(keyword => searchString.includes(keyword)) && !searchString.includes("BOTOX") && !searchString.includes("DYSPORT");
         });
       }
       
-      // 3. FILTRO DE PEPTÍDEOS (Busca tudo que tem Peptídeo no nome/categoria, independente da marca)
+      // 3. FILTRO DE PEPTÍDEOS
       if (brandName === "PEPTÍDEOS") {
         return products.filter(product => {
           const searchString = `${product.category || ''} ${product.name || ''} ${product.desc || ''}`.toUpperCase();
@@ -591,7 +592,22 @@
         });
       }
 
-      // 4. FILTRO POR MARCAS ESPECÍFICAS (Landerlan, Alpha, Oxygen, etc)
+      // 4. FILTRO DE HORMÔNIOS
+      if (brandName === "HORMÔNIOS") {
+        const keywordsHormonios = [
+          "HGH", "SOMATROPINA", "SOMATROPH", "TESTOSTERONA", 
+          "DECA", "NANDROLONA", "TREMBOLONA", "TREMBO", "MASTERON", "DROSTANOLONA", 
+          "DURATESTON", "PRIMOBOLAN", "METENOLONA", "NPP", "FENILPROPIONATO", 
+          "CIPIONATO", "ENANTATO", "PROPIONATO", "BOLDENONA", 
+          "UNDECILENATO", "HORMÔNIO", "HORMONIO", "HCG", "TESTOBOLIN", "INDUJECT", "NANDROBOLIN", "ALPHABOLIN", "MASTEBOLIN"
+        ];
+        return products.filter(product => {
+          const searchString = `${product.category || ''} ${product.name || ''} ${product.desc || ''}`.toUpperCase();
+          return keywordsHormonios.some(keyword => searchString.includes(keyword)) && !searchString.includes("TIRZEPATIDA");
+        });
+      }
+
+      // 5. FILTRO POR MARCAS ESPECÍFICAS
       const keyword = brandName.split(' ')[0]; 
       
       return products.filter(product => {
