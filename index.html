@@ -544,9 +544,12 @@
     let toastTimer = null;
 
     // ============================================================
-    // DEFINIÇÃO DAS MARCAS E IMAGENS (ATUALIZADO)
+    // DEFINIÇÃO DAS MARCAS E IMAGENS (ATUALIZADO COM ESTÉTICA)
     // ============================================================
     const MARCAS_DISPONIVEIS = [
+      { nome: "ESTÉTICA", img: "0000.jpg" },
+      { nome: "PEPTÍDEOS", img: "Pept.jpg" },
+      { nome: "EMAGRECIMENTO", img: "Emag.jpg" },
       { nome: "AXION PEPTIDES", img: "Axio.jpg" },
       { nome: "LANDERLAN", img: "Land.jpg" },
       { nome: "LANDERGOLD", img: "Land2.jpg" },
@@ -555,30 +558,40 @@
       { nome: "MUSCLE LABS", img: "Musc.jpg" },
       { nome: "COOPER PHARMA", img: "Coop.jpg" },
       { nome: "BRATVA LABS", img: "Brat.jpg" },
-      { nome: "ALPHA PHARMA", img: "Alph.jpg" },
-      { nome: "PEPTÍDEOS", img: "Pept.jpg" },
-      { nome: "EMAGRECIMENTO", img: "Emag.jpg" }
+      { nome: "ALPHA PHARMA", img: "Alph.jpg" }
     ];
 
-    // Função que filtra os produtos baseado na pasta escolhida
+    // Função Inteligente de Filtro
     function getProductsByBrand(brandName) {
       if (!brandName || brandName === "Todos") return products;
       
+      // 1. FILTRO DE ESTÉTICA (Busca por Botox, Dysport, Quenavim, etc)
+      if (brandName === "ESTÉTICA") {
+        const keywordsEstetica = ["ESTÉTICA", "BOTOX", "DYSPORT", "TOXINA", "QUENAVIM", "PREENC", "HIALUR"];
+        return products.filter(product => {
+          const searchString = `${product.category || ''} ${product.name || ''} ${product.desc || ''}`.toUpperCase();
+          return keywordsEstetica.some(keyword => searchString.includes(keyword));
+        });
+      }
+
+      // 2. FILTRO DE EMAGRECIMENTO (Busca por GLP-1, Tirzepatida, etc. independente da marca)
       if (brandName === "EMAGRECIMENTO") {
         const keywordsEmagrecimento = ["EMAGRECIMENTO", "TIRZEPATIDA", "TIRZEC", "LIPOLESS", "T.G.", "MONJAURO", "SAXENDA", "OZEMPIC", "MOURNAJARO", "RETATRUTIDA", "SEMAGLUTIDA", "CLEMBUTEROL", "QUENAVIM", "TIZENA"];
         return products.filter(product => {
           const searchString = `${product.category || ''} ${product.name || ''} ${product.desc || ''}`.toUpperCase();
-          return keywordsEmagrecimento.some(keyword => searchString.includes(keyword)) && !searchString.includes("AXION") && !searchString.includes("LANDER") && !searchString.includes("OXYGEN") && !searchString.includes("MUSCLE") && !searchString.includes("COOPER") && !searchString.includes("BRATVA") && !searchString.includes("ALPHA");
+          return keywordsEmagrecimento.some(keyword => searchString.includes(keyword)) && !searchString.includes("BOTOX") && !searchString.includes("DYSPORT");
         });
       }
       
+      // 3. FILTRO DE PEPTÍDEOS (Busca tudo que tem Peptídeo no nome/categoria, independente da marca)
       if (brandName === "PEPTÍDEOS") {
         return products.filter(product => {
-          const searchString = `${product.category || ''} ${product.name || ''}`.toUpperCase();
-          return (searchString.includes("PEPTÍDEO") || searchString.includes("PEPTIDE")) && !searchString.includes("AXION") && !searchString.includes("LANDER") && !searchString.includes("OXYGEN") && !searchString.includes("MUSCLE") && !searchString.includes("COOPER") && !searchString.includes("BRATVA") && !searchString.includes("ALPHA");
+          const searchString = `${product.category || ''} ${product.name || ''} ${product.desc || ''}`.toUpperCase();
+          return searchString.includes("PEPTÍDEO") || searchString.includes("PEPTIDE");
         });
       }
 
+      // 4. FILTRO POR MARCAS ESPECÍFICAS (Landerlan, Alpha, Oxygen, etc)
       const keyword = brandName.split(' ')[0]; 
       
       return products.filter(product => {
