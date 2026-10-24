@@ -31,7 +31,7 @@ window.AXION_PRODUCTS = [
     price: 2500.00,
     old: null,
     tag: "🔥 NOVO",
-    desc: "Somatropina (Origem ADNr) - Caixa com 100 UI. Pó Liofilizado para Solução Injetável IM/"SC.",
+    desc: "Somatropina (Origem ADNr) - Caixa com 100 UI. Pó Liofilizado para Solução Injetável IM/SC.", // ERRO CORRIGIDO AQUI
     code: "LANDERTROPIN",
     img: "IMG-20260713-WA0135.jpg"
   },
@@ -179,7 +179,7 @@ window.AXION_PRODUCTS = [
   { id: 84, name: "Decaland Nandrolona 200mg - 10ml", category: "Ganho de Massa", price: 225.00, old: null, tag: null, desc: "Decaland Nandrolona 200mg/mL - 10mL. Produto LANDERLAN. Administração intramuscular semanal.", code: "DN5", img: "84.jpg" },
   { id: 90, name: "Lipoland 15mg - Kit com 4 Frascos", category: "Emagrecimento", price: 1200.00, old: null, tag: null, desc: "Lipoland Tirzepatida 15mg - Kit com 4 frascos. Produto LANDERLAN. Administração subcutânea semanal.", code: "L15F", img: "90.jpg" },
   { id: 94, name: "Stanozolol 15ml Landerlan", category: "Ganho de Massa", price: 140.00, old: null, tag: null, desc: "Stanozolol Aquoso 50mg/mL - 15mL. Produto Landerlan. Administração intramuscular.", code: "STA-LAN15", img: "94.jpg" },
-  // ALPHA PHARMA
+  // ALPHA PHARMA (Com seus novos preços)
   { id: 4000, name: "Nandrobolin-250 (Nandrolona Decanoato) - Alpha Pharma", category: "ALPHA PHARMA", price: 550.00, old: null, tag: "🔥 NOVO", desc: "Nandrolona Decanoato 250mg/ml - 10ml multidose vial. I.M. only. Alpha Pharma Healthcare.", code: "NANDRO-A", img: "IMG-20260910-WA0063.jpg" },
   { id: 4001, name: "Induject-250 (Testosterona Blend) - Alpha Pharma", category: "ALPHA PHARMA", price: 600.00, old: null, tag: "🔥 NOVO", desc: "Testosterona Blend 250mg/ml - 10ml multidose vial. I.M. only. Alpha Pharma Healthcare.", code: "INDUJ-A", img: "IMG-20260910-WA0062.jpg" },
   { id: 4002, name: "Mastebolin (Drostanolona Propionato) - Alpha Pharma", category: "ALPHA PHARMA", price: 750.00, old: null, tag: "🔥 NOVO", desc: "Drostanolona Propionato 100mg/ml - 10ml multidose vial. I.M. only. Alpha Pharma Healthcare.", code: "MASTEB-A", img: "IMG-20260910-WA0059.jpg" },
