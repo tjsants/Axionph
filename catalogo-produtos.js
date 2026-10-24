@@ -31,7 +31,7 @@ window.AXION_PRODUCTS = [
     price: 2500.00,
     old: null,
     tag: "🔥 NOVO",
-    desc: "Somatropina (Origem ADNr) - Caixa com 100 UI. Pó Liofilizado para Solução Injetável IM/SC.",
+    desc: "Somatropina (Origem ADNr) - Caixa com 100 UI. Pó Liofilizado para Solução Injetável IM/"SC.",
     code: "LANDERTROPIN",
     img: "IMG-20260713-WA0135.jpg"
   },
@@ -180,11 +180,11 @@ window.AXION_PRODUCTS = [
   { id: 90, name: "Lipoland 15mg - Kit com 4 Frascos", category: "Emagrecimento", price: 1200.00, old: null, tag: null, desc: "Lipoland Tirzepatida 15mg - Kit com 4 frascos. Produto LANDERLAN. Administração subcutânea semanal.", code: "L15F", img: "90.jpg" },
   { id: 94, name: "Stanozolol 15ml Landerlan", category: "Ganho de Massa", price: 140.00, old: null, tag: null, desc: "Stanozolol Aquoso 50mg/mL - 15mL. Produto Landerlan. Administração intramuscular.", code: "STA-LAN15", img: "94.jpg" },
   // ALPHA PHARMA
-  { id: 4000, name: "Nandrobolin-250 (Nandrolona Decanoato) - Alpha Pharma", category: "ALPHA PHARMA", price: 500.00, old: null, tag: "🔥 NOVO", desc: "Nandrolona Decanoato 250mg/ml - 10ml multidose vial. I.M. only. Alpha Pharma Healthcare.", code: "NANDRO-A", img: "IMG-20260910-WA0063.jpg" },
-  { id: 4001, name: "Induject-250 (Testosterona Blend) - Alpha Pharma", category: "ALPHA PHARMA", price: 500.00, old: null, tag: "🔥 NOVO", desc: "Testosterona Blend 250mg/ml - 10ml multidose vial. I.M. only. Alpha Pharma Healthcare.", code: "INDUJ-A", img: "IMG-20260910-WA0062.jpg" },
-  { id: 4002, name: "Mastebolin (Drostanolona Propionato) - Alpha Pharma", category: "ALPHA PHARMA", price: 500.00, old: null, tag: "🔥 NOVO", desc: "Drostanolona Propionato 100mg/ml - 10ml multidose vial. I.M. only. Alpha Pharma Healthcare.", code: "MASTEB-A", img: "IMG-20260910-WA0059.jpg" },
-  { id: 4003, name: "Testobolin (Testosterona Enantato) - Alpha Pharma", category: "ALPHA PHARMA", price: 500.00, old: null, tag: "🔥 NOVO", desc: "Testosterona Enantato 250mg/ml - 10ml multidose vial. I.M. only. Alpha Pharma Healthcare.", code: "TESTOB-A", img: "IMG-20260910-WA0061.jpg" },
-  { id: 4004, name: "Alphabolin (Metenolona Enantato) - Alpha Pharma", category: "ALPHA PHARMA", price: 500.00, old: null, tag: "🔥 NOVO", desc: "Metenolona Enantato 100mg/ml - 10ml multidose vial. I.M. only. Alpha Pharma Healthcare.", code: "ALPHAB-A", img: "IMG-20260910-WA0058.jpg" },
+  { id: 4000, name: "Nandrobolin-250 (Nandrolona Decanoato) - Alpha Pharma", category: "ALPHA PHARMA", price: 550.00, old: null, tag: "🔥 NOVO", desc: "Nandrolona Decanoato 250mg/ml - 10ml multidose vial. I.M. only. Alpha Pharma Healthcare.", code: "NANDRO-A", img: "IMG-20260910-WA0063.jpg" },
+  { id: 4001, name: "Induject-250 (Testosterona Blend) - Alpha Pharma", category: "ALPHA PHARMA", price: 600.00, old: null, tag: "🔥 NOVO", desc: "Testosterona Blend 250mg/ml - 10ml multidose vial. I.M. only. Alpha Pharma Healthcare.", code: "INDUJ-A", img: "IMG-20260910-WA0062.jpg" },
+  { id: 4002, name: "Mastebolin (Drostanolona Propionato) - Alpha Pharma", category: "ALPHA PHARMA", price: 750.00, old: null, tag: "🔥 NOVO", desc: "Drostanolona Propionato 100mg/ml - 10ml multidose vial. I.M. only. Alpha Pharma Healthcare.", code: "MASTEB-A", img: "IMG-20260910-WA0059.jpg" },
+  { id: 4003, name: "Testobolin (Testosterona Enantato) - Alpha Pharma", category: "ALPHA PHARMA", price: 630.00, old: null, tag: "🔥 NOVO", desc: "Testosterona Enantato 250mg/ml - 10ml multidose vial. I.M. only. Alpha Pharma Healthcare.", code: "TESTOB-A", img: "IMG-20260910-WA0061.jpg" },
+  { id: 4004, name: "Alphabolin (Metenolona Enantato) - Alpha Pharma", category: "ALPHA PHARMA", price: 1500.00, old: null, tag: "🔥 NOVO", desc: "Metenolona Enantato 100mg/ml - 10ml multidose vial. I.M. only. Alpha Pharma Healthcare.", code: "ALPHAB-A", img: "IMG-20260910-WA0058.jpg" },
   // OUTROS
   { id: 1003, name: "Lipoland Tirzepatida 15mg - 4 Frascos - LANDERLAN", category: "Emagrecimento", price: 999.00, old: null, tag: null, desc: "Lipoland Tirzepatida 15mg - 4 Frascos - LANDERLAN", code: "LIPO15-4F", img: "1003.jpg" },
   { id: 71, name: "Androlic/Mesterolona 25mg - 20 comprimidos", category: "Ganho de Massa", price: 185.00, old: null, tag: null, desc: "Mesterolona 25mg - 20 comprimidos. Produto LANDERLAN. Uso oral diário.", code: "AN25", img: "71.jpg" },
